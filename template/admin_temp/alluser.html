@@ -1,0 +1,117 @@
+{% extends 'admin_temp/base.html' %}
+{% block content %}
+
+<style>
+  mark {
+      background-color: yellow;
+      font-weight: bold;
+      border-radius: 7px;
+  }
+</style>
+
+
+<ul class="navbar-nav mr-lg-2">
+  <li class="nav-item nav-search d-lg-block">
+    <div class="input-group">
+      <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
+      </div>
+      <div class="ser" style="display: flex;gap: 1rem;justify-content: space-between;width: 100%;margin-bottom: 1rem;">
+      <input type="text" class="form-control"  id="searchBox" placeholder="Search now">
+      <button onclick="searchAndHighlight()" style="border-radius: 7px;"> <i class="icon-search"></i> Search</button>
+      <button onclick="clearHighlight()" style="border-radius: 7px;"> <i class="icon-fixed-width icon-trash"></i> Clear</button>
+    </div>
+    </div>
+  </li>
+</ul>
+
+
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <p class="card-title">User</p>
+          <div class="row">
+            <div class="col-12">
+              <div class="table-responsive">
+                <table id="example" class="display expandable-table" style="width:100%">
+                  <thead>
+                    <tr>
+                      <th>username</th>
+                      <th>email</th>
+                      <th>Balance</th>
+                      <th>Loign as user</th>
+                      <th>Action</th>
+                     
+                    </tr>
+                  </thead>
+                  {% for x in x reversed %}
+                  <tbody>
+                    <td>
+                        <div class="tbd">
+                            <p class="content">{{x.username}}</p>
+                            <div class="content">
+                                
+                                <p></p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="content">
+                        {{x.email}}
+                    </td>
+                    <td>
+  <a href="/superadmin/addf">${{ x.total_balance }}</a>
+                    </td>
+                    
+                      <td>
+                      <a href="{% url 'login_as_user' x.id %}">Login as User</a>
+                      </td>
+                      <td>
+                     <a href="">sendemil</a>
+                      </td>
+                    
+                  </tbody>
+                  {% endfor %}
+              </table>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <script>
+      function searchAndHighlight() {
+          clearHighlight(); // Clear previous highlights
+  
+          let searchText = document.getElementById("searchBox").value.trim();
+          if (!searchText) return; // Exit if input is empty
+  
+          let contentElements = document.querySelectorAll(".content"); // Select all elements with class "content"
+          let regex = new RegExp(`(${searchText})`, "gi");
+          let firstMatch = null;
+  
+          contentElements.forEach((element) => {
+              element.innerHTML = element.innerHTML.replace(/<mark>(.*?)<\/mark>/g, "$1"); // Remove old highlights
+              element.innerHTML = element.innerHTML.replace(regex, `<mark>$1</mark>`); // Highlight matches
+  
+              if (!firstMatch) {
+                  firstMatch = element.querySelector("mark"); // Get the first highlighted match
+              }
+          });
+  
+          if (firstMatch) {
+              firstMatch.scrollIntoView({ behavior: "smooth", block: "center" }); // Scroll to the first match
+          }
+      }
+  
+      function clearHighlight() {
+          let contentElements = document.querySelectorAll(".content");
+          contentElements.forEach((element) => {
+              element.innerHTML = element.innerHTML.replace(/<mark>(.*?)<\/mark>/g, "$1"); // Remove highlights
+          });
+      }
+  </script>
+  
+
+{% endblock %}

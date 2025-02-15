@@ -1,0 +1,185 @@
+{% extends 'admin_temp/base.html' %}
+{% block content %}
+  
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User KYC Details</title>
+  <style>
+    
+
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #007bff;
+    }
+
+    /* Profile Card */
+    .profile-card {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 20px;
+    }
+
+    .profile-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-right: 20px;
+      object-fit: cover;
+    }
+
+    .profile-info {
+      flex: 1;
+    }
+
+    .profile-info h2 {
+      margin: 0;
+      font-size: 24px;
+      color: #333;
+    }
+
+    .profile-info p {
+      margin: 5px 0;
+      color: #555;
+    }
+
+    /* Tab Navigation */
+    .tabs {
+      display: flex;
+      justify-content: space-around;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 20px;
+    }
+
+    .tabs button {
+      flex: 1;
+      padding: 10px 20px;
+      border: none;
+      background: #f4f4f9;
+      color: #333;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .tabs button.active {
+      background: #007bff;
+      color: #fff;
+      border-bottom: 3px solid #0056b3;
+    }
+
+    /* Tab Content */
+    .tab-content {
+      display: none;
+      padding: 10px;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    /* KYC Details */
+    .kyc-details {
+      margin: 10px 0;
+    }
+
+    .kyc-details h3 {
+      margin-bottom: 10px;
+      color: #007bff;
+    }
+
+    .kyc-details p {
+      margin: 5px 0;
+    }
+
+    .kyc-details img {
+      max-width: 100%;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h4>User KYC Details</h4>
+
+    <!-- Profile Card -->
+    <div class="profile-card">
+      <!-- <img src="https://via.placeholder.com/100" alt="User Photo" /> -->
+      <div class="profile-info">
+        <h5>Kyc Info for {{x.user.username}}</h5>
+        
+      </div>
+    </div>
+
+    <!-- Tab Navigation -->
+    <div class="tabs">
+      <button class="active" onclick="showTab('personal')">Personal Info</button>
+      <button onclick="showTab('documents')">Documents</button>
+      <button onclick="showTab('other')">Other Details</button>
+    </div>
+
+    <!-- Tab Content -->
+    <div id="personal" class="tab-content active">
+      <div class="kyc-details">
+        <h3>Personal Information</h3>
+        <p><strong>Full Name:</strong> {{x.full_name}}</p>
+        <p><strong>Email:</strong> {{x.email}}</p>
+        <p><strong>SSN:</strong> {{x.ssn}}</p>
+      </div>
+    </div>
+
+    <div id="documents" class="tab-content">
+      <div class="kyc-details">
+        <h3>Uploaded Documents</h3>
+        <p><strong>Passport:</strong></p>
+        <img src="{{x.passport.url}}" alt="Passport" />
+        <p><strong>Driver's License:</strong></p>
+        <img src="{{x.drivers_license.url}}" alt="Driver's License" />
+      </div>
+    </div>
+
+    <div id="other" class="tab-content">
+      <div class="kyc-details">
+        <h3>Other Information</h3>
+        <p>No additional information provided.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Tab functionality
+    function showTab(tabId) {
+      // Hide all tab content
+      const tabs = document.querySelectorAll('.tab-content');
+      tabs.forEach(tab => tab.classList.remove('active'));
+
+      // Remove active class from all buttons
+      const buttons = document.querySelectorAll('.tabs button');
+      buttons.forEach(btn => btn.classList.remove('active'));
+
+      // Show the selected tab content
+      document.getElementById(tabId).classList.add('active');
+
+      // Highlight the clicked button
+      event.target.classList.add('active');
+    }
+  </script>
+</body>
+</html>
+
+{% endblock %}

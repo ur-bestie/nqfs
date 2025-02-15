@@ -1,0 +1,522 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="csrf-token" content="jA0iVqT8JIBdkMpn0xhuxcD7niZjH2RKQFLGg8QX">
+    <link rel="shortcut icon" type="image/png" href="images/icons/icon.png">
+    <title>
+        Google 2fa Security    </title>
+
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/boxicons.min.css" rel="stylesheet">
+    <link href="css/glightbox.min.css" rel="stylesheet">
+    <link href="css/remixicon.css" rel="stylesheet">
+    <link href="css/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/selectric.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/iziToast.min.css">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+
+    <!-- sweet alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.12/dist/sweetalert2.all.min.js" integrity="sha256-2Dbg51yxfa7qZ8CSKqsNxHtph8UHdgbzxXF9ANtyJHo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.12/dist/sweetalert2.min.css" integrity="sha256-7jUS+MWeqkFdmW9ozkZ7mPagz+QmMbsBlt+Q3MsE+FU=" crossorigin="anonymous">
+
+
+    <style>
+        @media (max-width: 991px) {
+            #header.header-inner-pages {
+                display: block;
+                background: transparent !important;
+                position: absolute;
+            }
+
+            .dashboard-body-part {
+                padding-top: 80px;
+                position: relative;
+                z-index: 1;
+            }
+
+            .dashboard-body-part::before {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 160px;
+                background: linear-gradient(to top, #2f5b88, #153352);
+                z-index: -1;
+            }
+        }
+
+        .sp-referral .single-child {
+            padding: 6px 10px;
+            border-radius: 5px;
+        }
+
+        .sp-referral .single-child+.single-child {
+            margin-top: 15px;
+        }
+
+        .sp-referral .single-child p {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0;
+        }
+
+        .sp-referral .single-child p img {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            object-fit: cover;
+            -o-object-fit: cover;
+        }
+
+        .sp-referral .single-child p span {
+            width: calc(100% - 35px);
+            font-size: 14px;
+            padding-left: 10px;
+        }
+
+        .sp-referral>.single-child.root-child>p img {
+            border: 2px solid #c3c3c3;
+        }
+
+        .sub-child-list {
+            position: relative;
+            padding-left: 35px;
+        }
+
+        .sub-child-list::before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 17px;
+            width: 1px;
+            height: 100%;
+            background-color: #a1a1a1;
+        }
+
+        .sub-child-list>.single-child {
+            position: relative;
+        }
+
+        .sub-child-list>.single-child::before {
+            position: absolute;
+            content: '';
+            left: -18px;
+            top: 21px;
+            width: 30px;
+            height: 5px;
+            border-left: 1px solid #a1a1a1;
+            border-bottom: 1px solid #a1a1a1;
+            border-radius: 0 0 0 5px;
+        }
+
+        .sub-child-list>.single-child>p img {
+            border: 2px solid #c3c3c3;
+        }
+    </style>
+<!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+var _smartsupp = _smartsupp || {};
+_smartsupp.key = 'fef8c00a48acba26f16c2853274d48d987e719e1';
+window.smartsupp||(function(d) {
+  var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+  s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+  c.type='text/javascript';c.charset='utf-8';c.async=true;
+  c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+})(document);
+</script>
+<noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
+</head>
+
+<body>
+    <div id="preloader"></div>
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top header-inner-pages">
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+            <div class="d-flex flex-wrap align-items-center">
+                <div class="logo me-auto me-lg-0 ">
+                    <a href="dashboard.php">
+                        <img class="img-fluid rounded sm-device-img text-align" src="images/icons/whitelogo.png" width="100%" alt="pp">
+                    </a>
+                </div>
+            </div>
+            <div class="header-right d-flex">
+
+
+                <div class="dropdown ms-3">
+                    <button class="dropdown-toggle user-toggle-menu" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="images/user.png" alt="pp">
+                        <span class="ms-2">Promise Chukwu</span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="2fa.php">2fa</a></li>
+                        <li><a class="dropdown-item" href="profile_settings.php">Settings</a></li>
+                        <li><a class="dropdown-item" href="includes/logout.php">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header><!-- End Header -->
+
+    <main id="main" class="dashboard-main">
+        <section class="dashboard-section">
+
+            <div class="d-sidebar">
+                <ul class="d-sidebar-menu">
+                    <li class="">
+                        <a href="dashboard.php"><i data-feather="home"></i> Dashboard</a>
+                    </li>
+                    <li class="">
+                        <a href="backup.php"><i data-feather="repeat"></i> Link Assets</a>
+                    </li>
+                    <li class="">
+                        <a href="backup_crypto.php" style="display: inline-flex; align-items: center;"><i style=" margin-right: 7px;" class="material-icons">&#xe5d5;</i><span> Backup With Crypto</span></a>
+                    </li>
+                    <li class="">
+                        <a href="withdraw1.php"><i data-feather="credit-card"></i> Withdarw</a>
+                    </li>
+
+                    <!-- <li class="has_submenu ">
+                        <a href="#0"><i data-feather="zap"></i> Investment</a>
+                        <ul class="submenu">
+                            <li class="">
+                                <a href=""><i data-feather="chevrons-right"></i></i> Investment plans</a>
+                            </li>
+                            <li class="">
+                                <a href=""><i data-feather="chevrons-right"></i> Invest log</a>
+                            </li>
+                        </ul>
+                    </li> -->
+                    <!-- 
+                    <li class="has_submenu ">
+                        <a href="#0"><i data-feather="briefcase"></i> Deposit</a>
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="dashboard.php"><i data-feather="chevrons-right"></i> Backup Wi</a>
+                            </li>
+                            <li class="">
+                                <a href=""><i data-feather="chevrons-right"></i> Deposit log</a>
+                            </li>
+                        </ul>
+                    </li> -->
+
+                    <!-- <li class="has_submenu ">
+                        <a href="#0"><i data-feather="credit-card"></i> Withdraw</a>
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="dashboard.php"><i data-feather="chevrons-right"></i> Withdraw</a>
+                            </li>
+                            <li class="">
+                                <a href=""><i data-feather="chevrons-right"></i> Withdraw log</a>
+                            </li>
+                        </ul>
+                    </li> -->
+
+                    <li class="">
+                        <a href="buy_coin.php"><i class="fas fa-hand-holding-usd"></i> Buy Coin</a>
+                    </li>
+                    <li class="">
+                        <a href="apply_card.php"><i class="fa fa-credit-card" aria-hidden="true"></i>
+                            Cards</a>
+                    </li>
+
+
+                    <!-- <li class="">
+                        <a href="">
+                            <i data-feather="file-text"></i>
+                            Money transfer log
+                        </a>
+                    </li> -->
+
+
+                    <!-- <li class="">
+                        <a href=""><i data-feather="file-text"></i> Interest log</a>
+                    </li> -->
+
+                    <!-- <li class="">
+                        <a href=""><i data-feather="file-text"></i> Refferal log</a>
+                    </li> -->
+
+                    <li class="active">
+                        <a href="2fa.php"><i data-feather="shield"></i> 2fa</a>
+                    </li>
+                    <li class="">
+                        <a href=""><i data-feather="life-buoy"></i> Support</a>
+                    </li>
+                    <li>
+                        <a href="includes/logout.php"><i data-feather="log-out"></i> Logout</a>
+                    </li>
+                </ul>
+                <div class="d-plan-notice mt-4 mx-3">
+                    <p class="mb-0">Your current plan
+                        -N/A</p>
+                    <a href="">Update plan <i class="fas fa-arrow-up"></i></a>
+                </div>
+            </div>
+
+
+
+
+            <!-- mobile bottom menu start -->
+            <div class="mobile-bottom-menu-wrapper">
+                <ul class="mobile-bottom-menu">
+                    <li>
+                        <a href="backup_crypto.php" class="">
+                            <i style=" margin-right: 7px;" class="material-icons">&#xe5d5;</i><span>
+                                <span>Backup Crypto</span>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="apply_card.php" class="">
+                           <i class="fa fa-credit-card" aria-hidden="true"></i>
+                            <span>Cards</span>
+                        </a>
+                    </li> -->
+                    <li>
+                        <a href="backup.php" class="">
+                           <i class="fa fa-link" aria-hidden="true"></i>
+                            <span>Link Assets</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="dashboard.php" class="">
+                            <i class="bi bi-house-door"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="withdraw1.php" class="">
+                            <i class="bi bi-cash-coin"></i>
+                            <span>Withdraw</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="buy_coin.php" class="">
+                            <i class="fas fa-hand-holding-usd"></i>
+                            <span>Buy Coin</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+           
+            <style>
+                #tidio-chat-iframe {
+                    inset: auto -7px 98px auto !important;
+                }
+            </style><script>
+    'use strict'
+
+    function getCountDown(elementId, seconds) {
+        var times = seconds;
+
+        var x = setInterval(function() {
+            var distance = times * 1000;
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById(elementId).innerHTML = "COMPLETE";
+            }
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            document.getElementById(elementId).innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+            times--;
+        }, 1000);
+    }
+</script>
+
+<div class="dashboard-body-part">
+
+    <div class="mobile-page-header">
+        <h5 class="title">Investment history</h5>
+        <a href="dashboard.php" class="back-btn"><i class="bi bi-arrow-left"></i> Back</a>
+    </div>
+
+    <div class="site-card">
+        <div class="card-header">
+            <h5 class="mb-0">Two factor authentication</h5>
+        </div>
+        <div class="card-body">
+            <p>Two factor authentication (2fa) strengthens access security by requiring two methods (also referred to as factors) to verify your identity. two factor authentication protects against phishing, social engineering and password brute force attacks and secures your logins from attackers exploiting weak or stolen credentials.
+            </p>
+
+
+
+
+            <div class="form-group mt-4">
+                <button id="g2fa" type="submit" class="btn main-btn">Generate secret key to enable 2fa</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+</section>
+</main>
+
+<script>
+    $(document).on('click', '#g2fa', function(e) {
+        let timerInterval
+        Swal.fire({
+            title: 'Please Wait!',
+            html: 'Processing...',
+            timer: 5000,
+            // timerProgressBar: true,
+            didOpen: () => {
+                Swal.showLoading()
+                timerInterval = setInterval(() => {
+                    const content = Swal.getHtmlContainer()
+                    if (content) {
+                        const b = content.querySelector('b')
+                        if (b) {
+                            b.textContent = Swal.getTimerLeft()
+                        }
+                    }
+                }, 50)
+            },
+            willClose: () => {
+                clearInterval(timerInterval)
+            }
+        }).then((result) => {
+            ///cheack if the google 2fa is active or not
+            var google_2fa = "google_2fa";
+            $.ajax({
+                type: 'POST',
+                url: 'includes/server.php',
+                dataType: 'text',
+                data: {
+                    google_2fa: google_2fa
+                },
+                success: function(response) {
+                    // alert(response);
+                    if (response.trim() == "ok") {
+                        Swal.fire({
+                            title: 'Deactivate?',
+                            text: "Google 2fa Authenticator is already Active on This Account will you like to Deactivate?",
+                            icon: 'warning',
+                            showCancelButton: true,
+                            confirmButtonColor: '#3085d6',
+                            cancelButtonColor: '#d33',
+                            confirmButtonText: 'Yes, Deactivate it!'
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                let dactivate = "dactivate";
+                                $.ajax({
+                                    type: 'POST',
+                                    url: 'includes/server.php',
+                                    dataType: 'text',
+                                    data: {
+                                        dactivate: dactivate
+                                    },
+                                    success: function(response) {
+                                        // alert(response);
+                                        if (response.trim() == "ok") {
+                                            Swal.fire(
+                                                'Google Authenticator',
+                                                'Google 2fa Authenticator Deactivated Successfully.',
+                                                'success'
+                                            )
+                                        } else {
+                                            alert(
+                                                "there was an error please report this to the admin"
+                                            );
+                                        }
+                                    }
+                                });
+
+                            }
+                        })
+                    } else {
+                        $.ajax({
+                            type: 'POST',
+                            url: 'includes/googlecheck.php',
+                            dataType: 'json',
+                            success: function(resp) {
+                                console.log(resp);
+                                Swal.fire({
+                                    //icon: 'error',
+                                    title: 'Setup key : ' + resp[0] +
+                                        ' <br> or <br> SCAN THE CODE BELOW TO ACTIVATE 2FA Authenticator',
+                                    html: '<img src="' + resp[1] + '" />',
+                                    footer: '<a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en&gl=US">Download google 2fa Authenticator</a>'
+                                })
+                            }
+                        });
+                    }
+                }
+            });
+        })
+    });
+</script>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/purecounter.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<!-- <script src="js/slick.min.js"></script> -->
+<script src="js/feather.min.js"></script>
+
+<script src="js/glightbox.min.js"></script>
+<script src="js/validate.js"></script>
+<script src="js/selectric.min.js"></script>
+<script src="js/iziToast.min.js"></script>
+<script src="js/jquery.uploadPreview.min.js"></script>
+<script src="js/user_dashboard.js"></script>
+
+
+
+
+
+
+<script>
+    'use strict'
+    var url = "index.php/changeLang";
+
+    $(".changeLang").change(function() {
+        if ($(this).val() == '') {
+            return false;
+        }
+        window.location.href = url + "?lang=" + $(this).val();
+    });
+
+    feather.replace();
+
+    // responsive menu slideing
+    $(".d-sidebar-menu>li>a").on("click", function() {
+        var element = $(this).parent("li");
+        if (element.hasClass("open")) {
+            element.removeClass("open");
+            element.find("li").removeClass("open");
+            element.find("ul").slideUp(500, "linear");
+        } else {
+            element.addClass("open");
+            element.children("ul").slideDown();
+            element.siblings("li").children("ul").slideUp();
+            element.siblings("li").removeClass("open");
+            element.siblings("li").find("li").removeClass("open");
+            element.siblings("li").find("ul").slideUp();
+        }
+    });
+
+    $('.sidebar-open-btn').on('click', function() {
+        $(this).toggleClass('active');
+        $('.d-sidebar').toggleClass('active');
+    });
+</script>
+</body>
+
+</html>

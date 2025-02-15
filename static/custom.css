@@ -1,0 +1,442 @@
+.d_coin img{
+    width: 100%;
+}
+*{
+  outline: none;
+  border: none;
+}
+
+/* Modal Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Close button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.top_model{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.bpf img{
+    width: 5rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .bpf input{
+    margin-top: 1rem;
+    width: 100%;
+    height: 2rem;
+    border-radius: 5px;
+    border: 1px solid gray;
+  }
+  /* .bpf .submit{
+    background: linear-gradient(to right, #CD9F34, #F6DB77);
+  } */
+  
+  .wadd{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  .wadd button{
+    width: 248px;
+    height: 2vh;
+    border: none;
+    background-color: white;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    margin-bottom: 5px;
+  }
+  .copy_icon{
+    width: 4rem;
+    
+  }
+  .wadd button p{
+    font-size: 13px;
+  }
+  /* .wadd p{
+  
+  } */
+  .coin_cond{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .coin_cond a, .coin_cond button{
+    border: none;
+    height: 5vh;
+    width: 100%;
+    color: black;
+    border-radius: 6px;
+  }
+  .modal_body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2rem;
+    gap: 2rem;
+  }
+    
+
+  .link_container{
+    margin-top: 5rem;
+    display: flex;
+    gap: 6rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.link_container .box img{
+    z-index: 1;
+    width: 30%;
+}
+.link_container .box a{
+    z-index: 1;
+    color: black;
+    border-radius: 5px;
+    padding: 1px;
+    width: 30%;
+    font-size: 15px;
+    font-weight: 600;
+   text-align: center;
+    
+}
+
+
+
+.cardl {
+  width: 250px;
+  height: 200px;
+  background: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+
+.cardl h6 {
+  z-index: 1;
+  color: black;
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 7px;
+}
+
+.cardl::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+  height: 130%;
+  animation: rotBGimg 3s linear infinite;
+  transition: all 0.2s linear;
+}
+
+@keyframes rotBGimg {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cardl::after {
+  content: '';
+  position: absolute;
+  background: white;
+  ;
+  inset: 5px;
+  border-radius: 15px;
+  
+}  
+
+.wa_img{
+width: 5rem;
+}
+.wa_img img{
+  width: 100%;
+}
+.coin_cond{
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.topco_c{
+  color: dodgerblue;
+}
+.coin_cond button{
+  border: none;
+  height: 5vh;
+  width: 80%;
+  color: black;
+  border-radius: 3px;
+}
+
+.spinner {
+  margin-top: 2rem;
+  margin-left: 1rem;
+  top: 50%;
+  left: 50%;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+Hide main content initially
+#main-content {
+  display: none;
+}
+
+.switch {
+  display: none;
+}
+
+.switch.active {
+  display: block;
+}
+.switch p{
+  color: red;
+  text-align: left;
+}
+.switch a{
+  padding: 1px;
+  width: 5.5rem;
+  display: flex;
+  font-size: 13px;
+}
+
+.cardf .container{
+  background-color: white;
+  width: 90%;
+  border-radius: 10px;
+}
+.cardf .submit{
+  height: 2vh;
+  color: white;
+  width: 100%;
+  text-align: center;
+  border-radius: 1rem;
+} 
+.cardf .container input{
+ width: 100%;
+ height: 8vh;
+ margin-bottom: 1.6rem;
+ border-radius: 5px;
+ border: 1px solid gray;
+}
+.cardf .container input::placeholder{
+  padding-left: 1rem;
+}
+
+
+.section {
+  display: none;
+  margin-bottom: 20px;
+}
+
+.buttons button{
+  border: none;
+  background-color: transparent;
+}
+.cw{
+  margin-left: 10%;
+}
+.cw img{
+  width: 7rem;
+}
+.cw textarea{
+  width: 80%;
+  height: 30vh;
+  background-color: white;
+}
+.byci{
+  background-color: white;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 80%;
+}
+.byci img{
+  width: 80%;
+  margin-top: 10px;
+  
+}
+.bya{
+  color: white;
+}
+.bya button{
+  width: 90%;
+  border-radius: 5px;
+  margin-top: 1rem;
+  margin-bottom: 5px;
+}
+.byic_c, .byic_c .box{
+  background-color: white;
+}
+
+.bcoin_container{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+  padding: 1rem;
+
+}
+.bcoin_container .box{
+  text-align: left;
+  border-radius: 1rem;
+  color: white;
+  margin-bottom: 1rem;
+  
+   
+}
+@media (max-width:950px){
+  
+  .bcoin_container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 5px;
+  }
+  .bya button{
+    width: 90%;
+    border-radius: 5px;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+ }
+
+
+ .input-div {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #6e7ff3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+   animation: flicker 2s linear infinite;
+}
+
+.icon {
+  
+  font-size: 2rem;
+  cursor: pointer;
+  animation: iconflicker 2s linear infinite;
+}
+
+.input1 {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer !important;
+}
+
+
+
+.form2{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  width: 70%;
+  margin-left: 1rem;
+}
+.form2 input{
+  height: 10vh;
+  border-radius: 10px;
+}
+.form2 a{
+  color: white;
+  background-color: #3498db;
+  border-radius: 5px;
+  height: 5vh;
+  width: 50%;
+  
+}
+
+
+.form-popup {
+  display: none;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  width: 300px;
+  padding: 20px;
+  z-index: 9;
+}
+/* Style for the close button */
+.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}

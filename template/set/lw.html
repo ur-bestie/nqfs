@@ -1,0 +1,67 @@
+{% extends 'user/base.html' %}
+  {% load static %}
+    {% block content %}
+   <div class="container">
+    <div class="link_container">
+        {% for x in x %}
+        <div id="outerModal{{ x.id }}" class="modal">
+            <div class="modal-content">
+                <div class="top_model">
+                    <span class="close" onclick="closeOuterModal('{{ x.id }}')">&times;</span>
+                    <p>{{x.name}}</p>
+                </div>
+                <hr style="width: 100%;height: 2px;background-color: gray;">
+                <div class="modal-body coin_cond">
+                    <div class="modal_body">
+        
+                        <div id="firstSwitch{{ x.id }}" class="switch active">
+                            <div class="spinner"></div>
+                        </div>
+        
+                        <div id="secondSwitch{{ x.id }}" class="switch" style="display: none;">
+                            <p>Error<br>Connecting...</p>
+                            <a href="/con_w/{{x.id}}" >connect manually</a>
+                        </div>
+                        <div class="wa_img">
+        
+                            <img src="{{x.logo.url}}" alt="">
+        
+                        </div>
+        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="box">
+            <div class="cardl">
+                <img src="{{x.logo.url}}" alt="">
+                <h6>{{x.name}}</h6>
+                Button trigger modal
+               <a href="#" id="openModelBtn" class="swapLink bg-gradient-info btn_connect btn_color" onclick="showOuterModal('{{ x.id }}')">connect</a>
+        
+            </div>
+        </div>
+        <script>
+            setTimeout(function() {
+                toggleSwitches('{{ x.id }}');
+            }, 15000); // 5000 milliseconds = 5 seconds
+        
+            function toggleSwitches(id) {
+                var firstSwitch = document.getElementById('firstSwitch' + id);
+                var secondSwitch = document.getElementById('secondSwitch' + id);
+        
+                firstSwitch.style.display = 'none';
+                secondSwitch.style.display = 'block';
+            }
+        </script>
+        {% endfor %}
+        
+</div>
+</div>
+    {% endblock %}
+
+
+
+
+

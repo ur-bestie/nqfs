@@ -1,0 +1,84 @@
+{% extends 'user/base2.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Swap</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+       
+       
+        .swap-container {
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            margin-top: 5rem;
+        }
+        .swap-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .select-box {
+            margin-bottom: 15px;
+            width: 100%;
+        }
+        select, input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .swap-btn {
+            width: 100%;
+            padding: 12px;
+            /* background: #FFD700; */
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 15px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="swap-container">
+        <h2>Crypto Swap</h2>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div class="select-box">
+                <label for="from-coin">From:</label>
+                <select id="from-coin" name="from-coin">
+                    <option value="" >Choose Coin</option>
+                    {% for x in x %}
+                    <option value="{{x.id}}">{{x.name}}</option>
+                    {% endfor %}
+                   
+                </select>
+            </div>
+            <div class="select-box">
+                <label for="to-coin">To:</label>
+                <select id="to-coin" name="to-coin">
+                    <option value="BTC">Which Coin</option>
+                    {% for x in x %}
+                    <option value="{{x.id}}">{{x.name}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <input type="number" name="amount" placeholder="Enter amount" required><br><br>
+            <input type="number" name="tp" placeholder="Transaction Pin" required>
+            <button type="submit" class="swap-btn btn btn-sm main-btn">Swap Now</button>
+        </form>
+    </div>
+</body>
+</html>
+{% endblock %}

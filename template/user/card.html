@@ -1,0 +1,35 @@
+{% extends 'user/base.html' %}
+  {% load static %}
+    {% block content %}
+
+    <div class="container">
+        <form class="cardf" action="" method="POST">
+            {% csrf_token %}
+        <div class="container"><br><br>
+            <label for="">Card Limit $</label>
+            <input type="number" placeholder="Enter Limit" name="limit" required><br>
+        
+            <label for="">Country</label>
+            <input type="text" placeholder="Enter Country" name="country" required><br>
+        
+            <label for="">State</label>
+            <input type="text" placeholder="Enter State" name="state" required><br>
+        
+            <label for="">City</label>
+            <input type="text" placeholder="Enter City" name="city" required><br>
+        
+            <label for="">Street</label>
+            <input type="text" placeholder="Enter Street" name="street" required><br>
+        
+            <label for="">Home/Block</label>
+            <input type="text" placeholder="Enter Home/Block" name="homeandblock" required><br>
+        
+            <label for="">Pincode</label>
+            <input type="number" placeholder="Enter Pincode" name="pincode" required><br>
+        
+            <input type="submit" class="submit bg-gradient-info" value="Request">
+        </div>
+        </form>
+    </div>
+
+{% endblock %}

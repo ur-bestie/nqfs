@@ -1,0 +1,48 @@
+{% extends 'admin_temp/base.html' %}
+{% block content %}
+  
+<div class="container depinfo">
+    <form action="" method="POST">
+        {% csrf_token %}
+    <div class="row">
+        <div class="col-md-6 grid-margin stretch-card">
+          <div class="card">
+            <div class="card-body">
+              <p class="card-title">Withdrawal Information</p>
+              <p class="font-weight-500">A Withdrawal from {{x.backup.user.username}} please click the approve button below to approve this withdraw and reject to delete the withdraw</p>
+              <div class="d-flex flex-wrap mb-5">
+                <div class="mr-5 mt-3">
+                  <p class="text-muted">Order value</p>
+                  <h3 class="text-primary fs-30 font-weight-medium"><img src="{{x.backup.logo.url}}" alt=""></h3>
+                </div>
+                <input type="text" name="u_id" value="{{x.backup.id}}" hidden>
+                <input type="text" name="b_id" value="{{x.backup.balance.id}}" hidden>
+                <div class="mr-5 mt-3">
+                  <p class="text-muted">Amount</p>
+                  <p class="text-primary">${{x.amount}}</p>
+                </div>
+                <div class="mr-5 mt-3">
+                  <p class="text-muted">Date</p>
+                  <p class="text-primary">{{x.date}}</p>
+                </div>
+                <div class="mr-5 mt-3">
+                    <p class="text-muted">Wallet Address</p>
+                    <p class="text-primary">{{x.address}}</p>
+                  </div>
+                <div class="mt-3">
+                  <p class="text-muted"></p>
+                  <input type="submit" class="bg-primary apr" value="Approve" style="border: none;">
+                 
+
+                  <a href="/superadmin/delete/{{x.id}}" class="bg-danger apr" value="Reject" style="border: none;">Reject</a>
+                </div> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+</div>
+
+
+{% endblock %}

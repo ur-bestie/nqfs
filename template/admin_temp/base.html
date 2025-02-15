@@ -1,0 +1,442 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{{ss.sitename}}</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="{% static 'vendors/feather/feather.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/ti-icons/css/themify-icons.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/css/vendor.bundle.base.css' %}">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href="{% static 'vendors/datatables.net-bs4/dataTables.bootstrap4.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/ti-icons/css/themify-icons.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/style.css' %}">
+  <link rel="stylesheet" type="{% static 'text/css" href="js/select.dataTables.min.css' %}">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="{% static 'css/vertical-layout-light/style.css' %}">
+  <!-- endinject -->
+  <link rel="stylesheet" href="{% static 'custom.css' %}">
+</head>
+
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+       {% if ss.logo %}
+        <a class="navbar-brand brand-logo mr-5" href="/"><img src="{{ss.logo.url}}" class="mr-2" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href="/"><img src="{{ss.logo.url}}" alt="logo"/></a>
+      {% else %}
+      <a class="navbar-brand brand-logo mr-5" href="/"><img src="{% static 'user/logo.png' %}" class="mr-2" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href="/"><img src="{% static 'user/logo.png' %}" alt="logo"/></a>
+      {% endif %}
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+       
+        <ul class="navbar-nav navbar-nav-right">
+         
+          <li class="nav-item nav-profile dropdown">
+         
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="notify">{{total_unread}}
+              <img src="data:image/jpeg;base64,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" alt="profile">
+            </a>
+
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="notify">
+              <div class="container" style="display: flex;flex-direction: column;">
+                {% for n in n reversed %}
+
+              
+              {% if n.true %}
+              <p style="text-decoration: line-through;">{{n.notify}}</p>
+              {% else %}
+              <a href="/superadmin/read/{{n.id}}">{{n.notify}}</a>
+              {% endif %}
+              
+              {% endfor %}
+              </div>
+            </div>
+
+
+            <a class="nav-link dropdown-toggle" href="#">
+              <img src="{% static 'images/faces/face28.jpg' %}" alt="profile">
+            </a>
+           
+          </li>
+         
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_settings-panel.html -->
+      <div class="theme-setting-wrapper">
+        <div id="settings-trigger"><i class="ti-settings"></i></div>
+        <div id="theme-settings" class="settings-panel">
+          <i class="settings-close ti-close"></i>
+          <p class="settings-heading">SIDEBAR SKINS</p>
+          <div class="sidebar-bg-options selected" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border mr-3"></div>Light</div>
+          <div class="sidebar-bg-options" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark</div>
+          <p class="settings-heading mt-2">HEADER SKINS</p>
+          <div class="color-tiles mx-0 px-4">
+            <div class="tiles success"></div>
+            <div class="tiles warning"></div>
+            <div class="tiles danger"></div>
+            <div class="tiles info"></div>
+            <div class="tiles dark"></div>
+            <div class="tiles default"></div>
+          </div>
+        </div>
+      </div>
+      <div id="right-sidebar" class="settings-panel">
+        <i class="settings-close ti-close"></i>
+        <ul class="nav nav-tabs border-top" id="setting-panel" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="todo-tab" data-toggle="tab" href="#todo-section" role="tab" aria-controls="todo-section" aria-expanded="true">TO DO LIST</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="chats-tab" data-toggle="tab" href="#chats-section" role="tab" aria-controls="chats-section">CHATS</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="setting-content">
+          <div class="tab-pane fade show active scroll-wrapper" id="todo-section" role="tabpanel" aria-labelledby="todo-section">
+            <div class="add-items d-flex px-3 mb-0">
+              <form class="form w-100">
+                <div class="form-group d-flex">
+                  <input type="text" class="form-control todo-list-input" placeholder="Add To-do">
+                  <button type="submit" class="add btn btn-primary todo-list-add-btn" id="add-task">Add</button>
+                </div>
+              </form>
+            </div>
+            <div class="list-wrapper px-3">
+              <ul class="d-flex flex-column-reverse todo-list">
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Team review meeting at 3.00 PM
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Prepare for presentation
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Resolve all the low priority tickets due today
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li class="completed">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox" checked>
+                      Schedule meeting for next week
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li class="completed">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox" checked>
+                      Project review
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+              </ul>
+            </div>
+            <h4 class="px-3 text-muted mt-5 font-weight-light mb-0">Events</h4>
+            <div class="events pt-4 px-3">
+              <div class="wrapper d-flex mb-2">
+                <i class="ti-control-record text-primary mr-2"></i>
+                <span>Feb 11 2018</span>
+              </div>
+              <p class="mb-0 font-weight-thin text-gray">Creating component page build a js</p>
+              <p class="text-gray mb-0">The total number of sessions</p>
+            </div>
+            <div class="events pt-4 px-3">
+              <div class="wrapper d-flex mb-2">
+                <i class="ti-control-record text-primary mr-2"></i>
+                <span>Feb 7 2018</span>
+              </div>
+              <p class="mb-0 font-weight-thin text-gray">Meeting with Alisa</p>
+              <p class="text-gray mb-0 ">Call Sarah Graves</p>
+            </div>
+          </div>
+          <!-- To do section tab ends -->
+          <div class="tab-pane fade" id="chats-section" role="tabpanel" aria-labelledby="chats-section">
+            <div class="d-flex align-items-center justify-content-between border-bottom">
+              <p class="settings-heading border-top-0 mb-3 pl-3 pt-0 border-bottom-0 pb-0">Friends</p>
+              <small class="settings-heading border-top-0 mb-3 pt-0 border-bottom-0 pb-0 pr-3 font-weight-normal">See All</small>
+            </div>
+            <ul class="chat-list">
+              <li class="list active">
+                <div class="profile"><img src="{% static 'images/faces/face1.jpg" alt="image' %}"><span class="online"></span></div>
+                <div class="info">
+                  <p>Thomas Douglas</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">19 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="{% static 'images/faces/face2.jpg' %}" alt="image"><span class="offline"></span></div>
+                <div class="info">
+                  <div class="wrapper d-flex">
+                    <p>Catherine</p>
+                  </div>
+                  <p>Away</p>
+                </div>
+                <div class="badge badge-success badge-pill my-auto mx-2">4</div>
+                <small class="text-muted my-auto">23 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="{% static 'images/faces/face3.jpg" alt="image' %}"><span class="online"></span></div>
+                <div class="info">
+                  <p>Daniel Russell</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">14 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="{% static 'images/faces/face4.jpg" alt="image' %}"><span class="offline"></span></div>
+                <div class="info">
+                  <p>James Richardson</p>
+                  <p>Away</p>
+                </div>
+                <small class="text-muted my-auto">2 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="{% static 'images/faces/face5.jpg' %}" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Madeline Kennedy</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">5 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="{% static 'images/faces/face6.jpg' %}" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Sarah Graves</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">47 min</small>
+              </li>
+            </ul>
+          </div>
+          <!-- chat tab ends -->
+        </div>
+      </div>
+      <!-- partial -->
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/superadmin">
+              <i class="icon-grid menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/superadmin/alluser">
+              <i class="icon-grid menu-icon"></i>
+              <span class="menu-title">manage user</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/superadmin/userkyc">
+              <i class="icon-grid menu-icon"></i>
+              <span class="menu-title">User Kyc</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/superadmin/lw">
+              <i class="icon-paper menu-icon"></i>
+              <span class="menu-title">Linked wallets</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
+              <i class="icon-columns menu-icon"></i>
+              <span class="menu-title">Add/Subtract Funds</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="form-elements">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="/superadmin/addf">Coins</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/superadmin/addb">Backup</a></li>
+             </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <i class="icon-layout menu-icon"></i>
+              <span class="menu-title">Transaction</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="/superadmin/deposit">Deposit</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/superadmin/withdraw">Withdrawal</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/superadmin/backupt">Backup Deposit</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/superadmin/backupw">Backup Withdrawal</a></li>
+                </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/superadmin/add_nft">
+              <i class="icon-paper menu-icon"></i>
+              <span class="menu-title">Add NFT</span>
+            </a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#form-element" aria-expanded="false" aria-controls="form-elements">
+              <i class="icon-columns menu-icon"></i>
+              <span class="menu-title">Source Codes</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="form-element">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Html&Css </a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Django </a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Langing Pages </a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> python </a></li>
+              </ul>
+            </div>
+          </li>
+           -->
+          <li class="nav-item">
+            <a class="nav-link" href="/superadmin/setting">
+              <i class="icon-paper menu-icon"></i>
+              <span class="menu-title">Site settings</span>
+            </a>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basics" aria-expanded="false" aria-controls="ui-basic">
+              <i class="icon-layout menu-icon"></i>
+              <span class="menu-title">Card</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basics">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="/superadmin/cardhis">Card history</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/superadmin/cardmake">Card create</a></li>
+                </ul>
+            </div>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+              <i class="icon-head menu-icon"></i>
+              <span class="menu-title">User Pages</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="auth">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Login </a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Register </a></li>
+              </ul>
+            </div>
+         
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'logout' %}">
+              <i class="icon-grid menu-icon"></i>
+              <span class="menu-title">Logout</span>
+            </a>
+          </li>
+          
+        </ul>
+      </nav>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+         {% block content %}
+         
+         {% endblock content %}
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2021. {{ss.sitename}} . All rights reserved.</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">{{ss.sitename}}<i class="ti-heart text-danger ml-1"></i></span>
+          </div>
+          
+        </footer> 
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>   
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+
+  
+
+
+  <!-- plugins:js -->
+  <script src="{% static 'vendors/js/vendor.bundle.base.js' %}"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="{% static 'vendors/chart.js/Chart.min.js' %}"></script>
+  <script src="{% static 'vendors/datatables.net/jquery.dataTables.js' %}"></script>
+  <script src="{% static 'vendors/datatables.net-bs4/dataTables.bootstrap4.js' %}"></script>
+  <script src="{% static 'js/dataTables.select.min.js' %}"></script>
+
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="{% static 'js/off-canvas.js' %}"></script>
+  <script src="{% static 'js/hoverable-collapse.js' %}"></script>
+  <script src="{% static 'js/template.js' %}"></script>
+  <script src="{% static 'js/settings.js' %}"></script>
+  <script src="{% static 'js/todolist.js' %}"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="{% static 'js/dashboard.js' %}"></script>
+  <script src="{% static 'js/Chart.roundedBarCharts.js' %}"></script>
+  <script src="{% static 'assets/js/custom.js' %}"></script>
+  <!-- End custom js for this page-->
+
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script>
+      {% if messages %}
+      {% for message in messages %}
+      swal({
+    title: "{% if message.tags == "success" %}Good Job!{% elif message.tags == "error" %}Oops!{% else %}info!{% endif %}",
+    text: "{{message}}!",
+    icon: "{% if message.tags == "success" %}success{% elif message.tags == "error" %}error{% else %}info{% endif %}",
+    button: "ok",
+  });
+      {% endfor %}
+      {% endif %}
+    </script>
+
+ 
+</body>
+
+</html>
+

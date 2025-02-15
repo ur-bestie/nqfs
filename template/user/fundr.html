@@ -1,0 +1,26 @@
+{% extends 'user/base2.html' %}
+{% block content %}
+<style>
+    .myf{
+        display: flex;
+        flex-direction: column;
+    }
+    .myf input{
+        border-radius: 5px;
+    }
+</style>
+<br>
+<div class="row g-sm-4 g-3 justify-content-between">
+  <div class="card-header d-flex flex-wrap align-items-center justify-content-between">
+    <!-- <h5 class="mb-sm-0 mb-2"><a href="/mydano" class="btn-sm main-btn"> My Donations</a></h5> -->
+   
+</div>
+<div class="container">
+   {% include 'fundrpop.html' %}
+   <form class="myf" action="" method="POST" >
+    <input type="text" class="form-input" name="lamount" placeholder=" Lost amont" style="border: 1px solid goldenrod;color: black;"><br>
+    <textarea name="linfo" id="" cols="50" rows="10" placeholder=" Explain how it happens"style="border: 1px solid goldenrod;color: black;border-radius:5px;"></textarea>
+    <br><a href="/lw" class="btn-sm main-btn">Link your wallet</a>   
+</form>
+</div>
+{% endblock %}

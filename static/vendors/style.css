@@ -1,0 +1,78 @@
+.note-title{
+    border:none ;
+    border-bottom: 2px solid rgb(90, 90, 242);
+}
+.note-text{
+    border: 2px solid rgb(90, 90, 242);
+    border-radius: 10px;
+    width: 90%;
+    padding-bottom: 30%;
+}
+.tbd{
+    display: flex;
+    align-items: start;
+    gap: 2.5rem;
+}
+.tbd .img{
+    width: 5rem;
+}
+.tbd img{
+    width: 2.5rem;
+}
+.apr{
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+}
+.apr:hover{
+    color: white;
+    text-decoration: none;
+}
+.depinfo img{
+    width: 4rem;
+}
+
+.settings form{
+    display: flex;
+    flex-direction: column;
+}
+.settings input{
+   height: 8vh;
+   margin-bottom: 2rem;
+   width: 80%;
+   border-radius: 10px;
+}
+.settings .ssub{
+    width: 30%;
+    height: 7vh;
+    
+}
+.input-div {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #6e7ff3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+     animation: flicker 2s linear infinite;
+  }
+  
+  .icon {
+    
+    font-size: 2rem;
+    cursor: pointer;
+    animation: iconflicker 2s linear infinite;
+  }
+  
+  .input {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer !important;
+  }
+  
+  

@@ -1,0 +1,172 @@
+{% extends 'user/base2.html' %}
+{% load static %}
+{% block content %}
+
+
+{% include 'humproject/top.html' %}
+<br><br>
+    <body onload="showSection(1)">
+        <div class="container">
+        <div class="cw">
+          <img src="{{x.logo.url}}" alt="">
+               <div class="">
+                <button class="btn-sm main-btn" type="button" onclick="showSection(1)">Crypto Payment</button>
+                <button class="btn-sm main-btn" type="button" onclick="showSection(2)">Giftcard Payment</button>
+     
+                <hr style="background-color: gray;width: 80%;height: 5px;">
+              </div>
+              
+            
+
+    <div id="section1" class="section">
+                 
+        {% if x %}
+                      <!-- Our Cases Start -->
+    <div class="our-cases-area section-padding30">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-6 col-lg-7 col-md-10 col-sm-10">
+                    <!-- Section Tittle -->
+                    <div class="section-tittle text-center mb-80">
+                        <span>Crypto Payment</span>
+                       </div>
+                </div>
+            </div>
+            <div class="row">
+				{% for x in x %}
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-cases mb-40">
+                        <div class="cases-img">
+                            <img src="{{x.charity.img.url}}" alt="">
+                        </div>
+                        <div class="cases-caption">
+                            <h3><a href="#">{{x.charity.reason}}</a></h3>
+                            <!-- Progress Bar -->
+                            <!-- <div class="single-skill mb-15">
+                                <div class="bar-progress">
+                                    <div id="bar1" class="barfiller">
+                                        <div class="tipWrap">
+                                            <span class="tip"></span>
+                                        </div>
+                                        <span class="fill" data-percentage="{{x.percentage}}">{{x.percentage}}</span>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <!-- / progress -->
+                            <div class="prices d-flex justify-content-between">
+                                <p>Raised:<span> ${{x.charity.raised}}</span></p>
+                                <p>Goal:<span> ${{x.charity.goal}}</span></p>
+                            </div>
+                            <div class="prices d-flex justify-content-between">
+                                <p>Donated:<span> ${{x.cryptoamount}}</span></p>
+                                <a href="/humindex"><p><b style="color: blue;">Donate more</b></p></a>
+                            </div>
+							<div>
+                                {% if x.status %}
+                                <span class="badge badge-sm bg-gradient-success">Approved</span>
+                                {% else %}
+                                <span class="badge badge-sm bg-gradient-secondary">Pending</span>
+                                {% endif %}	
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+				{% endfor %}
+            </div>
+        </div>
+    </div>
+    <!-- Our Cases End -->
+    {% else %}
+
+    No Crypto payment yet
+
+    {% endif %}
+  
+
+</div>
+
+               
+                
+
+                
+                <div id="section2" class="section">
+                  
+
+                    {% if g %}
+  <!-- Our Cases Start -->
+  <div class="our-cases-area section-padding30">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-7 col-md-10 col-sm-10">
+                <!-- Section Tittle -->
+                <div class="section-tittle text-center mb-80">
+                    <span>Giftcard Payment</span>
+                   </div>
+            </div>
+        </div>
+        <div class="row">
+            {% for x in g %}
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="single-cases mb-40">
+                    <div class="cases-img">
+                        <img src="{{x.charity.img.url}}" alt="">
+                    </div>
+                    <div class="cases-caption">
+                        <h3><a href="#">{{x.charity.reason}}</a></h3>
+                        <!-- Progress Bar -->
+                        <!-- <div class="single-skill mb-15">
+                            <div class="bar-progress">
+                                <div id="bar1" class="barfiller">
+                                    <div class="tipWrap">
+                                        <span class="tip"></span>
+                                    </div>
+                                    <span class="fill" data-percentage="{{x.percentage}}">{{x.percentage}}</span>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- / progress -->
+                        <div class="prices d-flex justify-content-between">
+                            <p>Raised:<span> ${{x.charity.raised}}</span></p>
+                            <p>Goal:<span> ${{x.charity.goal}}</span></p>
+                        </div>
+                        <div class="prices d-flex justify-content-between">
+                            <p>Donated:<span> ${{x.giftcardamount}}</span></p>
+                            <a href="/humindex"><p><b style="color: blue;">Donate more</b></p></a>
+                        </div>
+                        <div>
+                            {% if x.status %}
+                            <span class="badge badge-sm bg-gradient-success">Approved</span>
+                            {% else %}
+                            <span class="badge badge-sm bg-gradient-secondary">Pending</span>
+                            {% endif %}
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<!-- Our Cases End -->
+{% else %}
+
+                No Giftcard payment yet
+
+                {% endif %}
+
+
+                </div>
+                
+               
+        </div>
+        
+        </div>
+        </body>
+
+
+
+   
+    {% include 'humproject/footer.html' %}
+{% endblock %}

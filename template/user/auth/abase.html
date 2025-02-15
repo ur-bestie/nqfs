@@ -1,0 +1,243 @@
+
+{% load static %}
+
+
+
+<link rel="stylesheet" href="https://quantumfinancialsecurityledger.com/assets/panel/css/styles.css">
+<link rel="manifest" href="__manifest.json">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+
+
+
+<style>
+input.btn.btn-primary.btn-block.btn-lg {
+background: #000000 !important;
+border: 1px solid;
+}
+input.form-control {
+background: white !important;
+}
+</style>
+
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#000000">
+<title>
+Auth | worldquantumledger	</title>
+<meta name="description" content="worldquantumledger">
+<meta name="keywords" content="worldquantumledger"/>
+<link rel="icon" type="image/png" href="upload/963logo (2).png" sizes="32x32">
+<link rel="apple-touch-icon" sizes="180x180" href="upload/963logo (2).png">
+<link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet">
+<link href="{% static 'assets/css/fontawesome.css' %}" rel="stylesheet">
+<link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+<link href="{% static 'assets/css/all.min.css' %}" rel="stylesheet">
+<link href="{% static 'a/css/style.css' %}" rel="stylesheet">
+
+<link rel="stylesheet" href="{% static 'assets/css/others.css' %}">
+<script src="assets/js/language.js"></script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2"></script>
+<style>
+html, body {margin: 0; height: 100%; overflow: hidden}
+
+.authbody {
+  overflow-y: hidden;
+  /* Hide vertical scrollbar */
+  overflow-x: hidden;
+  /* Hide horizontal scrollbar */
+  background-image: url('https://elements-resized.envatousercontent.com/elements-video-cover-images/f473fffd-dd15-484e-80d3-0e85c5cb6ef8/video_preview/video_preview_0000.jpg?w=500&cf_fit=cover&q=85&format=auto&s=bd507b47834b63ec6f277a48938e2bf095022a1043ad8a1a1dea6f457d28ca66');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0; 
+  height: 100%; 
+  overflow: hidden
+}
+.authbody::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    z-index: -1;
+}
+
+.cap {
+  position:fixed;bottom:10%;left:0;right:0;top:15%;width:480px;margin:0 auto
+}
+
+@media only screen and (max-width: 600px) {
+.cap {
+  position:fixed;bottom:10%;left:0;right:0;top:15%;width:100%;margin:0 auto
+}
+}
+
+
+</style>
+
+</head>
+
+<body class="authbody">
+
+<!-- App Header -->
+<div class="appHeader no-border transparent position-absolute">
+
+<div class="pageTitle"></div>
+<div class="right">
+  <div class="top-bar-item top-bar-item-full" id="id_100">
+        <select onchange="doGTranslate(this);" class="text-primary" style="width: 50px; border-radius: 20px;">
+          <option value="">EN</option>
+          <option value="en|af">Afrikaans</option>
+          <option value="en|sq">Albanian</option>
+          <option value="en|ar">Arabic</option>
+          <option value="en|hy">Armenian</option>
+          <option value="en|az">Azerbaijani</option>
+          <option value="en|eu">Basque</option>
+          <option value="en|be">Belarusian</option>
+          <option value="en|bg">Bulgarian</option>
+          <option value="en|ca">Catalan</option>
+          <option value="en|zh-CN">Chinese (Simplified)</option>
+          <option value="en|zh-TW">Chinese (Traditional)</option>
+          <option value="en|hr">Croatian</option>
+          <option value="en|cs">Czech</option>
+          <option value="en|da">Danish</option>
+          <option value="en|nl">Dutch</option>
+          <option value="en|en">English</option>
+          <option value="en|et">Estonian</option>
+          <option value="en|tl">Filipino</option>
+          <option value="en|fi">Finnish</option>
+          <option value="en|fr">French</option>
+          <option value="en|gl">Galician</option>
+          <option value="en|ka">Georgian</option>
+          <option value="en|de">German</option>
+          <option value="en|el">Greek</option>
+          <option value="en|ht">Haitian Creole</option>
+          <option value="en|iw">Hebrew</option>
+          <option value="en|hi">Hindi</option>
+          <option value="en|hu">Hungarian</option>
+          <option value="en|is">Icelandic</option>
+          <option value="en|id">Indonesian</option>
+          <option value="en|ga">Irish</option>
+          <option value="en|it">Italian</option>
+          <option value="en|ja">Japanese</option>
+          <option value="en|ko">Korean</option>
+          <option value="en|lv">Latvian</option>
+          <option value="en|lt">Lithuanian</option>
+          <option value="en|mk">Macedonian</option>
+          <option value="en|ms">Malay</option>
+          <option value="en|mt">Maltese</option>
+          <option value="en|no" >Norwegian</option>
+          <option value="en|fa">Persian</option>
+          <option value="en|pl">Polish</option>
+          <option value="en|pt">Portuguese</option>
+          <option value="en|ro">Romanian</option>
+          <option value="en|ru">Russian</option>
+          <option value="en|sr">Serbian</option>
+          <option value="en|sk">Slovak</option>
+          <option value="en|sl">Slovenian</option>
+          <option value="en|es">Spanish</option>
+          <option value="en|sw">Swahili</option>
+          <option value="en|sv">Swedish</option>
+          <option value="en|th">Thai</option>
+          <option value="en|tr">Turkish</option>
+          <option value="en|uk">Ukrainian</option>
+          <option value="en|ur">Urdu</option>
+          <option value="en|vi">Vietnamese</option>
+          <option value="en|cy">Welsh</option>
+          <option value="en|yi">Yiddish</option>
+        </select>
+        <div id="google_translate_element2"></div>
+      </div>		</div>
+</div>
+<!-- * App Header -->
+
+<!-- App Capsule -->
+<div id="appCapsule" class="cap">
+
+<div class="section mt-2 text-center">
+  <a href="/"><img src="{% static 'a/images/logo.png' %}" width="150px"/></a>
+</div>
+<div class="section mb-5 p-2">
+
+{% block content %}
+
+  <!-- <form method="post">
+    <div class="card">
+      <div class="card-body pb-1">
+        <div class="form-group basic">
+          <div class="input-wrapper">
+            <label class="label" for="email1">Email</label>
+            <input type="email" class="form-control" name="acct_email" required>
+          </div>
+        </div>
+
+        <div class="form-group basic">
+          <div class="input-wrapper">
+            <label class="label" for="password1">Password</label>
+            <input type="password" class="form-control" name="acct_password"  required>
+          </div>
+        </div>
+        <div class="form-group basic">
+          <div class="input-wrapper">
+            <a href="reset-password.php" class="text-primary">Forgot Password?</a> | <a href="register.php" class="text-primary">Register</a>
+          </div>
+        </div>
+        <input type="submit" class="btn btn-primary btn-block btn-lg" name="emaillogin" value="Sign In">
+      </div>
+    </div>
+
+  </form> -->
+
+{% endblock %}  
+
+</div>
+
+</div>
+<!-- DialogIconedDanger -->
+<button data-bs-toggle="modal" data-bs-target="#DialogIconedDanger" id="clickButton" style="display: none">click</button>
+<div class="modal fade dialogbox" id="DialogIconedDanger" data-bs-backdrop="static" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-icon text-danger">
+        <ion-icon name="close-circle"></ion-icon>
+      </div>
+      <div class="modal-header">
+        <h5 class="modal-title">Error</h5>
+      </div>
+      <div class="modal-body">
+        Invalid Login Details. If you have forgotten your password, please send a mail to
+        <a href="mailto:support@quantumfinancialsecurityledger.com" class="text-primary">
+          ssupport@quantumfinancialsecurityledger.com						</a>
+      </div>
+      <div class="modal-footer">
+        <div class="btn-inline">
+          <a href="#" class="btn" data-bs-dismiss="modal">CLOSE</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- * DialogIconedDanger -->
+<!-- * App Capsule -->
+<!-- Bootstrap -->
+<script src="assets/js/lib/bootstrap.bundle.min.js"></script>
+<!-- Splide -->
+<script src="assets/js/plugins/splide/splide.min.js"></script>
+<!-- Base Js File -->
+<script src="assets/js/fontawesome.min.js"></script>
+<script src="assets/js/all.min.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+</body>
+
+</html>

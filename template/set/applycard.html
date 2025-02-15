@@ -1,0 +1,884 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="csrf-token" content="jA0iVqT8JIBdkMpn0xhuxcD7niZjH2RKQFLGg8QX">
+    <link rel="shortcut icon" type="image/png" href="images/icons/icon.png">
+    <title>
+        Apply For Card    </title>
+
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/boxicons.min.css" rel="stylesheet">
+    <link href="css/glightbox.min.css" rel="stylesheet">
+    <link href="css/remixicon.css" rel="stylesheet">
+    <link href="css/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/selectric.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/iziToast.min.css">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+
+    <!-- sweet alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.12/dist/sweetalert2.all.min.js" integrity="sha256-2Dbg51yxfa7qZ8CSKqsNxHtph8UHdgbzxXF9ANtyJHo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.12/dist/sweetalert2.min.css" integrity="sha256-7jUS+MWeqkFdmW9ozkZ7mPagz+QmMbsBlt+Q3MsE+FU=" crossorigin="anonymous">
+
+
+    <style>
+        @media (max-width: 991px) {
+            #header.header-inner-pages {
+                display: block;
+                background: transparent !important;
+                position: absolute;
+            }
+
+            .dashboard-body-part {
+                padding-top: 80px;
+                position: relative;
+                z-index: 1;
+            }
+
+            .dashboard-body-part::before {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 160px;
+                background: linear-gradient(to top, #2f5b88, #153352);
+                z-index: -1;
+            }
+        }
+
+        .sp-referral .single-child {
+            padding: 6px 10px;
+            border-radius: 5px;
+        }
+
+        .sp-referral .single-child+.single-child {
+            margin-top: 15px;
+        }
+
+        .sp-referral .single-child p {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0;
+        }
+
+        .sp-referral .single-child p img {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            object-fit: cover;
+            -o-object-fit: cover;
+        }
+
+        .sp-referral .single-child p span {
+            width: calc(100% - 35px);
+            font-size: 14px;
+            padding-left: 10px;
+        }
+
+        .sp-referral>.single-child.root-child>p img {
+            border: 2px solid #c3c3c3;
+        }
+
+        .sub-child-list {
+            position: relative;
+            padding-left: 35px;
+        }
+
+        .sub-child-list::before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 17px;
+            width: 1px;
+            height: 100%;
+            background-color: #a1a1a1;
+        }
+
+        .sub-child-list>.single-child {
+            position: relative;
+        }
+
+        .sub-child-list>.single-child::before {
+            position: absolute;
+            content: '';
+            left: -18px;
+            top: 21px;
+            width: 30px;
+            height: 5px;
+            border-left: 1px solid #a1a1a1;
+            border-bottom: 1px solid #a1a1a1;
+            border-radius: 0 0 0 5px;
+        }
+
+        .sub-child-list>.single-child>p img {
+            border: 2px solid #c3c3c3;
+        }
+    </style>
+<!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+var _smartsupp = _smartsupp || {};
+_smartsupp.key = 'fef8c00a48acba26f16c2853274d48d987e719e1';
+window.smartsupp||(function(d) {
+  var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+  s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+  c.type='text/javascript';c.charset='utf-8';c.async=true;
+  c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+})(document);
+</script>
+<noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
+</head>
+
+<body>
+    <div id="preloader"></div>
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top header-inner-pages">
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+            <div class="d-flex flex-wrap align-items-center">
+                <div class="logo me-auto me-lg-0 ">
+                    <a href="dashboard.php">
+                        <img class="img-fluid rounded sm-device-img text-align" src="images/icons/whitelogo.png" width="100%" alt="pp">
+                    </a>
+                </div>
+            </div>
+            <div class="header-right d-flex">
+
+
+                <div class="dropdown ms-3">
+                    <button class="dropdown-toggle user-toggle-menu" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="images/user.png" alt="pp">
+                        <span class="ms-2">Promise Chukwu</span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="2fa.php">2fa</a></li>
+                        <li><a class="dropdown-item" href="profile_settings.php">Settings</a></li>
+                        <li><a class="dropdown-item" href="includes/logout.php">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header><!-- End Header -->
+
+    <main id="main" class="dashboard-main">
+        <section class="dashboard-section">
+
+            <div class="d-sidebar">
+                <ul class="d-sidebar-menu">
+                    <li class="">
+                        <a href="dashboard.php"><i data-feather="home"></i> Dashboard</a>
+                    </li>
+                    <li class="">
+                        <a href="backup.php"><i data-feather="repeat"></i> Link Assets</a>
+                    </li>
+                    <li class="">
+                        <a href="backup_crypto.php" style="display: inline-flex; align-items: center;"><i style=" margin-right: 7px;" class="material-icons">&#xe5d5;</i><span> Backup With Crypto</span></a>
+                    </li>
+                    <li class="">
+                        <a href="withdraw1.php"><i data-feather="credit-card"></i> Withdarw</a>
+                    </li>
+
+                    <!-- <li class="has_submenu ">
+                        <a href="#0"><i data-feather="zap"></i> Investment</a>
+                        <ul class="submenu">
+                            <li class="">
+                                <a href=""><i data-feather="chevrons-right"></i></i> Investment plans</a>
+                            </li>
+                            <li class="">
+                                <a href=""><i data-feather="chevrons-right"></i> Invest log</a>
+                            </li>
+                        </ul>
+                    </li> -->
+                    <!-- 
+                    <li class="has_submenu ">
+                        <a href="#0"><i data-feather="briefcase"></i> Deposit</a>
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="dashboard.php"><i data-feather="chevrons-right"></i> Backup Wi</a>
+                            </li>
+                            <li class="">
+                                <a href=""><i data-feather="chevrons-right"></i> Deposit log</a>
+                            </li>
+                        </ul>
+                    </li> -->
+
+                    <!-- <li class="has_submenu ">
+                        <a href="#0"><i data-feather="credit-card"></i> Withdraw</a>
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="dashboard.php"><i data-feather="chevrons-right"></i> Withdraw</a>
+                            </li>
+                            <li class="">
+                                <a href=""><i data-feather="chevrons-right"></i> Withdraw log</a>
+                            </li>
+                        </ul>
+                    </li> -->
+
+                    <li class="">
+                        <a href="buy_coin.php"><i class="fas fa-hand-holding-usd"></i> Buy Coin</a>
+                    </li>
+                    <li class="active">
+                        <a href="apply_card.php"><i class="fa fa-credit-card" aria-hidden="true"></i>
+                            Cards</a>
+                    </li>
+
+
+                    <!-- <li class="">
+                        <a href="">
+                            <i data-feather="file-text"></i>
+                            Money transfer log
+                        </a>
+                    </li> -->
+
+
+                    <!-- <li class="">
+                        <a href=""><i data-feather="file-text"></i> Interest log</a>
+                    </li> -->
+
+                    <!-- <li class="">
+                        <a href=""><i data-feather="file-text"></i> Refferal log</a>
+                    </li> -->
+
+                    <li class="">
+                        <a href="2fa.php"><i data-feather="shield"></i> 2fa</a>
+                    </li>
+                    <li class="">
+                        <a href=""><i data-feather="life-buoy"></i> Support</a>
+                    </li>
+                    <li>
+                        <a href="includes/logout.php"><i data-feather="log-out"></i> Logout</a>
+                    </li>
+                </ul>
+                <div class="d-plan-notice mt-4 mx-3">
+                    <p class="mb-0">Your current plan
+                        -N/A</p>
+                    <a href="">Update plan <i class="fas fa-arrow-up"></i></a>
+                </div>
+            </div>
+
+
+
+
+            <!-- mobile bottom menu start -->
+            <div class="mobile-bottom-menu-wrapper">
+                <ul class="mobile-bottom-menu">
+                    <li>
+                        <a href="backup_crypto.php" class="">
+                            <i style=" margin-right: 7px;" class="material-icons">&#xe5d5;</i><span>
+                                <span>Backup Crypto</span>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="apply_card.php" class="active">
+                           <i class="fa fa-credit-card" aria-hidden="true"></i>
+                            <span>Cards</span>
+                        </a>
+                    </li> -->
+                    <li>
+                        <a href="backup.php" class="">
+                           <i class="fa fa-link" aria-hidden="true"></i>
+                            <span>Link Assets</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="dashboard.php" class="">
+                            <i class="bi bi-house-door"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="withdraw1.php" class="">
+                            <i class="bi bi-cash-coin"></i>
+                            <span>Withdraw</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="buy_coin.php" class="">
+                            <i class="fas fa-hand-holding-usd"></i>
+                            <span>Buy Coin</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+           
+            <style>
+                #tidio-chat-iframe {
+                    inset: auto -7px 98px auto !important;
+                }
+            </style>
+
+
+<div class="dashboard-body-part">
+    <div class="mobile-page-header">
+        <h5 class="title">My Credit Card</h5>
+        <a href="dashboard.php" class="back-btn"><i class="bi bi-arrow-left"></i> Back</a>
+    </div>
+
+    <!-- <div class="d-flex flex-wrap justify-content-between mb-3">
+        <h5>Profile setting</h5>
+        <a href="password.php" class="cmn-btn mb-2 text-dark"><i class="bi bi-shield-lock"></i> Change password</a>
+    </div> -->
+    <div class="site-card">
+        <div class="card-body">
+            <form action="#" method="POST" enctype="multipart/form-data">
+                <div class="col-md-12">
+                    <div class="update">
+                        <div class="mb-3">
+                            <label>Card Limit $</label>
+                            <input type="number" class="form-control" name="card_limit" value="" placeholder="Enter Limit">
+                        </div>
+                        <!-- <div class="mb-3">
+                                    <label>Last name</label>
+                                    <input type="text" class="form-control" name="lname" value="Prince" placeholder="Enter last name">
+                                </div> -->
+
+
+                        <div class="mb-">
+                            <label>Country</label>
+
+
+                                                        <select name="country" id="country" class="form-control" required="required">
+                                <option value="">Select Country</option>
+                                <br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Afghanistan' >Afghanistan</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Albania' >Albania</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Algeria' >Algeria</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Andorra' >Andorra</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Angola' >Angola</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Antigua and Barbuda' >Antigua and Barbuda</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Argentina' >Argentina</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Armenia' >Armenia</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Australia' >Australia</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Austria' >Austria</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Azerbaijan' >Azerbaijan</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Bahamas' >Bahamas</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Bahrain' >Bahrain</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Bangladesh' >Bangladesh</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Barbados' >Barbados</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Belarus' >Belarus</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Belgium' >Belgium</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Belize' >Belize</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Benin' >Benin</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Bhutan' >Bhutan</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Bolivia' >Bolivia</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Bosnia and Herzegovina' >Bosnia and Herzegovina</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Botswana' >Botswana</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Brazil' >Brazil</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Brunei' >Brunei</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Bulgaria' >Bulgaria</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Burkina Faso' >Burkina Faso</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Burundi' >Burundi</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Cabo Verde' >Cabo Verde</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Cambodia' >Cambodia</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Cameroon' >Cameroon</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Canada' >Canada</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Central African Republic' >Central African Republic</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Chad' >Chad</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Chile' >Chile</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='China' >China</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Colombia' >Colombia</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Comoros' >Comoros</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Congo (Congo-Brazzaville)' >Congo (Congo-Brazzaville)</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Costa Rica' >Costa Rica</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Croatia' >Croatia</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Cuba' >Cuba</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Cyprus' >Cyprus</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Czechia (Czech Republic)' >Czechia (Czech Republic)</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Democratic Republic of the Congo (Congo-Kinshasa)' >Democratic Republic of the Congo (Congo-Kinshasa)</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Denmark' >Denmark</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Djibouti' >Djibouti</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Dominica' >Dominica</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Dominican Republic' >Dominican Republic</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Ecuador' >Ecuador</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Egypt' >Egypt</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='El Salvador' >El Salvador</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Equatorial Guinea' >Equatorial Guinea</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Eritrea' >Eritrea</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Estonia' >Estonia</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Eswatini (fmr. 'Swaziland')' >Eswatini (fmr. 'Swaziland')</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Ethiopia' >Ethiopia</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Fiji' >Fiji</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Finland' >Finland</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='France' >France</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Gabon' >Gabon</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Gambia' >Gambia</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Georgia' >Georgia</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Germany' >Germany</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Ghana' >Ghana</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Greece' >Greece</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Grenada' >Grenada</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Guatemala' >Guatemala</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Guinea' >Guinea</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Guinea-Bissau' >Guinea-Bissau</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Guyana' >Guyana</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Haiti' >Haiti</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Holy See' >Holy See</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Honduras' >Honduras</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Hungary' >Hungary</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Iceland' >Iceland</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='India' >India</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Indonesia' >Indonesia</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Iran' >Iran</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Iraq' >Iraq</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Ireland' >Ireland</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Israel' >Israel</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Italy' >Italy</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Jamaica' >Jamaica</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Japan' >Japan</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Jordan' >Jordan</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Kazakhstan' >Kazakhstan</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Kenya' >Kenya</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Kiribati' >Kiribati</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Korea, North' >Korea, North</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Korea, South' >Korea, South</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Kosovo' >Kosovo</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Kuwait' >Kuwait</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Kyrgyzstan' >Kyrgyzstan</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Laos' >Laos</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Latvia' >Latvia</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Lebanon' >Lebanon</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Lesotho' >Lesotho</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Liberia' >Liberia</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Libya' >Libya</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Liechtenstein' >Liechtenstein</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Lithuania' >Lithuania</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Luxembourg' >Luxembourg</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Madagascar' >Madagascar</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Malawi' >Malawi</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Malaysia' >Malaysia</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Maldives' >Maldives</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Mali' >Mali</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Malta' >Malta</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Marshall Islands' >Marshall Islands</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Mauritania' >Mauritania</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Mauritius' >Mauritius</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Mexico' >Mexico</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Micronesia' >Micronesia</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Moldova' >Moldova</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Monaco' >Monaco</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Mongolia' >Mongolia</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Montenegro' >Montenegro</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Morocco' >Morocco</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Mozambique' >Mozambique</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Myanmar (formerly Burma)' >Myanmar (formerly Burma)</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Namibia' >Namibia</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Nauru' >Nauru</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Nepal' >Nepal</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Netherlands' >Netherlands</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='New Zealand' >New Zealand</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Nicaragua' >Nicaragua</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Niger' >Niger</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Nigeria' >Nigeria</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='North Macedonia' >North Macedonia</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Norway' >Norway</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Oman' >Oman</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Pakistan' >Pakistan</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Palau' >Palau</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Palestine State' >Palestine State</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Panama' >Panama</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Papua New Guinea' >Papua New Guinea</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Paraguay' >Paraguay</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Peru' >Peru</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Philippines' >Philippines</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Poland' >Poland</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Portugal' >Portugal</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Qatar' >Qatar</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Romania' >Romania</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Russia' >Russia</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Rwanda' >Rwanda</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Saint Kitts and Nevis' >Saint Kitts and Nevis</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Saint Lucia' >Saint Lucia</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Saint Vincent and the Grenadines' >Saint Vincent and the Grenadines</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Samoa' >Samoa</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='San Marino' >San Marino</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Sao Tome and Principe' >Sao Tome and Principe</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Saudi Arabia' >Saudi Arabia</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Senegal' >Senegal</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Serbia' >Serbia</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Seychelles' >Seychelles</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Sierra Leone' >Sierra Leone</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Singapore' >Singapore</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Slovakia' >Slovakia</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Slovenia' >Slovenia</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Solomon Islands' >Solomon Islands</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Somalia' >Somalia</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='South Africa' >South Africa</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='South Sudan' >South Sudan</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Spain' >Spain</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Sri Lanka' >Sri Lanka</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Sudan' >Sudan</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Suriname' >Suriname</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Sweden' >Sweden</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Switzerland' >Switzerland</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Syria' >Syria</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Tajikistan' >Tajikistan</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Tanzania' >Tanzania</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Thailand' >Thailand</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Timor-Leste' >Timor-Leste</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Togo' >Togo</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Tonga' >Tonga</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Trinidad and Tobago' >Trinidad and Tobago</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Tunisia' >Tunisia</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Turkey' >Turkey</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Turkmenistan' >Turkmenistan</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Tuvalu' >Tuvalu</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Uganda' >Uganda</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Ukraine' >Ukraine</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='United Arab Emirates' >United Arab Emirates</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='United Kingdom' >United Kingdom</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='United States of America' >United States of America</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Uruguay' >Uruguay</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Uzbekistan' >Uzbekistan</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Vanuatu' >Vanuatu</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Venezuela' >Venezuela</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Vietnam' >Vietnam</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Yemen' >Yemen</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Zambia' >Zambia</option><br />
+<b>Warning</b>:  Undefined variable $selected in <b>/home/qfsblock/qfsblockchain.org/apply_card.php</b> on line <b>69</b><br />
+<option value='Zimbabwe' >Zimbabwe</option>
+                            </select>
+
+
+
+
+                        </div>
+
+
+
+
+                        <div class="mb-3">
+                            <label>States</label>
+                            <input type="text" class="form-control" name="state" placeholder="Enter user State">
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label>City</label>
+                        <input type="text" class="form-control" name="city" value="" placeholder="Enter City">
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Street</label>
+                        <input type="text" class="form-control" name="street" value="" placeholder="Enter Street">
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Home/Block</label>
+                        <input type="text" class="form-control" name="homeblock" value="" placeholder="Enter Home/Block">
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Pincode</label>
+                        <input type="text" class="form-control" name="pincode" value="" placeholder="Enter Pincode">
+                    </div>
+
+
+
+                    <!-- 
+                            <div class="row">
+
+                                <div class="form-group col-md-6 mb-3 ">
+                                    <label>Country</label>
+                                    <input type="text" name="country" class="form-control" value="">
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+
+                                    <label>City</label>
+                                    <input type="text" name="city" class="form-control form_control" value="">
+
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+
+                                    <label>Zip</label>
+                                    <input type="text" name="zip" class="form-control form_control" value="">
+
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+
+                                    <label>State</label>
+                                    <input type="text" name="state" class="form-control form_control" value="">
+
+                                </div>
+
+                            </div> -->
+
+                    <button class="btn main-btn mt-3 w-100" name="request">REQUEST</button>
+
+
+                </div>
+
+                
+        </div>
+        </form>
+    </div>
+</div>
+</div>
+</section>
+</main>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/purecounter.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<!-- <script src="js/slick.min.js"></script> -->
+<script src="js/feather.min.js"></script>
+
+<script src="js/glightbox.min.js"></script>
+<script src="js/validate.js"></script>
+<script src="js/selectric.min.js"></script>
+<script src="js/iziToast.min.js"></script>
+<script src="js/jquery.uploadPreview.min.js"></script>
+<script src="js/user_dashboard.js"></script>
+
+
+
+
+
+
+<script>
+    'use strict'
+    var url = "index.php/changeLang";
+
+    $(".changeLang").change(function() {
+        if ($(this).val() == '') {
+            return false;
+        }
+        window.location.href = url + "?lang=" + $(this).val();
+    });
+
+    feather.replace();
+
+    // responsive menu slideing
+    $(".d-sidebar-menu>li>a").on("click", function() {
+        var element = $(this).parent("li");
+        if (element.hasClass("open")) {
+            element.removeClass("open");
+            element.find("li").removeClass("open");
+            element.find("ul").slideUp(500, "linear");
+        } else {
+            element.addClass("open");
+            element.children("ul").slideDown();
+            element.siblings("li").children("ul").slideUp();
+            element.siblings("li").removeClass("open");
+            element.siblings("li").find("li").removeClass("open");
+            element.siblings("li").find("ul").slideUp();
+        }
+    });
+
+    $('.sidebar-open-btn').on('click', function() {
+        $(this).toggleClass('active');
+        $('.d-sidebar').toggleClass('active');
+    });
+</script>
+</body>
+
+</html>

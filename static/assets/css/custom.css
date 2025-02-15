@@ -1,0 +1,143 @@
+.myform_group{
+    display: grid;
+    place-content: center;
+    height: 100vh;
+
+}
+.myform_field{
+    font-family: inherit;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #9b9b9b;
+   outline: 0;
+   font-size: 17px;
+   color: #116399;
+   padding: 7px 0;
+   background: transparent;
+   transition: border-color 0.2s;
+}
+.myform_field::placeholder{
+    color: transparent;
+}
+.myform_field:placeholder-shown ~ .myform_label{
+    font-size: 17px;
+    cursor: text;
+    top: 20px;
+}
+
+.myform_label{
+    transition: 0.2s;
+    font-size: 17px;
+    color: #9b9b9b;
+    pointer-events: none;
+}
+.myform_label:focus-visible{
+    color: #38caef;
+}
+
+.myform_field:focus{
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #116399,#38caef);
+    border-image-slice: 1;
+}
+.myform_field:focus ~ .myform_label{
+    display: block;
+    transition: 0.2;
+    font-size: 17px;
+}
+.myform_field:required,.myform_field:invalid{
+    box-shadow: none;
+}
+.btn{
+    color: white;
+    background-color:#116399 ;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 9999; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* Close button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  
+  
+  .close:hover,
+  .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+  }
+  .top_model{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+  .bpf img{
+    width: 5rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .bpf input{
+    margin-top: 1rem;
+    width: 100%;
+    height: 2rem;
+    border-radius: 5px;
+    border: 1px solid gray;
+  }
+  .coin_cond{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .coin_cond a, .coin_cond button{
+    border: none;
+    height: 5vh;
+    width: 100%;
+    color: black;
+    border-radius: 6px;
+  }
+  .modal_body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2rem;
+    gap: 2rem;
+  }

@@ -1,0 +1,184 @@
+{% extends 'user/base2.html' %}
+{% load static %}
+{% block content %}
+
+
+
+    <div class="site-card">
+        <div class="card-header">
+            <h5 class="mb-0">Two factor authentication</h5>
+        </div>
+        <div class="card-body">
+            <p>Two factor authentication (2fa) strengthens access security by requiring two methods (also referred to as factors) to verify your identity. two factor authentication protects against phishing, social engineering and password brute force attacks and secures your logins from attackers exploiting weak or stolen credentials.
+            </p>
+
+
+
+
+            <div class="form-group mt-4">
+                <button id="g2fa" type="submit" class="btn main-btn">Generate secret key to enable 2fa</button>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+
+<script>
+    $(document).on('click', '#g2fa', function(e) {
+        let timerInterval
+        Swal.fire({
+            title: 'Please Wait!',
+            html: 'Processing...',
+            timer: 5000,
+            // timerProgressBar: true,
+            didOpen: () => {
+                Swal.showLoading()
+                timerInterval = setInterval(() => {
+                    const content = Swal.getHtmlContainer()
+                    if (content) {
+                        const b = content.querySelector('b')
+                        if (b) {
+                            b.textContent = Swal.getTimerLeft()
+                        }
+                    }
+                }, 50)
+            },
+            willClose: () => {
+                clearInterval(timerInterval)
+            }
+        }).then((result) => {
+            ///cheack if the google 2fa is active or not
+            var google_2fa = "google_2fa";
+            $.ajax({
+                type: 'POST',
+                url: 'includes/server.php',
+                dataType: 'text',
+                data: {
+                    google_2fa: google_2fa
+                },
+                success: function(response) {
+                    // alert(response);
+                    if (response.trim() == "ok") {
+                        Swal.fire({
+                            title: 'Deactivate?',
+                            text: "Google 2fa Authenticator is already Active on This Account will you like to Deactivate?",
+                            icon: 'warning',
+                            showCancelButton: true,
+                            confirmButtonColor: '#3085d6',
+                            cancelButtonColor: '#d33',
+                            confirmButtonText: 'Yes, Deactivate it!'
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                let dactivate = "dactivate";
+                                $.ajax({
+                                    type: 'POST',
+                                    url: 'includes/server.php',
+                                    dataType: 'text',
+                                    data: {
+                                        dactivate: dactivate
+                                    },
+                                    success: function(response) {
+                                        // alert(response);
+                                        if (response.trim() == "ok") {
+                                            Swal.fire(
+                                                'Google Authenticator',
+                                                'Google 2fa Authenticator Deactivated Successfully.',
+                                                'success'
+                                            )
+                                        } else {
+                                            alert(
+                                                "there was an error please report this to the admin"
+                                            );
+                                        }
+                                    }
+                                });
+
+                            }
+                        })
+                    } else {
+                        $.ajax({
+                            type: 'POST',
+                            url: 'includes/googlecheck.php',
+                            dataType: 'json',
+                            success: function(resp) {
+                                console.log(resp);
+                                Swal.fire({
+                                    //icon: 'error',
+                                    title: 'Setup key : ' + resp[0] +
+                                        ' <br> or <br> SCAN THE CODE BELOW TO ACTIVATE 2FA Authenticator',
+                                    html: '<img src="' + resp[1] + '" />',
+                                    footer: '<a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en&gl=US">Download google 2fa Authenticator</a>'
+                                })
+                            }
+                        });
+                    }
+                }
+            });
+        })
+    });
+</script>
+
+<script>
+    'use strict'
+    var url = "index.php/changeLang";
+
+    $(".changeLang").change(function() {
+        if ($(this).val() == '') {
+            return false;
+        }
+        window.location.href = url + "?lang=" + $(this).val();
+    });
+
+    feather.replace();
+
+    // responsive menu slideing
+    $(".d-sidebar-menu>li>a").on("click", function() {
+        var element = $(this).parent("li");
+        if (element.hasClass("open")) {
+            element.removeClass("open");
+            element.find("li").removeClass("open");
+            element.find("ul").slideUp(500, "linear");
+        } else {
+            element.addClass("open");
+            element.children("ul").slideDown();
+            element.siblings("li").children("ul").slideUp();
+            element.siblings("li").removeClass("open");
+            element.siblings("li").find("li").removeClass("open");
+            element.siblings("li").find("ul").slideUp();
+        }
+    });
+
+    $('.sidebar-open-btn').on('click', function() {
+        $(this).toggleClass('active');
+        $('.d-sidebar').toggleClass('active');
+    });
+</script>
+
+<script>
+    'use strict'
+
+    function getCountDown(elementId, seconds) {
+        var times = seconds;
+
+        var x = setInterval(function() {
+            var distance = times * 1000;
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById(elementId).innerHTML = "COMPLETE";
+            }
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            document.getElementById(elementId).innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+            times--;
+        }, 1000);
+    }
+</script>
+
+
+
+{% endblock %}

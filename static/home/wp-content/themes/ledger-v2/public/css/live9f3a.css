@@ -1,0 +1,1780 @@
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.fadeIn {
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-name: fadeIn
+}
+
+@keyframes fadeOutDown {
+    0% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+    to {
+        opacity: 0;
+        transform: translateY(20px)
+    }
+}
+
+.fadeOutDown {
+    animation-duration: 6s;
+    animation-fill-mode: backwards;
+    animation-name: fadeOutDown
+}
+
+.animate-chevron-down .item {
+    animation-delay: .12s;
+    animation-duration: 2.2s;
+    animation-iteration-count: infinite;
+    display: block
+}
+
+.animate-chevron-down .item.fal {
+    font-size: 14px
+}
+
+.animate-chevron-down .item:nth-child(2) {
+    animation-delay: .28s
+}
+
+.animate-chevron-down .item:last-child {
+    animation-delay: .38s
+}
+
+.page-template-page-ledger-live-download #header.dark-header:not(.out-of-top) {
+    background-color: #000
+}
+
+.form-bloc form .outline,
+form input {
+    background: transparent !important
+}
+
+@media screen and (max-width:690px) {
+    .page-template-page-ledger-live #header {
+        margin-bottom: 0
+    }
+}
+
+.page-template-page-ledger-live .introduction {
+    padding: 0 !important
+}
+
+.page-template-page-ledger-live .introduction>.flexbox {
+    align-items: stretch
+}
+
+@media screen and (max-width:1510px) {
+    .page-template-page-ledger-live .introduction>.flexbox {
+        margin: auto
+    }
+}
+
+@media screen and (max-width:992px) {
+    .page-template-page-ledger-live .introduction>.flexbox {
+        flex-direction: column
+    }
+}
+
+.page-template-page-ledger-live .introduction>.flexbox .content {
+    padding-bottom: 80px;
+    padding-top: 80px;
+    text-align: center
+}
+
+@media screen and (max-width:860px) {
+    .page-template-page-ledger-live .introduction>.flexbox .content {
+        padding-bottom: 20px;
+        padding-top: 40px;
+        text-align: left
+    }
+}
+
+@media screen and (max-width:992px) {
+    .page-template-page-ledger-live .introduction>.flexbox .content .title {
+        font-size: 3.8rem
+    }
+}
+
+.page-template-page-ledger-live .introduction>.flexbox .illustration {
+    min-width: 55%;
+    overflow: hidden;
+    position: relative
+}
+
+@media screen and (max-width:992px) {
+    .page-template-page-ledger-live .introduction>.flexbox .illustration {
+        background-color: #ff5300
+    }
+}
+
+.page-template-page-ledger-live .introduction>.flexbox .illustration iframe,
+.page-template-page-ledger-live .introduction>.flexbox .illustration video {
+    display: block;
+    height: 100%;
+    margin: auto;
+    min-height: 100%
+}
+
+@media screen and (max-width:992px) {
+    .page-template-page-ledger-live .introduction>.flexbox .illustration iframe,
+    .page-template-page-ledger-live .introduction>.flexbox .illustration video {
+        height: 35vh;
+        width: 100%
+    }
+}
+
+.page-template-page-ledger-live .qr-code {
+    font-size: 1.1rem;
+    margin: 0 0 0 1vw !important;
+    position: relative
+}
+
+.page-template-page-ledger-live .qr-code img {
+    padding: 7px
+}
+
+.page-template-page-ledger-live .qr-code span {
+    padding-top: 5px;
+    text-align: center
+}
+
+.page-template-page-ledger-live .scroll-fixed-zone {
+    height: 715px;
+    overflow: hidden;
+    position: relative
+}
+
+@media screen and (max-width:992px) {
+    .page-template-page-ledger-live .scroll-fixed-zone {
+        height: 550px
+    }
+}
+
+@media screen and (max-width:767.5px) {
+    .page-template-page-ledger-live .scroll-fixed-zone {
+        height: auto
+    }
+}
+
+.page-template-page-ledger-live .scroll-fixed-zone .fixed-area {
+    height: 100%;
+    margin: 0 0 0 4%;
+    width: 50%
+}
+
+@media screen and (max-width:767.5px) {
+    .page-template-page-ledger-live .scroll-fixed-zone .fixed-area {
+        display: none
+    }
+}
+
+.page-template-page-ledger-live .scroll-fixed-zone .fixed-area>* {
+    background-position: 100%;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%
+}
+
+@media screen and (max-width:1200px) {
+    .page-template-page-ledger-live .scroll-fixed-zone .fixed-area>* {
+        background-size: contain
+    }
+}
+
+.page-template-page-ledger-live .scroll-fixed-zone .fixed-area-text {
+    position: relative
+}
+
+@media screen and (min-width:768px) {
+    .page-template-page-ledger-live .scroll-fixed-zone .fixed-area-text {
+        height: 78%;
+        left: auto;
+        margin-left: auto;
+        overflow: hidden;
+        overflow-y: auto;
+        position: absolute;
+        right: 0;
+        width: 38%
+    }
+}
+
+@media screen and (max-width:767.5px) {
+    .page-template-page-ledger-live .scroll-fixed-zone .fixed-area-text>* {
+        display: flex;
+        overflow: hidden;
+        overflow-x: auto
+    }
+    .page-template-page-ledger-live .scroll-fixed-zone .fixed-area-text>* .item {
+        min-width: 90%;
+        padding: 0 4%
+    }
+    .page-template-page-ledger-live .scroll-fixed-zone .fixed-area-text>* .target {
+        display: none
+    }
+    .page-template-page-ledger-live .scroll-fixed-zone .fixed-area-text:before {
+        background: linear-gradient(90deg, transparent, #000);
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 100%;
+        position: absolute;
+        right: -4%;
+        width: 11%
+    }
+}
+
+.page-template-page-ledger-live .scroll-fixed-zone .fixed-area-text::-webkit-scrollbar {
+    display: none
+}
+
+.page-template-page-ledger-live .scroll-fixed-zone .fixed-area-text:after {
+    background: linear-gradient(transparent, #000);
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 100px;
+    position: sticky;
+    width: 100%
+}
+
+@media screen and (max-width:767.5px) {
+    .page-template-page-ledger-live .scroll-fixed-zone .fixed-area-text:after {
+        display: none
+    }
+}
+
+.page-template-page-ledger-live .scroll-fixed-zone .fixed-area-text .bloc-text {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 0;
+    max-width: 100%;
+    min-height: 450px
+}
+
+@media screen and (min-width:768px) {
+    .page-template-page-ledger-live .scroll-fixed-zone .fixed-area-text .bloc-text {
+        background: transparent !important;
+        justify-content: flex-end;
+        min-height: 150px
+    }
+    .page-template-page-ledger-live .scroll-fixed-zone .fixed-area-text .bloc-text:not(.active) {
+        opacity: .3
+    }
+    .page-template-page-ledger-live .scroll-fixed-zone .fixed-area-text .bloc-text:not(.active) .title {
+        color: #fff
+    }
+    .page-template-page-ledger-live .scroll-fixed-zone .fixed-area-text .bloc-text:not(.active) .subtitle {
+        opacity: 0
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:992px) {
+    .page-template-page-ledger-live .scroll-fixed-zone .fixed-area-text .bloc-text:nth-last-child(-n+1) {
+        min-height: 0
+    }
+}
+
+.page-template-page-ledger-live .scroll-fixed-zone .fixed-area-text .bloc-text .image-mobile {
+    margin: 0 auto 40px
+}
+
+@media screen and (min-width:768px) {
+    .page-template-page-ledger-live .scroll-fixed-zone .fixed-area-text .bloc-text .image-mobile {
+        display: none
+    }
+}
+
+.page-template-page-ledger-live .scroll-fixed-zone .fixed-area-text .bloc-text .title {
+    color: #ff5300
+}
+
+@media screen and (max-width:767.5px) {
+    .page-template-page-ledger-live .scroll-fixed-zone .fixed-area-text .bloc-text .title {
+        margin-top: 30px
+    }
+}
+
+.page-template-page-ledger-live .scroll-fixed-zone .fixed-area-text .bloc-text .subtitle {
+    transition: all .3s
+}
+
+@media screen and (max-width:767.5px) {
+    .page-template-page-ledger-live .scroll-fixed-zone .fixed-area-text .bloc-text .subtitle {
+        font-size: 1.8rem
+    }
+    .page-template-page-ledger-live .scroll-fixed-zone .fixed-area-text .bloc-text:nth-last-child(-n+2) {
+        display: none
+    }
+}
+
+.page-template-page-ledger-live .scroll-fixed-zone+.bg-black {
+    padding-top: 0
+}
+
+@media screen and (max-width:768px) {
+    .page-template-page-ledger-live .scroll-fixed-zone+.bg-black {
+        text-align: left
+    }
+    .page-template-page-ledger-live .scroll-fixed-zone+.bg-black .title {
+        font-size: 1.6rem
+    }
+}
+
+.page-template-page-ledger-live .crypto-gallery {
+    align-items: center;
+    color: #000;
+    display: flex
+}
+
+.page-template-page-ledger-live .crypto-gallery .read-more {
+    margin-left: 0
+}
+
+@media screen and (max-width:1300px) {
+    .page-template-page-ledger-live .crypto-gallery {
+        margin-left: 0 !important;
+        margin-right: 0 !important
+    }
+}
+
+@media screen and (max-width:992px) {
+    .page-template-page-ledger-live .crypto-gallery {
+        flex-direction: column
+    }
+}
+
+@media screen and (max-width:768px) {
+    .page-template-page-ledger-live .crypto-gallery {
+        padding: 30px 6%
+    }
+}
+
+.page-template-page-ledger-live .crypto-gallery>* {
+    min-width: 50%
+}
+
+@media screen and (min-width:992px) {
+    .page-template-page-ledger-live .crypto-gallery .h4+p {
+        font-size: 2rem;
+        font-weight: 500
+    }
+}
+
+.page-template-page-ledger-live .crypto-gallery .grid-items {
+    margin-bottom: 0
+}
+
+.page-template-page-ledger-live .crypto-gallery .grid-items .grid-item {
+    height: 175px;
+    margin: 0;
+    width: 32%
+}
+
+@media screen and (max-width:768px) {
+    .page-template-page-ledger-live .crypto-gallery .grid-items .grid-item {
+        min-width: 130px
+    }
+}
+
+.page-template-page-ledger-live .crypto-gallery .grid-items .grid-item span {
+    color: #000;
+    opacity: 0;
+    transition: .2s
+}
+
+.page-template-page-ledger-live .crypto-gallery .grid-items .grid-item:hover {
+    background: none;
+    box-shadow: 0 0 1px 1px #000
+}
+
+.page-template-page-ledger-live .crypto-gallery .grid-items .grid-item:hover span {
+    opacity: 1
+}
+
+.page-template-page-ledger-live .crypto-gallery .grid-items .grid-item:nth-child(n+10) {
+    display: none
+}
+
+@media screen and (max-width:1510px) {
+    .page-template-page-ledger-live .c-diagonal-bloc>.row {
+        margin: auto
+    }
+}
+
+.page-template-page-ledger-live .c-diagonal-bloc .bloc-item {
+    flex-direction: row;
+    margin: 0
+}
+
+@media screen and (max-width:690px) {
+    .page-template-page-ledger-live .c-diagonal-bloc .bloc-item {
+        flex-direction: column
+    }
+}
+
+.page-template-page-ledger-live .c-diagonal-bloc .bloc-item:first-of-type {
+    background-color: #000
+}
+
+.page-template-page-ledger-live .c-diagonal-bloc .bloc-item:first-of-type .illustration {
+    background-color: #d4a0ff
+}
+
+.page-template-page-ledger-live .c-diagonal-bloc .bloc-item:first-of-type,
+.page-template-page-ledger-live .c-diagonal-bloc .bloc-item:first-of-type .h1,
+.page-template-page-ledger-live .c-diagonal-bloc .bloc-item:first-of-type .h2,
+.page-template-page-ledger-live .c-diagonal-bloc .bloc-item:first-of-type .h3,
+.page-template-page-ledger-live .c-diagonal-bloc .bloc-item:first-of-type .h4,
+.page-template-page-ledger-live .c-diagonal-bloc .bloc-item:first-of-type .h5,
+.page-template-page-ledger-live .c-diagonal-bloc .bloc-item:first-of-type .h6,
+.page-template-page-ledger-live .c-diagonal-bloc .bloc-item:first-of-type .h7 {
+    color: #fff
+}
+
+.page-template-page-ledger-live .c-diagonal-bloc .bloc-item img {
+    display: block
+}
+
+.page-template-page-ledger-live .c-diagonal-bloc .bloc-item>* {
+    margin: 0 !important;
+    padding-left: 6%;
+    padding-right: 6%
+}
+
+.page-template-page-ledger-live .c-diagonal-bloc .bloc-item>*>* {
+    margin-left: 0;
+    margin-right: 0
+}
+
+.page-template-page-ledger-live .c-diagonal-bloc .bloc-item .content {
+    padding-bottom: 80px;
+    padding-top: 80px
+}
+
+@media screen and (max-width:767px) {
+    .page-template-page-ledger-live .c-diagonal-bloc .bloc-item .content {
+        padding-bottom: 60px;
+        padding-top: 60px
+    }
+}
+
+.page-template-page-ledger-live .c-diagonal-bloc .bloc-item .illustration {
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 600px;
+    width: 100%
+}
+
+@media screen and (max-width:767px) {
+    .page-template-page-ledger-live .c-diagonal-bloc .bloc-item .illustration {
+        min-height: 300px
+    }
+}
+
+.page-template-page-ledger-live .download-section>* .flexbox .item-block {
+    align-items: center;
+    display: flex;
+    flex-direction: column
+}
+
+.page-template-page-ledger-live .download-section>* .flexbox .item-block:first-child {
+    display: none
+}
+
+@media screen and (min-width:1200px) {
+    .page-template-page-ledger-live .download-section>* .flexbox .item-block:first-child {
+        border-right: 1px solid
+    }
+}
+
+@media screen and (min-width:768.5px) {
+    .page-template-page-ledger-live .download-section>* .flexbox .item-block:first-child {
+        display: flex
+    }
+}
+
+.page-template-page-ledger-live .download-section>* .flexbox .item-block .bottom {
+    align-items: center;
+    display: flex;
+    flex-direction: row
+}
+
+@media screen and (max-width:992px) {
+    .page-template-page-ledger-live .download-section>* .flexbox .item-block .bottom {
+        flex-direction: column
+    }
+}
+
+.page-template-page-ledger-live .download-section>* .flexbox .item-block .bottom>* {
+    margin: 10px 15px
+}
+
+@media screen and (max-width:1024px) {
+    .page-template-page-ledger-live .download-section>* .flexbox .item-block>img {
+        height: auto !important;
+        max-width: 70%
+    }
+}
+
+@media screen and (max-width:768px) {
+    .page-template-page-ledger-live .download-section>* .flexbox .item-block .title {
+        display: none
+    }
+}
+
+.download-live .last-update {
+    align-items: center
+}
+
+@media screen and (max-width:690px) {
+    .download-live .last-update {
+        padding-bottom: 3vw
+    }
+    .download-live .last-update>* {
+        max-width: 100%
+    }
+}
+
+.download-live .last-update>.illustration {
+    flex: 2;
+    max-width: 650px;
+    order: 2
+}
+
+@media screen and (min-width:690px) {
+    .download-live .last-update>.illustration {
+        margin-left: 0
+    }
+}
+
+.download-live .getting-started>* {
+    background: url(../../../../../../www.ledger.com/wp-content/uploads/2019/11/download-get-started-banner-mobile.html) no-repeat bottom #f9f9f9;
+    background-size: contain;
+    border-radius: 0;
+    display: block;
+    height: 420px;
+    margin-top: 5vw;
+    width: 100%
+}
+
+@media screen and (min-width:690px) {
+    .download-live .getting-started>* {
+        background: url(../../../../../../www.ledger.com/wp-content/uploads/2019/11/download-get-started-banner.html) no-repeat 50% transparent;
+        background-size: contain
+    }
+}
+
+@media screen and (min-width:690px) and (max-width:1024px) {
+    .download-live .getting-started>* {
+        height: 260px
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .download-live .getting-started>* {
+        height: 392px
+    }
+}
+
+.live-campaign-page .hero {
+    align-items: center;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    height: 70vh;
+    max-height: 510px
+}
+
+@media screen and (min-width:992px) {
+    .live-campaign-page .hero {
+        height: 72vh;
+        max-height: 810px;
+        min-height: 700px
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .live-campaign-page .hero {
+        height: 810px
+    }
+}
+
+.live-campaign-page .hero>* {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100%;
+    padding-bottom: 2vw;
+    padding-top: 5vw;
+    width: 100%
+}
+
+.live-campaign-page .hero>*,
+.live-campaign-page .hero>* .content>:not(a),
+.live-campaign-page .hero>*>:not(a) {
+    color: #fff
+}
+
+.live-campaign-page .hero>* .content {
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    justify-content: center
+}
+
+.live-campaign-page .hero>* .content h1 {
+    line-height: 1.3
+}
+
+@media screen and (min-width:768px) {
+    .live-campaign-page .hero>* .content h1 {
+        font-size: 48px
+    }
+}
+
+.live-campaign-page .hero>* .super-small-text {
+    opacity: .8
+}
+
+@media screen and (min-width:769px) {
+    .live-campaign-page .hero>* .super-small-text {
+        max-width: 40%
+    }
+}
+
+.live-campaign-page .introduction {
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    margin-top: -170px;
+    min-height: 680px;
+    padding: 0
+}
+
+@media screen and (max-width:1270px) {
+    .live-campaign-page .introduction {
+        min-height: 580px
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .live-campaign-page .introduction {
+        background-position: right 22%;
+        background-size: 50%
+    }
+}
+
+@media screen and (max-width:992px) {
+    .live-campaign-page .introduction {
+        margin-top: -125px;
+        min-height: 470px;
+        padding-top: 40px
+    }
+}
+
+@media screen and (max-width:767px) {
+    .live-campaign-page .introduction {
+        background-image: none !important;
+        flex-direction: column;
+        padding-top: 120px
+    }
+}
+
+.live-campaign-page .introduction>* {
+    display: flex;
+    flex-direction: column
+}
+
+@media screen and (min-width:768px) {
+    .live-campaign-page .introduction>* {
+        justify-content: center
+    }
+    .live-campaign-page .introduction>* .content {
+        max-width: 38%
+    }
+}
+
+@media screen and (max-width:992px) {
+    .live-campaign-page .introduction>* .content .title {
+        font-size: 230%;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto
+    }
+}
+
+.live-campaign-page .introduction .illustration {
+    margin-top: 40px
+}
+
+@media screen and (min-width:690px) {
+    .live-campaign-page .content-with-video>:first-of-type {
+        padding-right: 60px
+    }
+}
+
+@media screen and (max-width:768px) {
+    .live-campaign-page .content-with-video>:first-of-type {
+        padding-bottom: 60px
+    }
+    .live-campaign-page .keypoints .flexbox {
+        flex-direction: column;
+        padding-left: 10px;
+        padding-right: 10px
+    }
+}
+
+@media screen and (min-width:769px) {
+    .live-campaign-page .keypoints .flexbox>:first-of-type {
+        flex: inherit;
+        max-width: 460px;
+        width: 32%
+    }
+}
+
+.live-campaign-page .keypoints .flexbox .keys {
+    display: flex;
+    justify-content: center
+}
+
+@media screen and (max-width:768px) {
+    .live-campaign-page .keypoints .flexbox .keys {
+        justify-content: space-between
+    }
+}
+
+@media screen and (max-width:690px) {
+    .live-campaign-page .keypoints .flexbox .keys {
+        flex-direction: column
+    }
+}
+
+.live-campaign-page .keypoints .flexbox .keys>* {
+    flex: 1;
+    margin: 0 12px;
+    max-width: 190px
+}
+
+@media screen and (max-width:690px) {
+    .live-campaign-page .keypoints .flexbox .keys>* {
+        margin: 0;
+        max-width: 100%
+    }
+    .live-campaign-page .keypoints .flexbox .keys>:not(:last-of-type) {
+        margin-bottom: 20px
+    }
+}
+
+.live-campaign-page .keypoints .flexbox .keys .fal {
+    color: #ff5300;
+    font-size: 28px;
+    margin-bottom: 5px
+}
+
+.live-campaign-page .features {
+    align-items: flex-start
+}
+
+.live-campaign-page .features .bloc-text {
+    margin-top: 0
+}
+
+@media screen and (max-width:690px) {
+    .live-campaign-page .features .bloc-text:not(:last-of-type) {
+        margin-bottom: 60px
+    }
+}
+
+.live-campaign-page .promotion {
+    flex-wrap: nowrap
+}
+
+@media screen and (max-width:768px) {
+    .live-campaign-page .promotion {
+        padding-left: 10px;
+        padding-right: 10px
+    }
+}
+
+.live-campaign-page .promotion>* {
+    flex: inherit
+}
+
+@media screen and (min-width:768px) {
+    .live-campaign-page .promotion>:not(.illustration) {
+        width: 55%
+    }
+}
+
+.live-campaign-page .promotion h4 img {
+    display: inline-block;
+    vertical-align: middle
+}
+
+@media screen and (min-width:768px) {
+    .live-campaign-page .promotion .illustration {
+        width: 45%
+    }
+}
+
+.live-campaign-page .promotion .illustration img {
+    max-width: 90%
+}
+
+@media screen and (max-width:690px) {
+    .live-campaign-page .promotion .illustration img {
+        margin-top: 20px
+    }
+}
+
+.live-campaign-page .academy-section {
+    display: flex;
+    justify-content: space-between
+}
+
+@media screen and (max-width:690px) {
+    .live-campaign-page .academy-section {
+        flex-direction: column
+    }
+}
+
+@media screen and (min-width:690px) {
+    .live-campaign-page .academy-section>* {
+        width: 53%
+    }
+}
+
+.live-campaign-page .academy-section>:not(.academy-lines) {
+    margin-bottom: 20px
+}
+
+@media screen and (min-width:690px) {
+    .live-campaign-page .academy-section>:not(.academy-lines) {
+        margin-bottom: 0;
+        width: 40%
+    }
+}
+
+.live-campaign-page .academy-section .academy-lines>* {
+    border: 1px solid #d8d8d8;
+    border-radius: 4px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    padding: 12px
+}
+
+@media screen and (max-width:690px) {
+    .live-campaign-page .academy-section .academy-lines>* {
+        flex-direction: column
+    }
+}
+
+@media screen and (min-width:690px) {
+    .live-campaign-page .academy-section .academy-lines>* {
+        align-items: center;
+        padding: 20px
+    }
+}
+
+.live-campaign-page .academy-section .academy-lines>* img {
+    margin-right: 20px
+}
+
+@media screen and (max-width:690px) {
+    .live-campaign-page .academy-section .academy-lines>* img {
+        margin: 0 auto 20px
+    }
+}
+
+.live-campaign-page .academy-section .academy-lines>:not(:last-of-type) {
+    margin-bottom: 12px
+}
+
+@media screen and (max-width:690px) {
+    .live-campaign-page .does-it-work>* {
+        width: 100%
+    }
+    .live-campaign-page .does-it-work img {
+        margin-bottom: 12px;
+        margin-top: 12px;
+        max-width: 90%
+    }
+}
+
+.ledger-live-home-block>* {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center
+}
+
+@media screen and (min-width:768px) {
+    .ledger-live-home-block>* {
+        flex-direction: row;
+        text-align: left
+    }
+    .ledger-live-home-block>*>* {
+        width: 50%
+    }
+}
+
+.ledger-live-home-block>*>.content-text {
+    margin-bottom: 60px
+}
+
+@media screen and (min-width:768px) {
+    .ledger-live-home-block>*>.content-text {
+        margin-bottom: 0;
+        max-width: 495px;
+        width: 45%
+    }
+}
+
+@media screen and (max-width:768px) {
+    .download-live {
+        margin-top: -20px
+    }
+}
+
+.download-live #hero .col.col-3 {
+    margin-bottom: 60px;
+    margin-top: 60px
+}
+
+@media screen and (max-width:767px) {
+    .download-live #hero .col.col-3 {
+        flex-direction: column
+    }
+    .download-live #hero .col.col-3>* {
+        margin-bottom: 20px;
+        margin-top: 20px
+    }
+    .download-live #hero .col.col-3>:not(:last-child) {
+        border-bottom: 1px solid #949494;
+        padding-bottom: 40px
+    }
+}
+
+@media screen and (min-width:768px) {
+    .download-live #hero .col.col-3>* {
+        border-left: 1px solid #949494;
+        padding-left: 2vw
+    }
+}
+
+.download-live #hero .col.col-3 .title {
+    color: #ff5300
+}
+
+@media screen and (max-width:860px) {
+    .download-live .download-block .download-app .bloc-item {
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: flex-start
+    }
+    .download-live .download-block .download-app .bloc-item>* {
+        order: 1 !important
+    }
+    .download-live .download-block .download-app .bloc-item img {
+        margin-bottom: 40px;
+        max-width: 520px
+    }
+    .download-live .download-block .download-app .bloc-item .content {
+        margin-left: 0;
+        order: 2 !important
+    }
+}
+
+@media screen and (max-width:768px) {
+    .download-live .download-block .download-app .bloc-item:not(:last-child) {
+        margin-bottom: 60px
+    }
+}
+
+.download-live .download-block .download-app .button {
+    margin-right: 12px;
+    position: relative;
+    width: 220px
+}
+
+@media screen and (max-width:1080px) {
+    .download-live .download-block .download-app .button {
+        margin-bottom: 20px;
+        margin-right: 0
+    }
+}
+
+.download-live .download-block .download-app .button i {
+    left: auto;
+    position: absolute;
+    right: 15%;
+    top: 39%
+}
+
+@media screen and (max-width:1080px) {
+    .download-live .download-block .download-app .flexbox {
+        align-items: flex-start !important;
+        flex-direction: column
+    }
+}
+
+@media screen and (max-width:768px) {
+    .download-live .crypto-gallery {
+        flex-direction: column
+    }
+}
+
+@media screen and (min-width:992px) {
+    .download-live .crypto-gallery>* {
+        max-width: 45%
+    }
+}
+
+.download-live .crypto-gallery .grid-items {
+    justify-content: flex-start
+}
+
+@media screen and (min-width:768px) {
+    .download-live .crypto-gallery .grid-items {
+        justify-content: center
+    }
+}
+
+.download-live .crypto-gallery .grid-items>* {
+    flex: auto;
+    margin: 3px 5px;
+    max-width: 170px;
+    padding: 50px 0;
+    position: relative;
+    width: 25%
+}
+
+.download-live .crypto-gallery .grid-items>* span {
+    bottom: 10%;
+    color: #000;
+    font-weight: 600;
+    opacity: 0;
+    position: absolute;
+    transition: opacity .2s;
+    width: 100%
+}
+
+.download-live .crypto-gallery .grid-items>:hover {
+    background-color: transparent;
+    border: 2px solid;
+    margin-bottom: -2px;
+    margin-top: -2px
+}
+
+.download-live .crypto-gallery .grid-items>:hover span {
+    opacity: 1
+}
+
+.page-template-page-start-your-crypto-journey #header {
+    background-color: transparent !important
+}
+
+.page-template-page-start-your-crypto-journey #header.out-of-top {
+    background-color: #fff !important
+}
+
+.page-template-page-start-your-crypto-journey main {
+    margin-top: -203px
+}
+
+@media screen and (max-width:992px) {
+    .page-template-page-start-your-crypto-journey main {
+        margin-top: -125px
+    }
+}
+
+.page-template-page-start-your-crypto-journey .introduction {
+    background-color: #949494;
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+    position: relative
+}
+
+.page-template-page-start-your-crypto-journey .introduction .content {
+    padding-bottom: 310px;
+    padding-top: 120px
+}
+
+@media screen and (max-width:1200px) {
+    .page-template-page-start-your-crypto-journey .introduction .content {
+        margin: 0
+    }
+}
+
+@media screen and (min-width:768px) {
+    .page-template-page-start-your-crypto-journey .introduction .content {
+        padding-bottom: 60px
+    }
+    .page-template-page-start-your-crypto-journey .introduction .content>* {
+        width: 37%
+    }
+}
+
+@media screen and (min-width:992px) {
+    .page-template-page-start-your-crypto-journey .introduction .content {
+        padding-top: 160px
+    }
+}
+
+.page-template-page-start-your-crypto-journey .introduction .illustration {
+    background-color: #ff5300;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 0;
+    height: 270px;
+    left: auto;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    width: 100%
+}
+
+@media screen and (min-width:768px) {
+    .page-template-page-start-your-crypto-journey .introduction .illustration {
+        background-position: 50%;
+        height: 100%;
+        width: 50%
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1200px) {
+    .page-template-page-start-your-crypto-journey .introduction .illustration {
+        background-size: cover
+    }
+}
+
+@media screen and (max-width:992px) {
+    .page-template-page-start-your-crypto-journey .content-with-video {
+        flex-direction: column
+    }
+}
+
+.page-template-page-start-your-crypto-journey .content-with-video video {
+    max-width: 50%
+}
+
+@media screen and (max-width:992px) {
+    .page-template-page-start-your-crypto-journey .content-with-video video {
+        margin-bottom: 40px;
+        max-width: 100%
+    }
+}
+
+.page-template-page-start-your-crypto-journey .learn-more-about {
+    display: flex;
+    justify-content: space-between
+}
+
+@media screen and (max-width:992px) {
+    .page-template-page-start-your-crypto-journey .learn-more-about {
+        flex-direction: column
+    }
+}
+
+.page-template-page-start-your-crypto-journey .learn-more-about>* {
+    width: 100%
+}
+
+@media screen and (min-width:992px) {
+    .page-template-page-start-your-crypto-journey .learn-more-about>* {
+        width: 45%
+    }
+}
+
+@media screen and (max-width:992px) {
+    .page-template-page-start-your-crypto-journey .learn-more-about .content {
+        margin-bottom: 40px
+    }
+}
+
+.page-template-page-start-your-crypto-journey .learn-more-about .simple-lines {
+    background-color: #f1f1f1;
+    border: 0;
+    padding: 40px;
+    text-align: left
+}
+
+.page-template-page-start-your-crypto-journey .learn-more-about .simple-lines,
+.page-template-page-start-your-crypto-journey .learn-more-about .simple-lines>*,
+.page-template-page-start-your-crypto-journey .learn-more-about .simple-lines>*>* {
+    color: #000 !important
+}
+
+@media screen and (min-width:992px) {
+    .page-template-page-start-your-crypto-journey .learn-more-about .simple-lines {
+        max-width: 595px
+    }
+}
+
+@media screen and (max-width:992px) {
+    .page-template-page-start-your-crypto-journey .learn-more-about .simple-lines {
+        flex-direction: column
+    }
+    .page-template-page-start-your-crypto-journey .learn-more-about .simple-lines div {
+        align-self: flex-start;
+        margin-top: 20px
+    }
+    .page-template-page-start-your-crypto-journey .learn-more-about .simple-lines img {
+        margin: auto;
+        padding: 0
+    }
+}
+
+.page-template-page-start-your-crypto-journey .steps-to-start-with-ledger {
+    background-color: #191919
+}
+
+.page-template-page-start-your-crypto-journey .steps-to-start-with-ledger .col.col-3 {
+    margin-bottom: 60px;
+    margin-top: 60px
+}
+
+@media screen and (max-width:991px) {
+    .page-template-page-start-your-crypto-journey .steps-to-start-with-ledger .col.col-3 {
+        margin-bottom: 0;
+        margin-top: 0
+    }
+}
+
+@media screen and (max-width:767px) {
+    .page-template-page-start-your-crypto-journey .steps-to-start-with-ledger .col.col-3 {
+        flex-direction: column
+    }
+    .page-template-page-start-your-crypto-journey .steps-to-start-with-ledger .col.col-3>* {
+        margin-bottom: 20px;
+        margin-top: 20px
+    }
+    .page-template-page-start-your-crypto-journey .steps-to-start-with-ledger .col.col-3>:not(:last-child) {
+        border-bottom: 1px solid #949494;
+        padding-bottom: 40px
+    }
+}
+
+@media screen and (min-width:768px) {
+    .page-template-page-start-your-crypto-journey .steps-to-start-with-ledger .col.col-3>* {
+        padding-left: 2vw
+    }
+    .page-template-page-start-your-crypto-journey .steps-to-start-with-ledger .col.col-3>:not(:first-child) {
+        border-left: 1px solid #949494
+    }
+}
+
+.page-template-page-start-your-crypto-journey .steps-to-start-with-ledger .col.col-3 .title {
+    color: #ff5300
+}
+
+.page-template-page-start-your-crypto-journey .steps-to-start-with-ledger .steps_to_start_with_ledger_link {
+    color: #fff
+}
+
+.page-template-page-start-your-crypto-journey .what-is-ledger,
+.page-template-page-start-your-crypto-journey .what-is-ledger .how-works {
+    background-color: #191919
+}
+
+.page-template-page-start-your-crypto-journey .what-is-ledger .how-works>* {
+    align-items: center
+}
+
+@media screen and (max-width:768px) {
+    .page-template-page-start-your-crypto-journey .what-is-ledger .how-works>* {
+        align-items: normal;
+        flex-direction: column;
+        justify-content: inherit
+    }
+}
+
+.page-template-page-start-your-crypto-journey .what-is-ledger .how-works .content {
+    flex: 2
+}
+
+@media screen and (min-width:1025px) {
+    .page-template-page-start-your-crypto-journey .what-is-ledger .how-works .content {
+        align-items: center
+    }
+}
+
+@media screen and (max-width:768px) {
+    .page-template-page-start-your-crypto-journey .what-is-ledger .how-works .content {
+        margin-top: 40px
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .page-template-page-start-your-crypto-journey .what-is-ledger .how-works .content {
+        flex-direction: column
+    }
+    .page-template-page-start-your-crypto-journey .what-is-ledger .how-works .content .left-on-mobile {
+        text-align: left
+    }
+}
+
+.page-template-page-start-your-crypto-journey .what-is-ledger .how-works .content img {
+    max-height: 400px;
+    width: auto
+}
+
+@media screen and (max-width:1024px) {
+    .page-template-page-start-your-crypto-journey .what-is-ledger .how-works .content img {
+        max-height: 300px
+    }
+}
+
+@media screen and (max-width:768px) {
+    .page-template-page-start-your-crypto-journey .what-is-ledger .swiper-wrapper {
+        display: block;
+        transform: none !important
+    }
+}
+
+.page-template-page-start-your-crypto-journey .what-is-ledger .swiper-slide {
+    height: auto
+}
+
+.page-template-page-start-your-crypto-journey .what-is-ledger .swiper-button-next,
+.page-template-page-start-your-crypto-journey .what-is-ledger .swiper-button-prev {
+    background: #fff;
+    color: #000;
+    font-size: 22px;
+    padding: 30px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    transition: all .2s
+}
+
+@media screen and (max-width:768px) {
+    .page-template-page-start-your-crypto-journey .what-is-ledger .swiper-button-next,
+    .page-template-page-start-your-crypto-journey .what-is-ledger .swiper-button-prev {
+        display: none
+    }
+}
+
+.page-template-page-start-your-crypto-journey .what-is-ledger .swiper-button-next:after,
+.page-template-page-start-your-crypto-journey .what-is-ledger .swiper-button-prev:after {
+    content: none
+}
+
+.page-template-page-start-your-crypto-journey .what-is-ledger .swiper-button-next.swiper-button-disabled,
+.page-template-page-start-your-crypto-journey .what-is-ledger .swiper-button-prev.swiper-button-disabled {
+    display: none
+}
+
+.page-template-page-start-your-crypto-journey .what-is-ledger .swiper-button-prev {
+    left: 0
+}
+
+.page-template-page-start-your-crypto-journey .what-is-ledger .bg-dark-grey {
+    background-color: #191919;
+    color: #fff
+}
+
+.page-template-page-start-your-crypto-journey .what-is-ledger .illustration {
+    background-color: #000;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 0;
+    height: 100%;
+    left: auto;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    width: 40%
+}
+
+@media screen and (max-width:768px) {
+    .page-template-page-start-your-crypto-journey .what-is-ledger .illustration {
+        bottom: auto;
+        height: 50%;
+        width: 100%
+    }
+}
+
+.page-template-page-start-your-crypto-journey .what-is-ledger .what-is-ledger-slides-text {
+    align-items: center;
+    display: flex;
+    margin-left: 4%;
+    margin-right: 4%;
+    max-width: 50%;
+    min-height: 420px
+}
+
+@media screen and (max-width:768px) {
+    .page-template-page-start-your-crypto-journey .what-is-ledger .what-is-ledger-slides-text {
+        align-items: flex-end;
+        max-width: 100%;
+        min-height: 800px
+    }
+    .page-template-page-start-your-crypto-journey .what-is-ledger-slides:not(:last-of-type) .what-is-ledger-slides-text-title {
+        bottom: 120px
+    }
+    .page-template-page-start-your-crypto-journey .what-is-ledger-slides:last-of-type .what-is-ledger-slides-text-title {
+        bottom: 40px
+    }
+    .page-template-page-start-your-crypto-journey .what-is-ledger .logo {
+        display: none
+    }
+}
+
+.page-template-page-start-your-crypto-journey .ledger-academy-block>* {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center
+}
+
+@media screen and (min-width:768px) {
+    .page-template-page-start-your-crypto-journey .ledger-academy-block>* {
+        flex-direction: row;
+        text-align: left
+    }
+    .page-template-page-start-your-crypto-journey .ledger-academy-block>*>* {
+        width: 40%
+    }
+}
+
+.page-template-page-start-your-crypto-journey .ledger-academy-block>*>.content-text {
+    margin-bottom: 60px
+}
+
+@media screen and (min-width:768px) {
+    .page-template-page-start-your-crypto-journey .ledger-academy-block>*>.content-text {
+        margin-bottom: 0;
+        max-width: 575px;
+        width: 50%
+    }
+}
+
+.on-click-block {
+    position: relative
+}
+
+@media screen and (min-width:768px) {
+    .on-click-block {
+        display: flex;
+        justify-content: space-between
+    }
+    .on-click-block>* {
+        flex: 1
+    }
+    .on-click-block .swiper-container {
+        color: #949494;
+        margin: 0;
+        position: static
+    }
+    .on-click-block .swiper-container>.swiper-wrapper {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        position: static;
+        transform: none !important
+    }
+    .on-click-block .swiper-container>.swiper-wrapper>.swiper-slide {
+        cursor: pointer;
+        filter: grayscale(1);
+        flex-shrink: 1 !important;
+        margin-right: 0 !important;
+        opacity: .3;
+        position: static !important;
+        transition: all .3s;
+        width: 100%
+    }
+    .on-click-block .swiper-container>.swiper-wrapper>.swiper-slide:not(:last-of-type) {
+        margin-bottom: 60px
+    }
+}
+
+@media screen and (min-width:768px) and (min-width:992px) {
+    .on-click-block .swiper-container>.swiper-wrapper>.swiper-slide {
+        margin-bottom: 60px !important;
+        max-width: 46%
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:992px) {
+    .on-click-block .swiper-container>.swiper-wrapper>.swiper-slide p {
+        margin-bottom: 10px
+    }
+}
+
+@media screen and (min-width:768px) {
+    .on-click-block .swiper-container>.swiper-wrapper>.swiper-slide.active,
+    .on-click-block .swiper-container>.swiper-wrapper>.swiper-slide:hover {
+        filter: grayscale(0);
+        opacity: 1
+    }
+    .on-click-block .swiper-container>.swiper-wrapper>.swiper-slide img,
+    .on-click-block .swiper-live-pagination {
+        display: none
+    }
+    .on-click-block .on-click-block-illustration {
+        flex: none;
+        margin-right: 5%;
+        max-width: 450px;
+        width: 42%
+    }
+    .on-click-block .on-click-block-illustration img {
+        position: sticky;
+        top: 12%
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1060px) {
+    .on-click-block .h1 {
+        margin-bottom: 60px
+    }
+    .on-click-block .h1 br {
+        display: none
+    }
+}
+
+@media screen and (max-width:767.5px) {
+    .on-click-block {
+        padding: 0 2%
+    }
+    .on-click-block .on-click-block-illustration {
+        display: none
+    }
+    .on-click-block .swiper-container .swiper-slide p {
+        margin-bottom: 10px
+    }
+    .on-click-block img {
+        display: block;
+        height: 300px;
+        margin: 0 auto 80px;
+        max-height: 300px;
+        width: auto
+    }
+    .on-click-block .swiper-live-pagination {
+        height: -moz-fit-content;
+        height: fit-content;
+        left: 0;
+        margin: 0;
+        position: absolute;
+        text-align: center;
+        top: 335px !important;
+        width: 100%;
+        z-index: 99
+    }
+    .on-click-block .swiper-live-pagination .swiper-pagination-bullet {
+        background-color: #000;
+        border-radius: 2px;
+        height: 2px;
+        max-width: 68px;
+        width: 20%
+    }
+    .on-click-block .swiper-live-pagination .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+        opacity: .25
+    }
+    .on-click-block .swiper-live-pagination .swiper-pagination-bullet:not(:last-child) {
+        margin-right: 2vw
+    }
+    .on-click-block .swiper-live-pagination.white .swiper-pagination-bullet {
+        background-color: #fff
+    }
+}
+
+.page-template-page-start #header {
+    background-color: #f1f1f1;
+    margin-bottom: 0
+}
+
+.page-template-page-start #header.out-of-top {
+    background-color: #fff !important
+}
+
+.page-template-page-start .app-buttons {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px;
+    padding-top: 40px
+}
+
+@media screen and (min-width:690px) {
+    .page-template-page-start .app-buttons {
+        align-items: baseline;
+        flex-direction: row;
+        justify-content: space-around
+    }
+}
+
+.page-template-page-start .app-buttons .button {
+    max-height: none
+}
+
+@media screen and (max-width:992px) {
+    .page-template-page-start .introduction {
+        padding-bottom: 80px !important;
+        padding-top: 40px !important
+    }
+    .page-template-page-start .introduction>* {
+        align-items: stretch;
+        flex-direction: column
+    }
+}
+
+.page-template-page-start .introduction .illustration img {
+    max-width: 90%
+}
+
+.page-template-page-start .articles-block {
+    flex-direction: row
+}
+
+@media screen and (max-width:768px) {
+    .page-template-page-start .articles-block {
+        flex-direction: column
+    }
+}
+
+.page-template-page-start .articles-block>* {
+    max-width: 48%;
+    padding: 80px
+}
+
+@media screen and (max-width:1200px) {
+    .page-template-page-start .articles-block>* {
+        padding: 35px
+    }
+}
+
+@media screen and (max-width:768px) {
+    .page-template-page-start .articles-block>* {
+        margin-bottom: 20px;
+        max-width: none;
+        padding: 20px
+    }
+}
+
+.page-template-page-start .articles-block>* .label-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase
+}
+
+.page-template-page-start .bottom-block {
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+    position: relative
+}
+
+.page-template-page-start .bottom-block .content {
+    padding-bottom: 80px;
+    padding-top: 80px
+}
+
+@media screen and (max-width:1200px) {
+    .page-template-page-start .bottom-block .content {
+        margin: 0
+    }
+}
+
+@media screen and (max-width:768px) {
+    .page-template-page-start .bottom-block .content {
+        padding-bottom: 310px
+    }
+}
+
+@media screen and (min-width:768px) {
+    .page-template-page-start .bottom-block .content>* {
+        max-width: 44%
+    }
+}
+
+@media screen and (max-width:992px) {
+    .page-template-page-start .bottom-block .content .buttons-block {
+        flex-direction: column
+    }
+}
+
+.page-template-page-start .bottom-block .content .app-buttons {
+    flex-direction: column
+}
+
+.page-template-page-start .bottom-block .content .app-buttons .button.primary {
+    background-color: #ff5300;
+    color: #fff;
+    width: 100%
+}
+
+@media screen and (max-width:1080px) {
+    .page-template-page-start .bottom-block .content .app-buttons {
+        align-items: flex-start !important;
+        flex-direction: column
+    }
+}
+
+.page-template-page-start .bottom-block .illustration {
+    background-color: #c3c3c3;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: 0;
+    height: 270px;
+    left: auto;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    width: 100%
+}
+
+@media screen and (min-width:768px) {
+    .page-template-page-start .bottom-block .illustration {
+        background-position: 0 100%;
+        height: 100%;
+        width: 45%
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:992px) {
+    .page-template-page-start .bottom-block .illustration {
+        background-size: cover
+    }
+}
+
+.page-template-page-start .download-button {
+    transition: all 0s;
+    width: 210px
+}
+
+.page-template-page-start .download-button,
+.page-template-page-start .download-button:active {
+    box-shadow: none !important
+}
+
+.page-template-page-start .download-button.is-open {
+    border-radius: 30px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0
+}
+
+.page-template-page-start .download-button+.list-app .bg {
+    border-radius: 30px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    width: 100%
+}

@@ -1,0 +1,168 @@
+{% extends 'admin_temp/base.html' %}
+{% block content %}
+  
+<style>
+  mark {
+      background-color: yellow;
+      font-weight: bold;
+      border-radius: 7px;
+  }
+</style>
+
+
+<ul class="navbar-nav mr-lg-2">
+  <li class="nav-item nav-search d-lg-block">
+    <div class="input-group">
+      <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
+      </div>
+      <div class="ser" style="display: flex;gap: 1rem;justify-content: space-between;width: 100%;margin-bottom: 1rem;">
+      <input type="text" class="form-control"  id="searchBox" placeholder="Search now">
+      <button onclick="searchAndHighlight()" style="border-radius: 7px;"> <i class="icon-search"></i> Search</button>
+      <button onclick="clearHighlight()" style="border-radius: 7px;"> <i class="icon-fixed-width icon-trash"></i> Clear</button>
+    </div>
+    </div>
+  </li>
+</ul>
+
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <p class="card-title">Available coins</p>
+          <p>choose coin</p>
+          <div class="row">
+            <div class="col-12">
+              <div class="table-responsive">
+                <table id="example" class="display expandable-table" style="width:100%">
+                  <thead>
+                    <tr>
+                      <th>user coins</th>
+                      <th>Amount</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  {% for x in x reversed %}
+
+
+
+
+
+                  <div id="outerModal{{ x.id }}" class="modal">
+                    <div class="modal-content">
+                      <div class="top_model">
+                        <span class="close" onclick="closeOuterModal('{{ x.id }}')">&times;</span>
+                        <p>{{x.name}}</p>
+                      </div>
+                        <div class="modal-body coin_cond">
+                          <button class="bg-gradient-info" onclick="showInnerModal1('{{ x.id }}')"><a href="#">Add</a></button>
+                         <button class="bg-gradient-info" onclick="showInnerModal2('{{ x.id }}')"><a href="#">Subtract</a></button>
+                          </div>
+                  
+                      </div>
+                  </div>
+                  
+                  
+                  
+                   <!-- Inner Modal 1 -->
+                   <div id="innerModal1{{ x.id }}" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeInnerModal1('{{ x.id }}')">&times;</span>
+                        <form class="bpf" action="" method="POST" style="width: 90%;">
+                          {% csrf_token %}
+                          <h5>Add {{x.name}} to {{x.user.username}} enter amount below</h5>
+                          <img src="{{x.logo.url}}" alt="" style="width: 5rem;"> 
+                          <input type="text" name="u_id" value="{{x.id}}" placeholder="id" hidden>
+                          <input type="text" name="ub_id" value="{{x.balance.id}}" placeholder="id" hidden>
+                          <input type="number" name="amount" id="{{x.id}}" placeholder=" Enter amount" min="1" required style="box-shadow:1px 1px 0px 1px gray;"><br>
+                      <input type="submit" class="submit bg-gradient-info" value="Add Now">
+                      </form>  
+                    </div>
+                  </div>
+                  
+                  <!-- Inner Modal 2 -->
+                  <div id="innerModal2{{ x.id }}" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeInnerModal2('{{ x.id }}')">&times;</span>
+                        <form class="bpf" action="adds" method="POST" style="width: 90%;">
+                          {% csrf_token %}
+                          <h5>Subtract {{x.name}} from {{x.user.username}} enter amount below</h5>
+                          <img src="{{x.logo.url}}" alt="" style="width: 5rem;"> 
+                          <input type="text" name="u_id" value="{{x.id}}" placeholder="id" hidden>
+                          <input type="text" name="ub_id" value="{{x.balance.id}}" placeholder="id" hidden>
+                      <input type="number" name="amount" id="{{x.id}}" placeholder=" Enter amount" min="1" required style="box-shadow:1px 1px 0px 1px gray;"><br>
+                      <input type="submit" class="submit bg-gradient-info" value="Subtract Now">
+                      </form> 
+                    </div>
+                  </div>
+
+
+
+
+
+                  <tbody>
+                    <td>
+                        <div class="tbd">
+                            <div class="img"><img src="{{x.logo.url}}" alt=""></div>
+                            <div class="content">
+                                <p>{{x.user.username}}</p>
+                                <p>{{x.name}}</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        ${{x.amount}}
+                    </td>
+                    <td>
+                        {% if x.status %}
+                       <a class="bg-primary apr">Approved</a>
+                        {% else %}
+                        <a href="#" onclick="showOuterModal('{{ x.id }}')">Edit</a>
+                        {% endif %}
+                    </td>
+                  </tbody>
+                  {% endfor %}
+              </table>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+
+        
+      </div>
+    </div>
+
+    <script>
+      function searchAndHighlight() {
+          clearHighlight(); // Clear previous highlights
+  
+          let searchText = document.getElementById("searchBox").value.trim();
+          if (!searchText) return; // Exit if input is empty
+  
+          let contentElements = document.querySelectorAll(".content"); // Select all elements with class "content"
+          let regex = new RegExp(`(${searchText})`, "gi");
+          let firstMatch = null;
+  
+          contentElements.forEach((element) => {
+              element.innerHTML = element.innerHTML.replace(/<mark>(.*?)<\/mark>/g, "$1"); // Remove old highlights
+              element.innerHTML = element.innerHTML.replace(regex, `<mark>$1</mark>`); // Highlight matches
+  
+              if (!firstMatch) {
+                  firstMatch = element.querySelector("mark"); // Get the first highlighted match
+              }
+          });
+  
+          if (firstMatch) {
+              firstMatch.scrollIntoView({ behavior: "smooth", block: "center" }); // Scroll to the first match
+          }
+      }
+  
+      function clearHighlight() {
+          let contentElements = document.querySelectorAll(".content");
+          contentElements.forEach((element) => {
+              element.innerHTML = element.innerHTML.replace(/<mark>(.*?)<\/mark>/g, "$1"); // Remove highlights
+          });
+      }
+  </script>
+
+{% endblock %}

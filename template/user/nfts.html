@@ -1,0 +1,195 @@
+{% extends 'user/base2.html' %}
+{% load static %}
+{% block content %}
+  
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        #hero {
+            background: url('hero.jpg') no-repeat center center/cover;
+            color: white;
+            padding: 100px 20px;
+        }
+        button {
+            background-color: #008cba;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 7px;
+        }
+        .nft-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .nft-item {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .nft-item:hover {
+            transform: scale(1.05);
+        }
+        .nft-item img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        /* Modal Background */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Close Button */
+.close {
+    color: red;
+    font-size: 24px;
+    float: right;
+    cursor: pointer;
+}
+
+    </style>
+
+    
+    <section id="hero" style="color: black;">
+        <h2>Discover & Buy Unique NFTs</h2>
+        <p>Explore our collection of exclusive digital assets.</p>
+        <div class="herbtn" style="display: flex;gap: 3rem;">
+            <button onclick="scrollToGallery()">Browse NFTs</button>
+            <a href="/mynft">
+        <button>My NFT collections</button>
+    </a>
+        </div>
+    </section>
+    
+    <section id="gallery">
+        <h5>Featured NFTs</h5>
+        <div class="nft-container">
+            <!-- {% for nft in nfts %}
+            <div class="nft-item">
+                <img src="{{ nft.image_url }}" alt="{{ nft.name }}">
+                <p>{{ nft.name }}</p>
+                <button onclick="openModal('{{ nft.name }}')">Buy</button>
+            </div>
+            {% endfor %} -->
+            {% for x in x %}
+           <div class="nft-item">
+                <img src="{{ x.image.url }}" alt="{{ nft.name }}">
+                <p>{{x.name}}</p>
+                <p style="font-weight: 800;">${{x.price}}</p>
+                {% if x.is_available %}
+                <button onclick="openModal('{{ x.id }}')">Purchase</button>
+                {% else %}
+                <button>Sold Out</button>
+                {% endif %}
+            </div>
+            
+
+
+
+<!-- Modal -->
+<div id="purchaseModal-{{ x.id }}" class="modal">
+    <form action="/buy_nft" method="POST">
+        {% csrf_token %}
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('{{ x.id }}')">&times;</span>
+        <h5>Confirm Purchase</h5>
+        <p>Name: {{x.name}}</p>
+        <p>Price: ${{x.price}}</p>
+        <input type="hidden" name="amount" value="{{x.price}}">
+        <input type="hidden" name="xid" value="{{x.id}}">
+        <select id="u_id" name="u_id" style="border: 2px solid gray;border-radius: 7px;">
+            <option value="">Select payment method</option>
+            {% for c in c %}
+            <option value="{{c.id}}">{{c.name}}</option>
+            {% endfor %}
+        </select>
+        <p>Are you sure you want to purchase this item?</p>
+        
+            <button type="submit">Yes, Purchase</button>
+      
+    </div>
+</form>
+</div>
+            
+           
+            {% endfor %}
+        </div>
+    </section>
+    
+    
+    
+<script>
+    function scrollToGallery() {
+            document.getElementById('gallery').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function openModal(itemId) {
+    document.getElementById(`purchaseModal-${itemId}`).style.display = "flex";
+}
+
+function closeModal(itemId) {
+    document.getElementById(`purchaseModal-${itemId}`).style.display = "none";
+}
+
+function confirmPurchase(itemId) {
+    alert(`Purchase confirmed for item ID: ${itemId}`);
+    closeModal(itemId);
+}
+
+
+</script>
+</body>
+</html>
+
+
+
+{% endblock %}

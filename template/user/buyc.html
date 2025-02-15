@@ -1,0 +1,55 @@
+{% extends 'user/base2.html' %}
+  {% load static %}
+    {% block content %}
+
+    <!-- <div class="container-fluid py-4">
+        <div class="bcoin_container">
+            {% for b in bc %}                       
+        <div class="box" style="background-color: white;">
+           <div class=" byci">
+            <img src="{{b.img.url}}" alt=""><br>
+            <h5 style="color: black;margin-top: 10px;">{{b.name}}</h5>
+            
+           </div>
+           <div class="container">
+            <a href="{{b.link}}" class="bya" style="width: 100%;">
+                <button class="bg-gradient-info" style="color: white;"> Buycoin</button></a>
+               </div>
+           </div>
+           
+        {% endfor %}
+        </div> -->
+
+        <div class="row g-sm-4 g-3 justify-content-center">
+            {% for b in bc %} 
+            <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+                <div class="payment-box text-center">
+                    <div class="payment-box-thumb">
+                        <a style="background-color: black;" data-toggle="modal" href="https://www.simplex.com/" class="">
+                            <img src="{{b.img.url}}" alt="Lights" class="trans-img">
+                        </a>
+                    </div>
+                    <div class="payment-box-content">
+                        <h5 class="title">{{b.name}}<i class="fas fa-google-wallet    "></i></h5>
+                        <a href="{{b.link}}" target="_blank" class=""><button data-href="" data-id="" class="btn main-btn w-100 paynow mt-3">Buy Now</button></a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+            <div class="col-xxl-2 col-lg-3 col-sm-4 col-6">
+                <div class="payment-box text-center">
+                    <div class="payment-box-thumb">
+                        <a href="https://www.coinbase.com/" class="">
+                            <img src="images/icons/Coinbase.png" alt="Lights" class="trans-img">
+                        </a>
+                    </div>
+                    <div class="payment-box-content">
+                        <h5 class="title">Coinbase</h5>
+                        <a href="https://www.coinbase.com/" class=""> <button data-href="" data-id="lob" class=" btn main-btn w-100 paynow mt-3">Buy Now</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}

