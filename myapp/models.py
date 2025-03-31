@@ -46,6 +46,7 @@ class KYCInfo(models.Model):
     email = models.EmailField(unique=True)
     ssn = models.CharField(max_length=11, unique=True)
     passport = models.FileField(upload_to='kyc_documents/passports/')
+    is_verified = models.BooleanField(default=False)
     drivers_license = models.FileField(upload_to='kyc_documents/licenses/')
     submitted_at = models.DateTimeField(auto_now_add=True)
 

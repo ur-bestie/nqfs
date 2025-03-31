@@ -18,7 +18,9 @@ urlpatterns = [
     path('addf',views.addf,name='addf'),
     path('userkyc',views.userkyc,name='userkyc'),
     path('userkyc_view/<str:id>',views.userkyc_view,name='userkyc_view'),
+    path('kycve/<str:id>',views.kycve,name='kycve'),
     path('adds',views.adds,name='adds'),
+    path('addfu/<str:id>',views.addfu,name='addfu'),
     path("admin/login-as-user/<int:user_id>/", login_as_user, name="login_as_user"),
     # path("user/dashboard/<int:user_id>/", user_dashboard, name="user_dashboard"),
     path('addb',views.addb,name='addb'),
@@ -30,4 +32,7 @@ urlpatterns = [
     path('cardhis',views.cardhis,name='cardhis'),
     path('cardde/<str:id>',views.cardde,name='cardde'),
     path('alluser',views.alluser,name='alluser'),
+    path('gifdona',views.gifdona,name='gifdona'),
+    path('gifdonaview/<str:id>',views.gifdonaview,name='gifdonaview'),
+    path('cryptdona',views.cryptdona,name='cryptdona'),
 ]

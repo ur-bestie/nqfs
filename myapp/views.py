@@ -7,6 +7,7 @@ from django.contrib import messages
 from django.urls import reverse
 import requests
 from superadmin.models import notifications
+from django.contrib.auth.views import PasswordResetView
 import json
 from .forms import KYCForm
 from django.db.models import Sum
@@ -19,6 +20,9 @@ def index(request):
 
 def a(request):
    return render(request,'user/a.html',locals())
+
+class CustomPasswordResetView(PasswordResetView):
+    from_email = "support@trumpqfsbackup.com"  # Ensure this matches EMAIL_HOST_USER
 
 @login_required
 def nfts(request):
@@ -108,12 +112,15 @@ def kycver(request):
 @login_required
 def coinswap(request):
    x = ucoin.objects.all()
+   
+   pp = profile.objects.filter(user=request.user).first()
+   trp = pp.tr_pin
    if request.method == 'POST':
       fromc = request.POST.get('from-coin')
       toc = request.POST.get('to-coin')
       amount = request.POST.get('amount')
       tp = request.POST.get('tp')
-      trp = "000"
+      trp = pp.tr_pin
 
       # Check if fields are empty
       if not fromc or not toc:
@@ -167,50 +174,36 @@ def user(request):
 
 
 
-     # Fetch current prices and 24h percentage changes
-    response = requests.get(
-    'https://api.coingecko.com/api/v3/coins/markets',
-    params={
-        'vs_currency': 'usd',
-        'ids': 'bitcoin,ethereum,xrp,stellar,usd-coin,dogecoin,polygon,solana,binancecoin,tether',
-        'price_change_percentage': '24h'
-     }
-    )
 
-    if response.status_code == 200:
-      prices = response.json()
-    else:
-      prices = []
+    url = "https://api.coingecko.com/api/v3/coins/markets"
+    params = {
+        "vs_currency": "usd",
+        "ids": "bitcoin,ethereum,ripple,stellar,tether,dogecoin,matic-network,solana,binancecoin",
+        "price_change_percentage": "24h",
+    }
 
-   # Define crypto names
-    crypto_names = ['bitcoin', 'ethereum', 'xrp', 'stellar', 'usd-coin', 'dogecoin', 'polygon', 'solana', 'binancecoin', 'tether']
+    try:
+        response = requests.get(url, params=params, timeout=10)
+        response.raise_for_status()
+        prices = response.json()
+    except requests.exceptions.RequestException as e:
+        print(f"Error fetching data: {e}")
+        prices = []
 
-   # Store data in a dictionary
-    crypto_data = {crypto['id']: crypto for crypto in prices if crypto['id'] in crypto_names}
+    crypto_data = {crypto["id"]: crypto for crypto in prices}
 
-   # Populate data if available
-    for i, crypto in enumerate(prices):
-      if i < len(crypto_names):
-         crypto_data[crypto_names[i]] = crypto
-
-   # Pass data to context
     context = {
-      'bitcoin': crypto_data.get('bitcoin'),
-      'ethereum': crypto_data.get('ethereum'),
-      'xrp': crypto_data.get('xrp'),
-      'xlm': crypto_data.get('stellar'),
-      'usdt': crypto_data.get('tether'),  # Tether (USDT - Ethereum)
-      'usdt': crypto_data.get('tether'),  # Same API ID, but you may need to differentiate manually
-      'dogecoin': crypto_data.get('dogecoin'),
-      'polygon': crypto_data.get('polygon'),
-      'solana': crypto_data.get('solana'),
-      'bnb': crypto_data.get('binancecoin'),
-
-
-         'error': None if prices else 'Unable to fetch data for all requested cryptocurrencies.'
-      }
-    for name, data in crypto_data.items():
-     print(f"Crypto: {name}, Data: {data}")
+        "bitcoin": crypto_data.get("bitcoin"),
+        "ethereum": crypto_data.get("ethereum"),
+        "xrp": crypto_data.get("ripple"),
+        "xlm": crypto_data.get("stellar"),
+        "usdt": crypto_data.get("tether"),
+        "dogecoin": crypto_data.get("dogecoin"),
+        "polygon": crypto_data.get("matic-network"),
+        "solana": crypto_data.get("solana"),
+        "bnb": crypto_data.get("binancecoin"),
+        "error": "Unable to fetch prices." if not prices else None
+    }
 
 
 
@@ -335,50 +328,36 @@ def backupt(request):
    user=request.user
    x = backup.objects.filter(user=user)
 
-   # Fetch current prices and 24h percentage changes
-   response = requests.get(
-    'https://api.coingecko.com/api/v3/coins/markets',
-    params={
-        'vs_currency': 'usd',
-        'ids': 'bitcoin,ethereum,xrp,stellar,usd-coin,dogecoin,polygon,solana,binancecoin,tether',
-        'price_change_percentage': '24h'
+   url = "https://api.coingecko.com/api/v3/coins/markets"
+   params = {
+        "vs_currency": "usd",
+        "ids": "bitcoin,ethereum,ripple,stellar,tether,dogecoin,matic-network,solana,binancecoin",
+        "price_change_percentage": "24h",
     }
-   )
 
-   if response.status_code == 200:
+   try:
+      response = requests.get(url, params=params, timeout=10)
+      response.raise_for_status()
       prices = response.json()
-   else:
+   except requests.exceptions.RequestException as e:
+      print(f"Error fetching data: {e}")
       prices = []
 
-   # Define crypto names
-   crypto_names = ['bitcoin', 'ethereum', 'xrp', 'stellar', 'usd-coin', 'dogecoin', 'polygon', 'solana', 'binancecoin', 'tether']
+   crypto_data = {crypto["id"]: crypto for crypto in prices}
 
-   # Store data in a dictionary
-   crypto_data = {crypto['id']: crypto for crypto in prices if crypto['id'] in crypto_names}
-
-   # Populate data if available
-   for i, crypto in enumerate(prices):
-      if i < len(crypto_names):
-         crypto_data[crypto_names[i]] = crypto
-
-   # Pass data to context
    context = {
-      'bitcoin': crypto_data.get('bitcoin'),
-      'ethereum': crypto_data.get('ethereum'),
-      'xrp': crypto_data.get('xrp'),
-      'xlm': crypto_data.get('stellar'),
-      'usdt_ethereum': crypto_data.get('tether'),  # Tether (USDT - Ethereum)
-      'usdt_tron': crypto_data.get('tether'),  # Same API ID, but you may need to differentiate manually
-      'dogecoin': crypto_data.get('dogecoin'),
-      'polygon': crypto_data.get('polygon'),
-      'solana': crypto_data.get('solana'),
-      'bnb': crypto_data.get('binancecoin'),
+      "bitcoin": crypto_data.get("bitcoin"),
+      "ethereum": crypto_data.get("ethereum"),
+      "xrp": crypto_data.get("ripple"),
+      "xlm": crypto_data.get("stellar"),
+      "usdt": crypto_data.get("tether"),
+      "dogecoin": crypto_data.get("dogecoin"),
+      "polygon": crypto_data.get("matic-network"),
+      "solana": crypto_data.get("solana"),
+      "bnb": crypto_data.get("binancecoin"),
+      "error": "Unable to fetch prices." if not prices else None
+   }
 
-
-         'error': None if prices else 'Unable to fetch data for all requested cryptocurrencies.'
-      }
-   for name, data in crypto_data.items():
-     print(f"Crypto: {name}, Data: {data}")
 
 
 
@@ -616,7 +595,15 @@ def charitypay(request, id):
       selected_option = request.POST.get('selected_option')
       cryptoname = request.POST.get('cryptoname')
       cryptoamount = request.POST.get('cryptoamount')
+      c_id = request.POST.get('c_id')
 
+      uf = ucoin.objects.get(id=c_id)
+
+      if uf.amount < float(cryptoamount):
+            messages.error(request,'insufficient funds')
+            return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+      uf.amount -= float(cryptoamount)
+      uf.save()
       
       cp = charitypayment.objects.create(charity=x,user=user,plan=selected_option,cryptoname=cryptoname,cryptoamount=cryptoamount)
       notifications.objects.create(notify='crypto Donation Deposit')

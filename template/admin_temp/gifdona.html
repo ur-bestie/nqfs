@@ -5,43 +5,36 @@
     <div class="col-md-12 grid-margin stretch-card">
       <div class="card">
         <div class="card-body">
-          <p class="card-title">Deposit</p>
+          <p class="card-title">GiftCard Donations</p>
           <div class="row">
             <div class="col-12">
               <div class="table-responsive">
                 <table id="example" class="display expandable-table" style="width:100%">
                   <thead>
                     <tr>
-                      <th>username</th>
-                      <th>Passport</th>
+                      <th>Donation Info</th>
+                      <th>Amount</th>
                       <th>Action</th>
-                      <th></th>
                     </tr>
                   </thead>
                   {% for x in x reversed %}
                   <tbody>
                     <td>
                         <div class="tbd">
-                            <p>{{x.user.username}}</p>
+                            <div class="img"><p>Donation from</p></div>
                             <div class="content">
-                                
-                                <p></p>
+                                <p>{{x.user.username}}</p>
+                                <p>{{x.date}}</p>
                             </div>
                         </div>
                     </td>
                     <td>
-                        <img src="{{x.passport.url}}" width="40" alt="">
-                    </td>
-
-                    <td>
-                        <a href="/superadmin/userkyc_view/{{x.id}}">View</a>
+                        ${{x.giftcardamount}}
                     </td>
                     <td>
-                      {% if x.is_verified %}
-                      <p>Verified</p>
-                      {% else %}
-                      <p>Not Verified</p>
-                      {% endif %}
+                        
+                  <a href="/superadmin/gifdonaview/{{x.id}}">View</a>
+                        
                     </td>
                   </tbody>
                   {% endfor %}

@@ -122,7 +122,11 @@
       <!-- <img src="https://via.placeholder.com/100" alt="User Photo" /> -->
       <div class="profile-info">
         <h5>Kyc Info for {{x.user.username}}</h5>
-        
+        {% if x.is_verified %}
+       <p class="text-primary">Verified</p>
+        {% else %}
+        <a class="bnt btn-success " style="padding: 5px;border-radius: 7px;" href="/superadmin/kycve/{{x.id}}">Click to Verify</a>
+      {% endif %}
       </div>
     </div>
 

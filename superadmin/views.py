@@ -48,6 +48,12 @@ def userkyc(request):
    x = KYCInfo.objects.all()
    return render(request,'admin_temp/userkyc.html',locals())
 
+def kycve(request, id):
+   x = KYCInfo.objects.get(id=id)
+   x.is_verified = True
+   x.save()
+   messages.success(request,'Kyc verified successfully')
+   return redirect('/superadmin/userkyc')
 
 @staff_member_required
 def login_as_user(request, user_id):
@@ -228,6 +234,23 @@ def adds(request):
       return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
    return render(request,'admin_temp/adds.html',locals())
 
+def addfu(request, id):
+   x = ucoin.objects.filter(user_id=id)
+   if request.method == 'POST':
+      u_id = request.POST.get('u_id')
+      ub_id = request.POST.get('ub_id')
+      amount = request.POST.get('amount')
+      uid = ucoin.objects.get(pk=u_id)
+      ubb = tbalance.objects.get(pk=ub_id)
+      uid.amount += float(amount)
+      uid.balance.amount += float(amount)
+      uid.save()
+      ubb.amount += float(amount)
+      ubb.save()
+      messages.success(request,'successful')
+      return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+   return render(request,'admin_temp/addf.html',locals())
+
 @staff_member_required
 def addb(request):
    x = backup.objects.all()
@@ -327,3 +350,17 @@ def read(request, id):
    n.true = True
    n.save()
    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+
+
+def gifdona(request):
+   x = giftcardpay.objects.all()
+   return render(request,'admin_temp/gifdona.html',locals())
+
+def gifdonaview(request, id):
+   x = giftcardpay.objects.get(id=id)
+   return render(request,'admin_temp/gifdonaview.html',locals())
+
+
+def cryptdona(request):
+   x = charitypayment.objects.all()
+   return render(request,'admin_temp/cryptdona.html',locals())

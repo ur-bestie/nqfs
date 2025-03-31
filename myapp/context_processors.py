@@ -6,7 +6,7 @@ def sett(request):
 
 def kyc_processor(request):
     try:
-      kIF = KYCInfo.objects.filter(user=request.user)
+      kIF = KYCInfo.objects.filter(user=request.user).first()
     except:
       KYCInfo.DoesNotExist
       kIF = None
